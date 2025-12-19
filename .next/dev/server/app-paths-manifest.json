@@ -1,0 +1,21 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/api/admin/branches/route": "app/api/admin/branches/route.js",
+  "/api/admin/events/route": "app/api/admin/events/route.js",
+  "/api/admin/gallery/route": "app/api/admin/gallery/route.js",
+  "/api/admin/news/route": "app/api/admin/news/route.js",
+  "/api/auth/me/route": "app/api/auth/me/route.js",
+  "/api/branches/route": "app/api/branches/route.js",
+  "/api/chits/route": "app/api/chits/route.js",
+  "/api/chits/states/route": "app/api/chits/states/route.js",
+  "/careers/page": "app/careers/page.js",
+  "/chitplans/page": "app/chitplans/page.js",
+  "/contactus/page": "app/contactus/page.js",
+  "/faqs/page": "app/faqs/page.js",
+  "/media/events/page": "app/media/events/page.js",
+  "/media/gallery/page": "app/media/gallery/page.js",
+  "/media/news/page": "app/media/news/page.js",
+  "/page": "app/page.js",
+  "/whyus/page": "app/whyus/page.js"
+}

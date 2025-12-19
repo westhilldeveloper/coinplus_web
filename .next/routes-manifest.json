@@ -1,0 +1,355 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/media/blog/[id]",
+      "regex": "^/admin/media/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/media/blog/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/media/gallery/edit/[id]",
+      "regex": "^/admin/media/gallery/edit/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/media/gallery/edit/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/blog/[id]",
+      "regex": "^/api/admin/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/blog/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/branches/[id]",
+      "regex": "^/api/admin/branches/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/branches/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/gallery/[id]",
+      "regex": "^/api/admin/gallery/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/gallery/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/blog/[id]",
+      "regex": "^/api/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/blog/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/chits/[id]",
+      "regex": "^/api/chits/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/chits/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/media/blog/[id]",
+      "regex": "^/media/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/media/blog/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/admin/branches",
+      "regex": "^/admin/branches(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/branches(?:/)?$"
+    },
+    {
+      "page": "/admin/chits",
+      "regex": "^/admin/chits(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/chits(?:/)?$"
+    },
+    {
+      "page": "/admin/chits/create",
+      "regex": "^/admin/chits/create(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/chits/create(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard",
+      "regex": "^/admin/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard(?:/)?$"
+    },
+    {
+      "page": "/admin/login",
+      "regex": "^/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/login(?:/)?$"
+    },
+    {
+      "page": "/admin/media/blog",
+      "regex": "^/admin/media/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/media/blog(?:/)?$"
+    },
+    {
+      "page": "/admin/media/events",
+      "regex": "^/admin/media/events(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/media/events(?:/)?$"
+    },
+    {
+      "page": "/admin/media/gallery",
+      "regex": "^/admin/media/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/media/gallery(?:/)?$"
+    },
+    {
+      "page": "/admin/media/gallery/create",
+      "regex": "^/admin/media/gallery/create(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/media/gallery/create(?:/)?$"
+    },
+    {
+      "page": "/admin/media/news",
+      "regex": "^/admin/media/news(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/media/news(?:/)?$"
+    },
+    {
+      "page": "/api/admin/blog",
+      "regex": "^/api/admin/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/blog(?:/)?$"
+    },
+    {
+      "page": "/api/admin/branches",
+      "regex": "^/api/admin/branches(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/branches(?:/)?$"
+    },
+    {
+      "page": "/api/admin/events",
+      "regex": "^/api/admin/events(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/events(?:/)?$"
+    },
+    {
+      "page": "/api/admin/gallery",
+      "regex": "^/api/admin/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/gallery(?:/)?$"
+    },
+    {
+      "page": "/api/admin/news",
+      "regex": "^/api/admin/news(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/news(?:/)?$"
+    },
+    {
+      "page": "/api/auth/login",
+      "regex": "^/api/auth/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/auth/login(?:/)?$"
+    },
+    {
+      "page": "/api/auth/logout",
+      "regex": "^/api/auth/logout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/auth/logout(?:/)?$"
+    },
+    {
+      "page": "/api/auth/me",
+      "regex": "^/api/auth/me(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/auth/me(?:/)?$"
+    },
+    {
+      "page": "/api/blog",
+      "regex": "^/api/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/blog(?:/)?$"
+    },
+    {
+      "page": "/api/branches",
+      "regex": "^/api/branches(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/branches(?:/)?$"
+    },
+    {
+      "page": "/api/careers/apply",
+      "regex": "^/api/careers/apply(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/careers/apply(?:/)?$"
+    },
+    {
+      "page": "/api/chits",
+      "regex": "^/api/chits(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chits(?:/)?$"
+    },
+    {
+      "page": "/api/chits/branches",
+      "regex": "^/api/chits/branches(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chits/branches(?:/)?$"
+    },
+    {
+      "page": "/api/chits/create",
+      "regex": "^/api/chits/create(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chits/create(?:/)?$"
+    },
+    {
+      "page": "/api/chits/states",
+      "regex": "^/api/chits/states(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/chits/states(?:/)?$"
+    },
+    {
+      "page": "/api/send-email",
+      "regex": "^/api/send\\-email(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/send\\-email(?:/)?$"
+    },
+    {
+      "page": "/branches",
+      "regex": "^/branches(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/branches(?:/)?$"
+    },
+    {
+      "page": "/careers",
+      "regex": "^/careers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers(?:/)?$"
+    },
+    {
+      "page": "/chitplans",
+      "regex": "^/chitplans(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/chitplans(?:/)?$"
+    },
+    {
+      "page": "/contactus",
+      "regex": "^/contactus(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contactus(?:/)?$"
+    },
+    {
+      "page": "/faqs",
+      "regex": "^/faqs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/faqs(?:/)?$"
+    },
+    {
+      "page": "/home",
+      "regex": "^/home(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/home(?:/)?$"
+    },
+    {
+      "page": "/media/blog",
+      "regex": "^/media/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/media/blog(?:/)?$"
+    },
+    {
+      "page": "/media/events",
+      "regex": "^/media/events(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/media/events(?:/)?$"
+    },
+    {
+      "page": "/media/gallery",
+      "regex": "^/media/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/media/gallery(?:/)?$"
+    },
+    {
+      "page": "/media/news",
+      "regex": "^/media/news(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/media/news(?:/)?$"
+    },
+    {
+      "page": "/whyus",
+      "regex": "^/whyus(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/whyus(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Downloads/coinplusweb/app/admin/chits/create/page.js"],"sourcesContent":["import CreateChitForm from '@/app/components/chits/CreateChitForm'\r\n\r\nexport default function AdminCreateChitPage() {\r\n  return (\r\n    <div className=\"container mx-auto py-8\">\r\n      <CreateChitForm />\r\n    </div>\r\n  )\r\n}"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;;;;;;;;;;AAGP"}}]
+}

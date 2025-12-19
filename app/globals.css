@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Podium Sharp";
+  src: url("/public/fonts/DEMO-podiumsharp-55.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Semi Bold */
+ @font-face {
+  font-family: "Podium Sharp";
+  src: url("/fonts/DEMO-podiumsharp-55.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Podium Sharp";
+  src: url("/fonts/DEMO-podiumsharp-513.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Extra Bold */
+@font-face {
+  font-family: "Podium Sharp";
+  src: url("/fonts/DEMO-podiumsharp-913.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/* Extra Black */
+@font-face {
+  font-family: "Podium Sharp";
+  src: url("/public/fonts/DEMO-podiumsharp-913.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Podium Sharp";
+  src: url("/fonts/DEMO-podiumsharp-510.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@theme {
+  --color-primary: #5F259F;
+  --color-secondary: #0A0A0A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+ 
+  
+  body {
+    font-family: "Podium Sharp", system-ui, sans-serif;
+  }
+}
+
+
+
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
