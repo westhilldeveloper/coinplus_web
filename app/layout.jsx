@@ -12,18 +12,18 @@ export const metadata = {
     icon: [
       // PNG format
       {
-        url: '/favicon-16x16.png',
+        url: '/images/favicon-16x16.png',
         sizes: '16x16',
         type: 'image/png',
       },
       {
-        url: '/images/favicon-32x32.ico',
+        url: '/images/favicon-32x32.png',
         sizes: '32x32',
         type: 'image/png',
       },
       // ICO format (for older browsers)
       {
-        url: '/images/favicon.ico',
+        url: '/images/favicon-32x32.png',
         sizes: 'any',
       },
       // SVG format (modern)
