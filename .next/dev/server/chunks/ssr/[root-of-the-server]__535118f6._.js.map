@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Downloads/coinplusweb/app/admin/create/page.js"],"sourcesContent":["\r\n\r\nimport CreateChitForm from '../../CreateChitForm'\r\n\r\nexport default function CreateChitPage() {\r\n  return (\r\n    <div className=\"container mx-auto py-8 px-4\">\r\n      <div className=\"mb-8\">\r\n        <h1 className=\"text-3xl font-bold text-gray-900\">Create New Chit</h1>\r\n        <p className=\"text-gray-600 mt-2\">\r\n          Fill in the details below to create a new chit. All fields marked with * are required.\r\n        </p>\r\n      </div>\r\n      <CreateChitForm />\r\n    </div>\r\n  )\r\n}"],"names":[],"mappings":";;;;;;;;;;;;AAIe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACb,8OAAC;gBAAI,WAAU;;kCACb,8OAAC;wBAAG,WAAU;kCAAmC;;;;;;kCACjD,8OAAC;wBAAE,WAAU;kCAAqB;;;;;;;;;;;;0BAIpC,8OAAC;;;;;;;;;;;AAGP"}}]
-}

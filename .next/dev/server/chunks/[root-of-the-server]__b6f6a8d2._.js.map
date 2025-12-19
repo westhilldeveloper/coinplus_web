@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Downloads/coinplusweb/app/api/branches/route.js"],"sourcesContent":["// Example: /api/branches\r\nexport async function GET(request) {\r\n  const { searchParams } = new URL(request.url);\r\n  const state = searchParams.get('state');\r\n  \r\n  try {\r\n    const branches = await prisma.branch.findMany({\r\n      where: {\r\n        state: state\r\n      },\r\n      orderBy: {\r\n        name: 'asc'\r\n      }\r\n    });\r\n    return NextResponse.json(branches);\r\n  } catch (error) {\r\n    return NextResponse.json(\r\n      { error: 'Failed to fetch branches' },\r\n      { status: 500 }\r\n    );\r\n  }\r\n}"],"names":[],"mappings":"AAAA,yBAAyB;;;;;AAClB,eAAe,IAAI,OAAO;IAC/B,MAAM,EAAE,YAAY,EAAE,GAAG,IAAI,IAAI,QAAQ,GAAG;IAC5C,MAAM,QAAQ,aAAa,GAAG,CAAC;IAE/B,IAAI;QACF,MAAM,WAAW,MAAM,OAAO,MAAM,CAAC,QAAQ,CAAC;YAC5C,OAAO;gBACL,OAAO;YACT;YACA,SAAS;gBACP,MAAM;YACR;QACF;QACA,OAAO,aAAa,IAAI,CAAC;IAC3B,EAAE,OAAO,OAAO;QACd,OAAO,aAAa,IAAI,CACtB;YAAE,OAAO;QAA2B,GACpC;YAAE,QAAQ;QAAI;IAElB;AACF"}}]
-}
