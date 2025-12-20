@@ -51,6 +51,9 @@ const Footer = () => {
                 <Link href="/media/gallery" className="hover:text-yellow-300 text-sm transition-colors">Gallery</Link>
                 <Link href="/media/events" className="hover:text-yellow-300 text-sm transition-colors">Events</Link>
                 <Link href="/careers" className="hover:text-yellow-300 text-sm transition-colors">Careers</Link>
+                <Link href="/privacy" className="hover:text-yellow-300 text-sm transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-yellow-300 text-sm transition-colors">Terms & Conditions</Link>
+                <Link href="/refund" className="hover:text-yellow-300 text-sm transition-colors">Refund Policy</Link>
                 <Link href="/contactus" className="hover:text-yellow-300 text-sm transition-colors">Contact us</Link>
               </div>
             </div>

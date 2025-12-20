@@ -366,7 +366,7 @@ export default function Header() {
       </header>
 
       {/* Add padding to prevent content from hiding behind fixed header */}
-      <div className="lg:h-0 h-16"></div>
+      <div className="lg:h-0 md:h-4 h-2 "></div>
     </>
   );
 }

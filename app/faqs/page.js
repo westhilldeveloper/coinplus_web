@@ -6,7 +6,6 @@ export default function FaQs() {
         <img
           src="/images/faqs.jpg"
           alt="FAQs Banner"
-          fill
           className="object-cover"
         />
       </div>

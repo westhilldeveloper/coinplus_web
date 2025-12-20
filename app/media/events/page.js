@@ -8,8 +8,6 @@ export default function Events() {
       <img 
     src="/images/events.jpg" 
     alt="arrow"
-    fill
-          priority
           className="object-cover"
   />
   </div>

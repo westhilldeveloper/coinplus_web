@@ -14,7 +14,6 @@ export default function Whyus() {
       <img 
     src="/images/whyus.jpg" 
     alt="arrow"
-    fill
           className="object-cover"
   />
   </div>

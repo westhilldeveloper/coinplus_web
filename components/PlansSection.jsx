@@ -221,7 +221,7 @@ export default function PlansSection() {
               onClick={() => setActiveTab(tab.key)}
               className={`flex-shrink-0 px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-6 rounded-lg sm:rounded-xl flex items-center gap-1.5 sm:gap-2 font-medium border transition-all duration-300 whitespace-nowrap ${
                 activeTab === tab.key
-                  ? "bg-secondary text-white border-primary shadow-md sm:shadow-lg shadow-primary/20 transform scale-[1.02]"
+                  ? "bg-primary/10 text-primary border-primary shadow-md sm:shadow-lg shadow-primary/20 transform scale-[1.02]"
                   : "bg-primary text-white hover:text-primary border-gray-200 hover:bg-gray-100 hover:border-gray-300"
               }`}
             >
@@ -261,7 +261,7 @@ export default function PlansSection() {
             <p className="text-gray-600">Loading plans...</p>
           </div>
         ) : filteredChits.length > 0 ? (
-          <div className="relative rounded-xl  h-[600px] overflow-hidden">
+          <div className="relative rounded-xl  h-[450px] max-h-[600px] overflow-hidden">
             <div className="absolute inset-0 bg-[url('/images/grpimg.jpg')] bg-cover bg-center z-0"></div>
             <div className="absolute inset-0 bg-black/80 z-0"></div>
             <div className="relative z-10 h-full overflow-y-auto p-6">
