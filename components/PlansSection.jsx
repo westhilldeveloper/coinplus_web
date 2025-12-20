@@ -33,38 +33,37 @@ export default function PlansSection() {
     } catch (error) {
       console.error('Error fetching states:', error);
     } finally {
-      // Fetch all chits after states are loaded (or even if states fail)
       fetchChits();
     }
   };
 
-  // Fetch chits data with filters
+  // Fetch chits data with filters - MODIFIED TO USE branch PARAM
   const fetchChits = async () => {
-    setLoading(true);
-    try {
-      // Build query parameters
-      const params = new URLSearchParams();
-      params.append('limit', '100'); // Fetch more items for filtering
-      
-      // Only add state parameter if a specific state is selected
-      if (selectedState && selectedState !== "") {
-        params.append('state', selectedState);
-      }
-
-      const response = await fetch(`/api/chits?${params.toString()}`);
-      if (!response.ok) throw new Error('Failed to fetch chits');
-      const data = await response.json();
-      
-      if (data.success) {
-        setChits(data.data);
-        setFilteredChits(data.data); // Initially show all chits
-      }
-    } catch (error) {
-      console.error('Error fetching chits:', error);
-    } finally {
-      setLoading(false);
+  setLoading(true);
+  try {
+    // Build query parameters
+    const params = new URLSearchParams();
+    params.append('limit', '100'); // Fetch more items
+    
+    // Add state filter directly (since chits have state field)
+    if (selectedState && selectedState !== "") {
+      params.append('state', selectedState);
     }
-  };
+
+    const response = await fetch(`/api/chits?${params.toString()}`);
+    if (!response.ok) throw new Error('Failed to fetch chits');
+    const data = await response.json();
+    
+    if (data.success) {
+      setChits(data.data);
+      setFilteredChits(data.data);
+    }
+  } catch (error) {
+    console.error('Error fetching chits:', error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   // Initial data fetch
   useEffect(() => {
@@ -73,7 +72,7 @@ export default function PlansSection() {
 
   // Fetch chits when state changes
   useEffect(() => {
-    fetchChits(); // Always fetch when selectedState changes
+    fetchChits();
   }, [selectedState]);
 
   // Filter chits based on active tab
@@ -81,7 +80,6 @@ export default function PlansSection() {
     if (activeTab === "all") {
       setFilteredChits(chits);
     } else {
-      // Filter by chit_group or amount range based on tab
       const filtered = chits.filter(chit => {
         const chitGroup = chit.chit_group?.toLowerCase() || '';
         const chitValue = chit.chit_value;
@@ -115,15 +113,14 @@ export default function PlansSection() {
 
   // Get display amount based on chit value
   const getDisplayAmount = (chit) => {
-    return chit.chit_value;
+    return chit.chit_value || 0;
   };
 
   // Calculate EMI (this is a simplified calculation)
   const calculateEMI = (chit) => {
-    const amount = chit.chit_value;
-    const months = chit.duration_months || 20; // Default to 20 months if not specified
+    const amount = chit.chit_value || 0;
+    const months = chit.duration_months || 20;
     
-    // Simplified EMI calculation: amount / months
     return Math.round(amount / months);
   };
 
@@ -132,6 +129,16 @@ export default function PlansSection() {
     if (!stateCode) return "All States";
     const state = states.find(s => s.state === stateCode);
     return state ? state.label : stateCode;
+  };
+
+  // Get state from chit (try branch first, then chit state)
+  const getChitState = (chit) => {
+    // Try to get state from branch if available
+    if (chit.branch && chit.branch.state) {
+      return chit.branch.state;
+    }
+    // Fall back to chit state field
+    return chit.state;
   };
 
   return (
@@ -157,7 +164,10 @@ export default function PlansSection() {
           <div className="relative group">
             <select
               value={selectedState}
-              onChange={(e) => setSelectedState(e.target.value)}
+              onChange={(e) => {
+                console.log("Selected state:", e.target.value);
+                setSelectedState(e.target.value);
+              }}
               disabled={loading}
               className="appearance-none w-full lg:w-56 xl:w-64 px-3 sm:px-4 py-2.5 sm:py-3 pr-10 sm:pr-12 bg-white border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 cursor-pointer hover:border-gray-300 text-gray-800 font-medium text-sm sm:text-base shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
             >
@@ -168,7 +178,7 @@ export default function PlansSection() {
                   <option value="">All States</option>
                   {states.map((state) => (
                     <option key={state.state} value={state.state}>
-                      {state.label}
+                      {state.label} ({state.count || 0})
                     </option>
                   ))}
                 </>
@@ -251,9 +261,10 @@ export default function PlansSection() {
             <p className="text-gray-600">Loading plans...</p>
           </div>
         ) : filteredChits.length > 0 ? (
-          <div className="relative rounded-xl overflow-hidden p-6">
+          <div className="relative rounded-xl  h-[600px] overflow-hidden">
             <div className="absolute inset-0 bg-[url('/images/grpimg.jpg')] bg-cover bg-center z-0"></div>
             <div className="absolute inset-0 bg-black/80 z-0"></div>
+            <div className="relative z-10 h-full overflow-y-auto p-6">
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 relative z-10">
               {filteredChits.map((chit) => (
                 <div
@@ -316,6 +327,7 @@ export default function PlansSection() {
                   </button>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         ) : (

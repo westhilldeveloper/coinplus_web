@@ -2,7 +2,6 @@
 import prisma from '../../../lib/prisma'
 import { NextResponse } from 'next/server'
 
-// Map state codes to full names
 const STATE_MAP = {
   'TS': 'TELANGANA',
   'AP': 'ANDHRA PRADESH',
@@ -18,8 +17,8 @@ const STATE_MAP = {
 
 export async function GET() {
   try {
-    // Get unique states from chits
-    const uniqueStates = await prisma.branch.groupBy({
+    // Get unique states from CHITS table (not branches)
+    const uniqueStates = await prisma.chit.groupBy({
       by: ['state'],
       _count: {
         id: true,
@@ -30,11 +29,14 @@ export async function GET() {
     });
 
     // Format states with labels
-    const states = uniqueStates.map(item => ({
-      state: item.state,
-      label: STATE_MAP[item.state] || item.state,
-      count: item._count.id
-    })).filter(item => item.state); // Filter out null/undefined states
+    const states = uniqueStates
+      .map(item => ({
+        state: item.state,
+        label: STATE_MAP[item.state] || item.state,
+        count: item._count.id
+      }))
+      .filter(item => item.state) // Filter out null/undefined states
+      .sort((a, b) => a.label.localeCompare(b.label)); // Sort alphabetically
 
     return NextResponse.json({
       success: true,

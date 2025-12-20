@@ -235,7 +235,6 @@ export default function CareersPage() {
           src="/images/img_careers.jpeg"
           alt="FAQs Banner"
           fill
-          priority
           className="object-cover"
         />
       </div>

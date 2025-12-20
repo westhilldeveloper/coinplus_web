@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function WhyUs() {
   const items = [
@@ -33,6 +35,9 @@ export default function WhyUs() {
       icon: 'images/return-of-investment.gif'
     }
   ];
+
+  const router = useRouter();
+
   
   return (
     <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
@@ -66,7 +71,7 @@ export default function WhyUs() {
           
           {/* CTA Button */}
           <div className="w-full sm:w-auto">
-           <button className='w-full sm:w-auto border-2 border-white text-white font-bold rounded-md py-2.5 sm:py-3 px-6 sm:px-8 hover:bg-white/10 active:scale-95 transition-all duration-300 text-sm sm:text-base md:text-lg flex items-center justify-center gap-2 sm:gap-3 group'>
+           <button onClick={() => router.push('/chitplans')} className='w-full sm:w-auto border-2 border-white text-white font-bold rounded-md py-2.5 sm:py-3 px-6 sm:px-8 hover:bg-white/10 active:scale-95 transition-all duration-300 text-sm sm:text-base md:text-lg flex items-center justify-center gap-2 sm:gap-3 group'>
   Enquire Now
   <img 
     src="/images/right-arrow.gif" 
@@ -80,7 +85,7 @@ export default function WhyUs() {
 
       {/* Features Grid */}
       <div className=' my-6 sm:my-8 md:my-12'>
- <h1 className='text-4xl font-bold '>Our Strengths</h1>
+ <h1 className='md:text-4xl text-2xl font-bold '>Our Strengths</h1>
       </div>
       
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 md:gap-6 lg:gap-8 my-6 sm:my-8 md:my-12">

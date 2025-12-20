@@ -251,9 +251,9 @@ export default function ChitPlansComponent() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredChits.map((chit) => (
-                <div key={chit.id} className="bg-primary rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
+                <div key={chit.id} className="bg-primary rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg md:mx-0 mx-10 transition-shadow">
                   <div className="p-4">
                    
                     

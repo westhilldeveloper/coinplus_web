@@ -334,7 +334,7 @@ export default function BlogDisplay() {
                         {formatInlineText(truncateContent(blogs[0].description, 300))}
                       </div>
                       <Link 
-                        href={`/blog/${blogs[0].id}`}
+                        href={`/media/blog/${blogs[0].id}`}
                         className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-700 font-medium"
                       >
                         <span>Read Full Story</span>

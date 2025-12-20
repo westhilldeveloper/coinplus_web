@@ -9,12 +9,12 @@ import CreateChitForm from "../admin/CreateChitForm";
 export default function Whyus() {
   return (
     <div className=" ">
-       <div className="relative w-full h-[25vh] sm:h-[30vh]  lg:h-screen">
+     
+       <div className="relative w-full h-auto">
       <img 
     src="/images/whyus.jpg" 
     alt="arrow"
     fill
-          priority
           className="object-cover"
   />
   </div>

@@ -15,8 +15,10 @@ export async function GET(request) {
     const minValue = searchParams.get('minValue')
     const maxValue = searchParams.get('maxValue')
 
-    // Build where clause
+    // Build where clause - SIMPLIFIED APPROACH
+    // Since chits have their own state field
     const where = {}
+    
     if (state) where.state = state
     if (branch) where.branch = branch
     if (minValue || maxValue) {
