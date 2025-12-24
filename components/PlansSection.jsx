@@ -142,10 +142,10 @@ export default function PlansSection() {
   };
 
   return (
-    <div className="w-full mt-4 sm:mt-6 lg:mt-8 px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+    <div className="w-full mt-4 sm:mt-6 lg:mt-8 px-3 sm:px-2 md:px-2 lg:px-4 xl:px-8 ">
       {/* Header with Title and State Selector */}
       <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-6 gap-4 sm:gap-6">
-        <div className="lg:w-2/3">
+        <div className="lg:w-full">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
             Explore Our <span className="text-primary">Chit Fund Plans</span>
           </h1>

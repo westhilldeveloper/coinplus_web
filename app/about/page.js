@@ -9,9 +9,9 @@ export default function About() {
     <div className=" ">
       <div className="relative w-full h-auto ">
       <img 
-    src="/images/aboutus.jpg" 
+    src="/images/about.jpg" 
     alt="arrow"
-    fill
+    
           className="object-cover"
   />
   </div>

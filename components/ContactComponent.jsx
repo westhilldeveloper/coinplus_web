@@ -12,7 +12,7 @@ const ContactComponent = () => {
       }}
     >
       {/* Optional overlay for better text readability */}
-      <div className="absolute inset-0 bg-primary/40"></div>
+      <div className="absolute inset-0 bg-primary/60"></div>
       
       <div className="relative z-10 w-full  mx-auto">
         <div className="flex flex-col lg:flex-row  items-center gap-8 lg:gap-12">
@@ -22,7 +22,7 @@ const ContactComponent = () => {
               Want to chat? Feel free to contact our team
             </h2>
             
-            <p className="text-base sm:text-lg md:text-xl text-primary mb-8 md:mb-10">
+            <p className="text-base sm:text-lg md:text-xl text-yellow-300 mb-8 md:mb-10">
               Reach out to our experts for personalised guidance and support.
             </p>
           </div>

@@ -281,7 +281,7 @@ const CompanyList = () => {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 md:mb-8">
                 <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-0">
                   <div className={`${companies[activeCompany].color} p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl border border-primary/30`}>
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
+                    <div className="w-12 h-full sm:w-14 sm:h-full md:w-16 md:h-full">
                       <img 
                         src={companies[activeCompany].logo}
                         alt={companies[activeCompany].name}

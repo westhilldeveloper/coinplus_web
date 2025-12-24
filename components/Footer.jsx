@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="relative   rounded-t-lg z-10 mx-4 md:mx-12 px-4 sm:px-4 lg:px-4 py-6 md:py-10 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
             <div className=' justify-center md:justify-start'>
-              <div className='bg-white'>
+              <div className=''>
                <img 
                 src="/images/lg_coinplus.png" 
                 alt="Get a Quote" 

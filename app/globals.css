@@ -1,60 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
-@font-face {
-  font-family: "Podium Sharp";
-  src: url("/public/fonts/DEMO-podiumsharp-55.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
-/* Semi Bold */
- @font-face {
-  font-family: "Podium Sharp";
-  src: url("/fonts/DEMO-podiumsharp-55.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Bold */
-@font-face {
-  font-family: "Podium Sharp";
-  src: url("/fonts/DEMO-podiumsharp-513.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-/* Extra Bold */
-@font-face {
-  font-family: "Podium Sharp";
-  src: url("/fonts/DEMO-podiumsharp-913.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-/* Extra Black */
-@font-face {
-  font-family: "Podium Sharp";
-  src: url("/public/fonts/DEMO-podiumsharp-913.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Italic */
-@font-face {
-  font-family: "Podium Sharp";
-  src: url("/fonts/DEMO-podiumsharp-510.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
 
 
 @theme {
   --color-primary: #5F259F;
   --color-secondary: #0A0A0A;
+    /* Add Open Sans to Tailwind theme */
+  --font-sans: 'Source Serif 4', system-ui, sans-serif;
 }
+
 
 @layer base {
   html {
@@ -64,7 +19,7 @@
  
   
   body {
-    font-family: "Podium Sharp", system-ui, sans-serif;
+    font-family: 'Source Serif 4', system-ui, sans-serif;
   }
 }
 

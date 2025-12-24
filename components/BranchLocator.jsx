@@ -158,7 +158,7 @@ const BranchLocator = () => {
   };
 
   return (
-    <div className="relative py-8 md:py-10 px-4 sm:px-6 shadow-md">
+    <div className="relative py-8 md:py-10 px-4 mx-8 sm:px-6 shadow-md">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('/images/celebration.jpg')] bg-cover bg-center opacity-20"></div>

@@ -19,7 +19,7 @@ const RealStories = () => {
   const fallbackVideos = [
     {
       id: "1",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "9nte4r_FiGQ",
       title: "Customer Success Story",
       subtitle: "Real People, Real Results",
       description: "See how our services have transformed lives.",
@@ -27,7 +27,7 @@ const RealStories = () => {
     },
     {
       id: "2",
-      youtubeId: "L_jWHffIx5E",
+      youtubeId: "Cxgy0EA_3f0",
       title: "Financial Journey",
       subtitle: "Achieving Dreams Together",
       description: "Watch inspiring stories of financial growth.",
@@ -35,20 +35,20 @@ const RealStories = () => {
     },
     {
       id: "3",
-      youtubeId: "9bZkp7q19f0",
+      youtubeId: "elrf36X5_m4",
       title: "Trust & Partnership",
       subtitle: "Building Relationships",
       description: "Discover why customers trust us with their goals.",
       duration: "5:21"
     },
-    {
-      id: "4",
-      youtubeId: "CduA0TULnow",
-      title: "Success Stories",
-      subtitle: "Real Customer Experiences",
-      description: "Hear directly from our satisfied customers.",
-      duration: "6:15"
-    }
+    // {
+    //   id: "4",
+    //   youtubeId: "0e3JYDJXFzg",
+    //   title: "Success Stories",
+    //   subtitle: "Real Customer Experiences",
+    //   description: "Hear directly from our satisfied customers.",
+    //   duration: "6:15"
+    // }
   ];
 
   // Format duration from ISO 8601

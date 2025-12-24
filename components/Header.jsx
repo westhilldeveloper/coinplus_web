@@ -134,8 +134,8 @@ export default function Header() {
               <Image 
                 src="/images/cplogo.png" 
                 alt="Company Logo" 
-                width={isScrolled ? 100 : 120} 
-                height={isScrolled ? 100 : 120}
+                width={isScrolled ? 140 : 160} 
+                height={isScrolled ? 120 : 140}
                 className="transition-all duration-300"
                 priority
               />
@@ -210,7 +210,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="ml-4 px-6 py-2.5 bg-gradient-to-r from-primary to-primary/80 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
               >
-                Contact
+                Pay Now
               </Link>
             </nav>
 
@@ -366,7 +366,7 @@ export default function Header() {
       </header>
 
       {/* Add padding to prevent content from hiding behind fixed header */}
-      <div className="lg:h-0 md:h-4 h-2 "></div>
+      <div className="lg:h-0 md:h-4 h-8 "></div>
     </>
   );
 }

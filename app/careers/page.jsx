@@ -232,7 +232,7 @@ export default function CareersPage() {
       <div className=" ">
   <div className="relative w-full h-auto ">
         <img
-          src="/images/img_careers.jpeg"
+          src="/images/img_careers.jpg"
           alt="FAQs Banner"
           fill
           className="object-cover"

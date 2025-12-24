@@ -3,7 +3,15 @@ import Header from "../components/Header";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import AuthProvider from "./context/AuthContext";
+import { Source_Serif_4 } from 'next/font/google'
 
+// Configure Open Sans font
+const openSans = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-open-sans', // Optional: CSS variable
+})
 
 export const metadata = {
   title: 'CoinPlus',
@@ -51,15 +59,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={openSans.className}>
       <body className="bg-white text-slate-800">
         <AuthProvider>
-        <Header/>
-        {children}
-         
-         <Footer/>
-         <GoogleAnalytics gaId="G-WLRGPBE180" />
-         </AuthProvider>
+          <Header/>
+          {children}
+          <Footer/>
+          <GoogleAnalytics gaId="G-WLRGPBE180" />
+        </AuthProvider>
       </body>
     </html>
   )

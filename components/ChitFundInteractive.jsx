@@ -12,26 +12,26 @@ const ChitFundInteractive = () => {
     {
       id: 1,
       title: "YEARS OF EMPOWERING DREAMS AND GOALS",
-      description: "With over 60 years of consistent growth and a current turnover of Rs. 12,817 crore, we have been empowering dreams and goals across generations.",
+      description: "With over 4 years of consistent growth and a current turnover of Rs. 12,817 crore, we have been empowering dreams and goals across generations.",
       shortTitle: "60+ Years"
     },
     {
       id: 2,
       title: "4200+ Employees",
       description: "Our dedicated team of over 4200 employees works tirelessly to provide excellent service and maintain our position as India's top chit fund company.",
-      shortTitle: "4200+ Employees"
+      shortTitle: "150+ Employees"
     },
     {
       id: 3,
-      title: "17000+ Agents",
+      title: "100+ Agents",
       description: "A vast network of over 17000 agents ensures we reach customers across India, providing convenient savings and borrowing options.",
       shortTitle: "17000+ Agents"
     },
     {
       id: 4,
-      title: "Network of 128 Branches",
+      title: "Network of 35 Branches",
       description: "With 128 branches spread across the country, we offer accessible financial services to help you plan for unforeseen events and ensure stability.",
-      shortTitle: "128 Branches"
+      shortTitle: "35 Branches"
     },
     {
       id: 5,
@@ -84,7 +84,7 @@ useEffect(() => {
 
 
   return (
-    <div className="min-h-2/screen md:min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-2/screen md:min-h-screen w-full bg-gradient-to-b from-blue-50 to-white">
       {/* Curved Line Progress Section */}
       <div className="relative bg-gradient-to-r from-primary to-primary pt-2 pb-2 md:pb-24 overflow-hidden">
         {/* Curved Background */}
@@ -109,10 +109,10 @@ useEffect(() => {
                 const isMobile = screenWidth < 640;
                 // Proper dot sizes - smaller to fit in viewBox
                 const dotRadius = isCurrent
-  ? isMobile ? 26 : 52
+  ? isMobile ? 50 : 52
   : isHovered
-  ? isMobile ? 22 : 44
-  : isMobile ? 24 : 48;// Reduced sizes
+  ? isMobile ? 30 : 44
+  : isMobile ? 30 : 48;// Reduced sizes
                 const outerRingRadius = dotRadius + (isMobile ? 6 : 10); // Reduced sizes
                 const numberFontSize = isMobile ? "20" : "48";
 const labelFontSize = isMobile ? "12" : "24";
@@ -173,7 +173,7 @@ const labelFontSize = isMobile ? "12" : "24";
                         r={dotRadius}
                         fill={isActive ? "#e41538ff" : isHovered ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0.3)"}
                         stroke="white"
-                        strokeWidth={isCurrent ? "3" : isHovered ? "2" : "2"}
+                        strokeWidth={isCurrent ? "3" : isHovered ? "5" : "2"}
                         className="transition-all duration-200"
                       />
                       

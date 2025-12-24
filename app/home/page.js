@@ -21,22 +21,22 @@ export default function Home() {
       <main className="w-full mx-auto px-4 sm:px-2 lg:px-2">
         <Hero />
        
-        <section className="mt-12">
+        <section className="mt-4">
           <PlansSection/>
         </section>
-        <section className="mt-12">
+        <section className="mt-4">
           <WhyUs />
         </section>
-         <section className="mt-12">
+         <section className="mt-4">
           <Vision/>
         </section>
-        <section className="mt-12">
+        <section className="mt-4">
           <BranchLocator/>
         </section>
-         <section className="mt-12">
+         <section className="mt-4">
           <Withus/>
         </section>
-        <section className="mt-12">
+        <section className="mt-4">
           <RealStories/>
         </section>
         <section className="mt-2">
