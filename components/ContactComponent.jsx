@@ -3,7 +3,7 @@ import React from 'react';
 const ContactComponent = () => {
   return (
     <div 
-      className="relative flex justify-between items-center min-h-[100px] md:min-h-[150px] px-2 sm:px-4 lg:px-4 py-4 md:py-6"
+      className="relative flex justify-between items-center min-h-[100px] md:min-h-[150px] px-0 sm:px-4 lg:px-4 py-4 md:py-6"
       style={{
         backgroundImage: `url('/images/family.png')`,
         backgroundSize: 'cover',

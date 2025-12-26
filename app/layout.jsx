@@ -3,10 +3,10 @@ import Header from "../components/Header";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import AuthProvider from "./context/AuthContext";
-import { Source_Serif_4 } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
 // Configure Open Sans font
-const openSans = Source_Serif_4({
+const openSans = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',

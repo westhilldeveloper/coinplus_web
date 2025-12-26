@@ -32,14 +32,11 @@ export default function AdminDashboard() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link href="/admin/chits/create" className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Add New Chit</h2>
-            <p className="text-gray-600">Create a new chit entry</p>
-          </Link>
+         
 
           <Link href="/admin/chits" className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">View All Chits</h2>
-            <p className="text-gray-600">Browse and manage chits</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Chits</h2>
+            <p className="text-gray-600"> manage chits</p>
           </Link>
            <Link href="/admin/media/news" className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
             <h2 className="text-xl font-bold text-gray-900 mb-4">News</h2>

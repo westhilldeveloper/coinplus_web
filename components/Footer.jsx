@@ -17,27 +17,46 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
             <div className=' justify-center md:justify-start'>
               <div className=''>
+                 <img 
+                src="/images/lg_finovest.png" 
+                alt="Get a Quote" 
+                className="w-20 h-12"
+              />
                <img 
                 src="/images/lg_coinplus.png" 
                 alt="Get a Quote" 
-                className=""
+                className="w-3/4"
               />
+             
               </div>
               <img 
-                src="/images/coinplusQr.jpeg" 
+                src="/images/brandLogo.png" 
                 alt="Get a QR Code" 
-                className=""
+                className="w-3/4"
               />
             </div>
             
             {/* Left Column - Chit Plans */}
-            <div className="text-white">
-              <h2 className="text-md md:text-xl font-bold md:mb-6 mb-2">Chit Plans</h2>
-              <div className="space-y-1">
-                <div className="text-sm md:text-md font-semibold text-yellow-300">Pay Installments</div>
-                <div className="text-sm md:text-md font-semibold text-yellow-300">Online Auctions</div>
-              </div>
-            </div>
+           <div className="flex flex-col justify-start text-white">
+  <h2 className="text-md md:text-xl font-bold md:mb-6 mb-2">Chit Plans</h2>
+  <div className="space-y-1">
+    <div className="text-sm md:text-md font-semibold text-yellow-300">Pay Installments</div>
+    <div className="text-sm md:text-md font-semibold text-yellow-300">Online Auctions</div>
+    <div className="text-sm md:text-md font-semibold mt-4 text-yellow-300">Download App</div>
+  </div>
+  <div className="flex justify-start w-1/3"> {/* Added w-full */}
+    <img 
+      src="/images/playStoreQR.png" 
+      alt="Get a QR Code" 
+       className="self-start mr-2"
+    />
+     <img 
+      src="/images/appStore_QR.png" 
+      alt="Get a QR Code" 
+       className="self-start"
+    />
+  </div>
+</div>
 
             {/* Middle Column - Quick Links */}
             <div className="text-white">

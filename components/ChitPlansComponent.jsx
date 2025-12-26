@@ -330,18 +330,7 @@ export default function ChitPlansComponent() {
           )}
         </div>
         
-        {/* Footer */}
-        <footer className="border-t border-gray-200 pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-green-600">© 2023 Chit Plans Dashboard. All rights reserved.</p>
-            </div>
-            <div className="text-center md:text-right">
-              <p className="text-green-600">Contact: support@chitplans.com</p>
-              <p className="text-green-600">Phone: 1800-123-4567</p>
-            </div>
-          </div>
-        </footer>
+       
       </div>
     </div>
   )

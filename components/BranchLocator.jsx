@@ -158,7 +158,7 @@ const BranchLocator = () => {
   };
 
   return (
-    <div className="relative py-8 md:py-10 px-4 mx-8 sm:px-6 shadow-md">
+    <div className="relative py-8 md:py-10 px-2 mx-0 sm:px-6 shadow-md">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('/images/celebration.jpg')] bg-cover bg-center opacity-20"></div>
@@ -199,7 +199,7 @@ const BranchLocator = () => {
                     <select
                       value={selectedState}
                       onChange={(e) => handleStateChange(e.target.value)}
-                      className="w-3/4 px-4 py-3 pr-10 bg-gray-50  rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all appearance-none"
+                      className="w-full px-4 py-3 pr-10 bg-gray-50  rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all appearance-none"
                       required
                       disabled={loadingStates}
                     >
@@ -230,7 +230,7 @@ const BranchLocator = () => {
                       value={selectedBranch}
                       onChange={(e) => setSelectedBranch(e.target.value)}
                       disabled={!selectedState || loadingBranches}
-                      className={`w-3/4 px-4 py-3 pr-10 rounded-md  transition-all appearance-none ${
+                      className={`w-full px-4 py-3 pr-10 rounded-md  transition-all appearance-none ${
                         !selectedState
                           ? "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed"
                           : "bg-gray-50 border-primary/20 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all appearance-none"

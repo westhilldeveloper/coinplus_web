@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className=" font-normal mt-6 md:mt-10 px-2 sm:px-2 lg:px-2 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+    <section className=" font-normal mt-6 md:mt-10 px-0 sm:px-2 lg:px-2 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
       {/* Left Content */}
       <div className="order-2 lg:order-1">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
@@ -65,7 +65,7 @@ export default function Hero() {
   
 >
   <div className="w-full flex  flex-col justify-center items-center">
-    <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto px-4 sm:px-0">
+    <div className="relative w-full  px-0 sm:px-0">
   <div className="relative aspect-video md:aspect-auto md:h-[500px] lg:h-[550px] xl:h-[600px] rounded-xl sm:rounded-2xl overflow-hidden border-2 md:border-0 border-primary shadow-lg sm:shadow-xl">
     <video
       autoPlay

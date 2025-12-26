@@ -308,6 +308,20 @@ export default function ChitDashboard() {
 
   return (
     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+
+      <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">&nbsp;</h1>
+            </div>
+            <button
+              onClick={()=>router.push('/admin/dashboard')}
+              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+            >
+              Dashboard
+            </button>
+          </div>
+        </div>
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-8 py-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

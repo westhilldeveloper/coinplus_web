@@ -7,7 +7,6 @@ export default function News() {
       <img 
     src="/images/news.jpg" 
     alt="arrow"
-    fill
           
           className="object-cover"
   />

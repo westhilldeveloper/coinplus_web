@@ -94,7 +94,7 @@ const Withus = () => {
   };
 
   return (
-    <div className="w-full py-8 md:py-8 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div className="w-full py-8 md:py-8 px-0 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl ">
         {/* Header Section */}
        <div className="text-left mb-4">

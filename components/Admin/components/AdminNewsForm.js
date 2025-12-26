@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function AdminNewsForm() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ export default function AdminNewsForm() {
   const [success, setSuccess] = useState('');
   const [imagePreview, setImagePreview] = useState('');
   const fileInputRef = useRef(null);
+  const router = useRouter();
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
@@ -183,6 +185,17 @@ export default function AdminNewsForm() {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+       <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">&nbsp;</h1>
+            </div>
+            <button
+              onClick={()=>router.push('/admin/dashboard')}
+              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+            >
+              Dashboard
+            </button>
+          </div>
       <h2 className="text-2xl font-bold mb-6 text-gray-800">Add News</h2>
       
       {success && (

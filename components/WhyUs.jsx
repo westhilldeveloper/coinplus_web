@@ -40,7 +40,7 @@ export default function WhyUs() {
 
   
   return (
-    <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-8">
+    <div className="w-full px-0 sm:px-4 md:px-6 lg:px-8 xl:px-8">
       {/* Hero Section */}
       <section 
         id="how" 
@@ -76,7 +76,7 @@ export default function WhyUs() {
   <img 
     src="/images/right-arrow.gif" 
     alt="arrow"
-    className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 opacity-80 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300"
+    className="w-5 h-5 sm:w-6 sm:h-6  rounded-full md:w-7 md:h-7  group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-100"
   />
 </button>
           </div>
@@ -105,15 +105,15 @@ export default function WhyUs() {
                           transition-all duration-700 ease-out z-0"></div>
             
             {/* Icon Container */}
-            <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-primary to-secondary 
-                          rounded-md sm:rounded-md md:rounded-full flex items-center justify-center mb-3 sm:mb-4 md:mb-6 
+            <div className="relative z-10 w-22 h-22  md:w-16 md:h-16  bg-gradient-to-br from-primary to-secondary 
+                          rounded-full sm:rounded-full md:rounded-md flex items-center justify-center mb-3 sm:mb-4 md:mb-6 
                           group-hover:bg-white group-hover:scale-105 sm:group-hover:scale-110 
                           transition-all duration-200 mx-auto sm:mx-0">
               <span className="text-xl sm:text-2xl md:text-3xl group-hover:text-primary transition-colors duration-100">
                <img 
         src={item.icon} 
         alt={item.title}
-        className="rounded-full w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain group-hover:brightness-100 group-hover:contrast-125 transition-all duration-500"
+        className="rounded-full w-20 h-20  md:w-12 md:h-12 object-contain group-hover:brightness-100 group-hover:contrast-125 transition-all duration-500"
         loading="lazy"
       />
               </span>

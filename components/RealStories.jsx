@@ -232,7 +232,7 @@ const RealStories = () => {
   }
 
   return (
-    <div className="w-full py-6 md:py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+    <div className="w-full py-6 md:py-8 px-0 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}

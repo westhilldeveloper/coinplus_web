@@ -192,7 +192,7 @@ const labelFontSize = isMobile ? "12" : "24";
                       {/* Step label below dot - moved further down */}
                       <text 
                         x={position.x} 
-                         y={position.y + (isMobile ? 45 : 90)}
+                         y={position.y + (isMobile ? 55 : 90)}
                         textAnchor="middle" 
                         fill={isActive ? "white" : isHovered ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.9)"} 
                         fontSize={labelFontSize}

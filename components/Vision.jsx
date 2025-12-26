@@ -15,8 +15,8 @@ import {
 
 export default function Vision() {
   return (
-    <div className="w-full py-8 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full py-4 md:py-16 px-0 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-full mx-auto">
         {/* TOP SECTION: IMAGE & VISION */}
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
           
@@ -40,10 +40,10 @@ export default function Vision() {
 </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-4 md:gap-6">
-                <StatItem number="60 Lakh+" label="Satisfied Subscribers" />
-                <StatItem number="128" label="Branches" />
-                <StatItem number="17000+" label="Agents" />
-                <StatItem number="4200+" label="Employees" />
+                <StatItem number="10 K+" label="Satisfied Subscribers" />
+                <StatItem number="35 +" label="Branches" />
+                <StatItem number="170+" label="Agents" />
+                <StatItem number="100+" label="Employees" />
               </div>
             </div>
           </div>

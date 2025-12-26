@@ -139,7 +139,14 @@ export default function Header() {
                 className="transition-all duration-300"
                 priority
               />
-            </Link>
+            </Link> <Link href="/" className="flex items-center " onClick={closeMobileMenu}>
+                <Image 
+                  src="/images/lg_finovest.png" 
+                  alt="Company Logo" 
+                  width={100}
+                  height={100}
+                />
+              </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
@@ -255,6 +262,7 @@ export default function Header() {
                   height={100}
                 />
               </Link>
+             
               {/* <button
                 onClick={closeMobileMenu}
                 className="p-2 rounded-full hover:bg-gray-100 transition-colors"

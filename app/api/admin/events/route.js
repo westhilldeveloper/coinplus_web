@@ -22,8 +22,8 @@ export async function POST(request) {
       );
     }
 
-    // Create events in database
-    const events = await prisma.events.create({
+    // Create event in database
+    const event = await prisma.events.create({
       data: {
         description: description.trim(),
         imageUrl,
@@ -33,14 +33,14 @@ export async function POST(request) {
     return Response.json(
       { 
         success: true, 
-        message: 'events created successfully',
-        data: events 
+        message: 'Event created successfully',
+        data: event 
       },
       { status: 201 }
     );
 
   } catch (error) {
-    console.error('Error creating events:', error);
+    console.error('Error creating event:', error);
     
     return Response.json(
       { 

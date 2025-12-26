@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       
-      <main className="w-full mx-auto px-4 sm:px-2 lg:px-2">
+      <main className="w-full mx-auto px-0 sm:px-2 lg:px-2">
         <Hero />
        
         <section className="mt-4">

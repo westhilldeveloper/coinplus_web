@@ -85,6 +85,17 @@ export default function GalleryList() {
 
   return (
     <div className="space-y-6">
+       <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">&nbsp;</h1>
+            </div>
+            <button
+              onClick={()=>router.push('/admin/dashboard')}
+              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+            >
+              Dashboard
+            </button>
+          </div>
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-800">Galleries</h2>
         <button
