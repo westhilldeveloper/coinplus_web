@@ -42,7 +42,7 @@ const Footer = () => {
   <div className="space-y-1">
     <div className="text-sm md:text-md font-semibold text-yellow-300">Pay Installments</div>
     <div className="text-sm md:text-md font-semibold text-yellow-300">Online Auctions</div>
-    <div className="text-sm md:text-md font-semibold mt-4 text-yellow-300">Download App</div>
+    <div className="text-sm md:text-md font-semibold mb-2 text-yellow-300">Download App</div>
   </div>
   <div className="flex justify-start w-1/3"> {/* Added w-full */}
     <img 

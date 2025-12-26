@@ -355,7 +355,7 @@ export default function Header() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Visit Our Office</h4>
-                    <p className="text-sm text-gray-600">Mon-Fri, 9AM-6PM</p>
+                    <p className="text-sm text-gray-600">Mon-Sat, 9AM-5PM</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -364,7 +364,7 @@ export default function Header() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Call Us</h4>
-                    <p className="text-sm text-gray-600">+1 234 567 8900</p>
+                    <p className="text-sm text-gray-600">+91 97460 03484</p>
                   </div>
                 </div>
               </div>
