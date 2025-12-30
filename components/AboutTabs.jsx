@@ -30,13 +30,13 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Coinplus Chit Fund Private Limited</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              Over six decades ago, Coinplus Chit Fund introduced the people of Andhra Pradesh to a path towards a happier life. At that time, disciplined chit funds were relatively unknown. Coinplus pioneered the concept in 1962.
+             Coinplus is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
             </p>
             <p className="leading-relaxed">
-              As time went on, chit funds gained popularity because individuals recognized them as an ideal means of profitable savings and quick access to funds during contingencies. Today, Coinplus stands as the foremost Chit Fund Company and a household name in south India.
+             
             </p>
             <p className="leading-relaxed">
-              Amidst the emergence of numerous chit fund companies, Coinplus has maintained its leadership position by upholding unwavering values such as honest performance, professional integrity, exceptional service quality and absolute financial discipline. These enduring principles have solidified Coinplus's reputation and distinguished it from its counterparts in an ever-changing landscape.
+              As a new chapter begins, Coinplus is built on a fresh promise: to redefine the digital chit fund experience from the ground up. We are establishing our leadership not on legacy, but on the pillars of exceptional customer support, transparent service, and unwavering financial discipline. Our commitment is to provide every member with responsive, personalized service and the utmost clarity, ensuring a secure and empowering financial journey. This customer-first ethos is the foundation of our identity and our promise to stand out in the industry.
             </p>
           </div>
         </>
@@ -49,10 +49,10 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">A Tradition of Excellence</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              For over six decades, Coinplus has set the standard for excellence in the chit fund industry. Our commitment to maintaining the highest standards of service and financial discipline has earned us the trust of millions of customers across South India.
+              At Coinplus Chits, our foundation is built on trust, community, and the diligent pursuit of our members' aspirations. While our current operations are proudly focused in the vibrant communities of Kerala and Tamil Nadu, our vision is to extend the reliability and benefits of our chit fund services to every corner of India. We are deeply committed to bringing this proven, disciplined form of saving and credit to a national audience, helping more families build financial security and realize their dreams.
             </p>
             <p className="leading-relaxed">
-              We believe that excellence is not just about numbers, but about the positive impact we create in people's lives. Every transaction, every interaction, and every promise kept contributes to our tradition of excellence.
+              Our journey has taught us that true excellence is measured by the positive impact we create in people's lives. Every chit cycle we administer, every question we answer, and every promise we uphold reinforces our core values of transparency and unwavering support. As we look forward to expanding across India, we carry this dedication with us, promising the same standard of personalized service, absolute financial discipline, and community-centric values that have distinguished us in our home states.
             </p>
           </div>
         </>
@@ -62,13 +62,13 @@ const AboutTabs = () => {
       title: 'History of Chit Funds',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">History of Chit Funds</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">The Modern Evolution of Chit Funds</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              Chit funds have been an integral part of Indian financial culture for centuries, originating as community-based savings schemes. The concept revolves around a group of individuals coming together to contribute a fixed amount periodically, with one member receiving the total amount each time through auction or lottery.
+              For centuries, chit funds have been a cornerstone of community finance in India, rooted in trust and collective savings. Traditionally, they operate on a simple principle: a group contributes a fixed sum regularly, and each member takes turns receiving the pooled fund, providing both a disciplined savings habit and timely access to capital.
             </p>
             <p className="leading-relaxed">
-              Coinplus revolutionized this traditional system in 1962 by introducing professional management, transparency, and regulatory compliance. We transformed informal savings circles into a structured, reliable financial instrument that millions could trust for their savings and credit needs.
+              Today, Coinplus is redefining this trusted model for the digital age. While honoring the core community spirit of chit funds, we bring a new standard of professional integrity, technological transparency, and unwavering customer support. Our mission is to transform this timeless financial instrument into a secure, accessible, and empowering tool for a new generation, building a future where disciplined savings and financial growth are within everyone's reach.
             </p>
           </div>
         </>
@@ -78,13 +78,17 @@ const AboutTabs = () => {
       title: 'A Chit Fund Company is as Good as its Foreman',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">A Chit Fund Company is as Good as its Foreman</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Strength is Our System and Our People
+
+</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              In the chit fund business, the foreman plays a crucial role in ensuring the smooth functioning and success of each chit group. At Coinplus, we understand that our strength lies in the quality and integrity of our foremen.
+              In the modern chit fund landscape, trust is built on transparency, robust processes, and direct accountability. At Coinplus, we recognize that our greatest asset is our professional framework and the dedicated team that upholds it.
             </p>
             <p className="leading-relaxed">
-              Our foremen are carefully selected, rigorously trained, and continuously monitored to ensure they uphold our values of transparency, honesty, and customer-centric service. They serve as the vital link between the company and our valued customers, ensuring every transaction is handled with utmost care and professionalism.
+              We have built a system where technology-driven oversight ensures absolute financial discipline and clarity for every member. Our customer support and service teams are rigorously trained to embody our core values of transparency, integrity, and exceptional service. Serving as your primary and trusted point of contact, they ensure every interaction is handled with the utmost care, professionalism, and a commitment to your financial well-being.
+
+
             </p>
           </div>
         </>
@@ -94,26 +98,26 @@ const AboutTabs = () => {
       title: 'Why Coinplus?',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Why Coinplus?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Your Trusted Financial Partner</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-800 mb-3">3 Lakh+ Active Customers</h3>
-                <p className="text-gray-700">Trusted by over 3 lakh satisfied customers who continue to choose us for their financial needs.</p>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Customer Focus</h3>
+                <p className="text-gray-700">We prioritize the needs and satisfaction of our customers.</p>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-800 mb-3">120+ Branches</h3>
-                <p className="text-gray-700">Widespread presence with branches across South India, ensuring accessibility for all our customers.</p>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Experience</h3>
+                <p className="text-gray-700">Backed by the decades of experience of Finovest Chit and Kuries Ltd.</p>
               </div>
             </div>
             <div className="space-y-6">
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-800 mb-3">4200+ Employees</h3>
-                <p className="text-gray-700">A dedicated team of professionals committed to providing excellent service and support.</p>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Technology</h3>
+                <p className="text-gray-700">A user-friendly, secure, and innovative mobile app.</p>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-800 mb-3">17000+ Agents</h3>
-                <p className="text-gray-700">An extensive network of agents bringing our services closer to communities across the region.</p>
+                <h3 className="text-xl font-bold text-blue-800 mb-3">Transparency</h3>
+                <p className="text-gray-700">Complete visibility into your savings and transactions.</p>
               </div>
             </div>
           </div>
@@ -124,13 +128,15 @@ const AboutTabs = () => {
       title: 'Growing Force in Tamil Nadu and Karnataka',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Growing Force in Tamil Nadu and Karnataka</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Commitment to Kerala and Tamil Nadu</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              Coinplus has expanded its presence significantly in Tamil Nadu and Karnataka, establishing itself as a trusted financial partner for individuals and businesses alike. Our growth in these regions reflects our commitment to serving diverse communities with tailored financial solutions.
+              Coinplus has established a strong and growing presence in the vibrant communities of Kerala and Tamil Nadu. We are dedicated to being a trusted financial partner for individuals and families across these key regions, building our reputation on modern service and reliable solutions. Our focus here reflects our core mission: to provide accessible and empowering financial tools where they are needed most.
             </p>
             <p className="leading-relaxed">
-              With dedicated regional teams and localized services, we understand the unique financial needs of customers in Tamil Nadu and Karnataka, offering them the same reliability and excellence that has made us a household name in Andhra Pradesh.
+              Through a deep understanding of the local financial landscape and a network of dedicated professionals on the ground, we serve the unique needs of our members in Kerala and Tamil Nadu. We are committed to delivering the same standard of exceptional customer support, absolute transparency, and financial discipline in every interaction, laying a solid foundation for the communities we serve today and as we look toward future growth.
+
+
             </p>
           </div>
         </>
@@ -144,19 +150,19 @@ const AboutTabs = () => {
           <div className="space-y-6 text-gray-700">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 1: Join a Chit Group</h3>
-              <p>Customers join a chit group by paying an initial subscription amount. Each group has a fixed number of members and a predetermined chit value.</p>
+              <p>Browse and select a chit plan that fits your goals directly from our website or app. Complete your secure registration and pay the initial subscription online to officially join a group with a fixed value and duration.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 2: Regular Contributions</h3>
-              <p>Members make regular monthly contributions as per the chit agreement. These contributions accumulate to form the prize amount.</p>
+              <p>Once enrolled, you contribute a fixed monthly amount online. These automated, secure payments collectively build the total prize pool for your group, fostering a disciplined savings habit.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 3: Monthly Auctions</h3>
-              <p>Each month, members bid for the prize amount. The member willing to take the lowest bid amount receives the prize for that month.</p>
+              <p>Each month, the prize amount is auctioned digitally. Members can participate easily online, and the bidder willing to accept the lowest sum wins that month’s prize. The online system ensures a fair, transparent, and efficient process for everyone.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 4: Continued Participation</h3>
-              <p>Even after winning the prize, members continue to pay their monthly installments until the chit period completes.</p>
+              <p>Even after receiving the prize, you continue your monthly payments until the cycle concludes. This ensures the group's stability and builds your financial credibility, often making you eligible for future chits on favorable terms.</p>
             </div>
           </div>
         </>
@@ -166,13 +172,13 @@ const AboutTabs = () => {
       title: 'Coinplus, a Lifelong Friend',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Coinplus, a Lifelong Friend</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Coinplus, Your Partner in Progress</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              For generations, Coinplus has been more than just a financial institution - we've been a lifelong friend to millions of families. We've celebrated their joys and supported them through challenges, helping them achieve their dreams and secure their futures.
+              At Coinplus, we believe in building financial relationships that last. From the very first interaction, we strive to be more than just a service provider—we aim to be a reliable partner in your journey toward financial well-being. We are here to support your goals, celebrate your milestones, and help you build a more secure future.
             </p>
             <p className="leading-relaxed">
-              Our relationship with customers goes beyond transactions. We build trust, understand aspirations, and provide financial solutions that grow with our customers through different stages of life. This enduring friendship is the foundation of our success and the reason families have trusted us for over six decades.
+              Our commitment extends far beyond a simple transaction. We focus on building trust, understanding your unique aspirations, and providing flexible, transparent financial solutions designed to adapt to your life's changing chapters. This foundation of partnership and personalized support is what we are building today, and it's the reason families are choosing Coinplus as their trusted financial ally for the long term.
             </p>
           </div>
         </>
@@ -250,7 +256,7 @@ const AboutTabs = () => {
                           />
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-primary mb-2">
-                          3 Lakh+
+                          1000 +
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
                           Active Customers
@@ -282,7 +288,7 @@ const AboutTabs = () => {
                           />
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-primary mb-2">
-                          4200+
+                          100+
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
                           Employees
@@ -298,7 +304,7 @@ const AboutTabs = () => {
                           />
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-primary mb-2">
-                          17000+
+                          170+
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
                           Agents

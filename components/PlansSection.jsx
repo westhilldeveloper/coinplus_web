@@ -147,11 +147,11 @@ export default function PlansSection() {
       <div className="flex flex-col lg:flex-row lg:items-start justify-between mb-6 gap-4 sm:gap-6">
         <div className="lg:w-full">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-            Explore Our <span className="text-primary">Chit Fund Plans</span>
+            Discover Your <span className="text-primary">Ideal CoinPlus Plan</span>
           </h1>
           <p className="text-gray-600 mt-2 sm:mt-3 text-sm sm:text-base md:text-lg max-w-2xl">
-            Choose from a variety of plans designed to meet your financial goals. 
-            Filter by state to find plans available in your location.
+           Browse goal-oriented plans and instantly see which ones are available in your location.
+            
           </p>
         </div>
         

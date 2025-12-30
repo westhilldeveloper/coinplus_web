@@ -11,33 +11,33 @@ const ChitFundInteractive = () => {
   const steps = [
     {
       id: 1,
-      title: "YEARS OF EMPOWERING DREAMS AND GOALS",
-      description: "With over 4 years of consistent growth and a current turnover of Rs. 12,817 crore, we have been empowering dreams and goals across generations.",
-      shortTitle: "60+ Years"
+      title: "A NEW ERA OF FINANCIAL EMPOWERMENT",
+      description: "While our journey officially began this year, we stand on the solid foundation and impressive scale of our parent company, Finovest. With a legacy of empowering dreams across generations and a robust operational history reflected in a turnover of thousands of crores, we bring proven strength and discipline to a new digital age. At Coinplus, we are channeling this expertise into a fresh, customer-first approach. We are dedicated to using this strong foundation not as a relic of the past, but as the engine for your future—providing you with the most responsive support, transparent service, and reliable financial tools to achieve your goals.",
+      shortTitle: "New Start"
     },
     {
       id: 2,
-      title: "4200+ Employees",
-      description: "Our dedicated team of over 4200 employees works tirelessly to provide excellent service and maintain our position as India's top chit fund company.",
-      shortTitle: "150+ Employees"
+      title: "A Heritage of Scale, A Focus on You",
+      description: "While Coinplus is a new chapter in digital finance, we are powered by the extensive operational backbone of the Finovest Group. This includes a seasoned professional workforce of thousands, ensuring that behind our modern interface lies decades of institutional expertise in financial discipline and security. For you, this translates into a unique advantage: the reliability and scale of an industry leader, combined with the fresh energy, agile service, and direct customer focus of a new company. Our dedicated teams are committed to channelling this collective strength into providing you with exceptional, personalized support and a seamless experience.",
+      shortTitle: "100+ Employees"
     },
     {
       id: 3,
-      title: "100+ Agents",
-      description: "A vast network of over 17000 agents ensures we reach customers across India, providing convenient savings and borrowing options.",
-      shortTitle: "17000+ Agents"
+      title: "Expert Guidance, Wherever You Are",
+      description: "As part of the Finovest Group, we benefit from one of the industry’s most extensive networks, connecting us to communities nationwide. This vast reach is a testament to our deep-rooted presence and trust. For our members at Coinplus, this network is more than a number—it’s your direct link to knowledgeable, local support. It ensures you have access to personalized guidance and our services right in your community, all backed by the disciplined framework and responsive customer care that defines our new, modern approach.",
+      shortTitle: "100+ Agents"
     },
     {
       id: 4,
-      title: "Network of 35 Branches",
-      description: "With 128 branches spread across the country, we offer accessible financial services to help you plan for unforeseen events and ensure stability.",
-      shortTitle: "35 Branches"
+      title: "A Reliable Presence, Growing for You",
+      description: "Building upon the strong, established foundation of our group, we operate with a significant national footprint that provides stability and deep-rooted trust. This widespread presence ensures a robust framework for all our operations. At Coinplus, we are leveraging this legacy of reliability to build a more connected and accessible future for you. Our focus is on ensuring that our modern digital services are supported by professional, local expertise, giving you the convenience of seamless online management with the assurance of a trusted, tangible presence committed to your financial well-being.",
+      shortTitle: "35 + Branches"
     },
     {
       id: 5,
-      title: "Network of 35 Branches",
-      description: "With 35 additional branches recently opened, we continue to expand our reach to serve more customers across the country.",
-      shortTitle: "35 New Branches"
+      title: "A Local Presence, Nationally Empowered",
+      description: "As Coinplus, we are building our network with a clear, modern vision. Our strategically located branches serve as local hubs of trust and personalized service, ensuring our commitment is always within reach for our members. Each new branch we open is a direct extension of our core promise: to combine the accessibility of local, expert guidance with the innovation and discipline of a new-era financial partner. We are thoughtfully expanding our physical presence to complement our digital services, creating a seamless and supportive ecosystem for your financial journey.",
+      shortTitle: "Network"
     }
   ];
 

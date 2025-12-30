@@ -216,7 +216,7 @@ const RealStories = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Real People, Real Stories
+              Trust Built on Real Results
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-primary to-primary/60 mx-auto my-8 rounded-full"></div>
           </div>
@@ -238,10 +238,10 @@ const RealStories = () => {
         {/* Header Section */}
         <div className="text-left mb-12 md:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl  text-gray-900 mb-4">
-            Real People, Real Stories
+            Trust Built on Real Results
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 text-left max-w-3xl leading-relaxed">
-            We have helped over 60 lakh customers fulfill their dreams.
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 text-left max-w-full leading-relaxed">
+            See for yourself how our plans are helping members turn their goals into reality.
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from-primary to-primary/60 text-left my-8 rounded-full"></div>
         </div>

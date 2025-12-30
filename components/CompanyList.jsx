@@ -22,11 +22,10 @@ const CompanyList = () => {
       id: 0,
       name: 'Janashakti Agro',
       logo: '/images/lg_janashaktiagro.png',
-      shortName: 'Janashakti',
-      description: 'EFinovest Group Pvt. Ltd. (ETPL), consisting of Janashakti Agro, ETV Andhra Pradesh and ETV Telangana, has made a firm place for itself in the hearts of millions of viewers.',
+      shortName: 'Janashakti Agro',
+      description: `FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's Annual General Meeting (AGM) was last held on 21 Dec 2023. and as per records from Ministry of Corporate Affairs (MCA), its balance sheet was last filed on 2023-03-31.FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's NIC code is 0112 (which is part of its CIN). As per the NIC code, it is inolved in Growing of vegetables, horticultural specialties and nursery products.`,
       details: `
-        <p><strong>Janashakti Agro</strong>, a highly popular Telugu satellite channel, has established itself as a premier source of quality entertainment, resonating with and representing the sentiments and needs of its vast audience. Operating under the umbrella of EFinovest Group Private Limited (ETPL), the channel delivers a diverse programming mix that captivates viewers with wholesome and heartfelt content tailored for family audiences.</p>
-        <p>Renowned for its contemporary infotainment, ETPL also operates two 24-hour Telugu news channels, <strong>ETV-ANDHRA PRADESH</strong> and <strong>ETV-TELANGANA</strong>. These channels have earned immense credibility and loyalty among viewers, offering unbiased news and insightful perspectives.</p>
+        FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's Annual General Meeting (AGM) was last held on 21 Dec 2023. and as per records from Ministry of Corporate Affairs (MCA), its balance sheet was last filed on 2023-03-31.<strong>FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's</Strong> NIC code is 0112 (which is part of its CIN). As per the NIC code, it is inolved in Growing of vegetables, horticultural specialties and nursery products.
       `,
       color: 'bg-blue-50 border-blue-200'
     },
@@ -34,23 +33,25 @@ const CompanyList = () => {
       id: 1,
       name: 'JANASHAKTI FOUNDATION',
       logo: '/images/lg_JANASHAKTI FOUNDATION.png',
-      shortName: 'Janashakti',
-      description: 'Largest circulated Telugu daily newspaper with national recognition.',
+      shortName: 'Janashakti Foundation',
+      description: 'Get Instant Personal Loans of upto ₹25 Lakh with lower EMIs & minimal docs from FinCrif instant loan',
       details: `
-        <p><strong>Janashakti</strong> is the largest circulated Telugu daily newspaper in India. Established in 1974, it has grown to become one of the most influential newspapers in the country.</p>
-        <p>With multiple editions across Andhra Pradesh and Telangana, Janashakti reaches millions of readers daily, providing comprehensive coverage of news, politics, business, entertainment, and sports.</p>
+        <p>Finovest Janashakti Foundation is a non-govt company recognized under RoC-Ernakulam. Rooted in reliability and customer-centricity, the organization blends disciplined execution with a pragmatic, outcomes-first mindset. By aligning with established industry practices and transparent governance, it has cultivated a strong reputation among customers, partners, and stakeholders.</p>
+        <p>The company's core strength lies in its ability to translate market needs into practical, scalable solutions. From onboarding to post-delivery support, processes are designed to be clear, auditable, and responsive—ensuring consistency without losing agility. This balance helps Finovest Janashakti Foundation maintain trust and deliver value across engagements.</p>
       `,
       color: 'bg-green-50 border-green-200'
     },
     {
       id: 2,
-      name: 'Finovest',
+      name: 'Finovest Chits and Kuries PVT.LTD ',
       logo: '/images/lg_finovest.png',
-      shortName: 'Finovest',
-      description: 'Parent company overseeing various media and entertainment ventures.',
+      shortName: 'Finovest Chits and Kuries',
+      description: 'Parent company of Coinplus  chit.',
       details: `
-        <p><strong>Finovest</strong> serves as the parent organization for the Finovest Group's diverse business portfolio in media, entertainment, and communications.</p>
-        <p>The company oversees strategic operations and manages the group's investments across various sectors including print media, television, film production, and digital platforms.</p>
+        <p><strong>FINOVEST CHITS & KURIES PRIVATE LIMITED</strong> is involved in activities such as Other financial service activities, except insurance and pension funding activities, n.e.c.</p>
+        <p>FINOVEST CHITS & KURIES PVT LTD's registered office address is Door No. 37 /1314 E, Kalyana Krishna Samskrithi Bhavan, West Of Boys Hs Road, Kannankulangara Junction, Tripunithura, Ernakulam, Ernakulam, Kerala, India, 682301
+click Here For All The Companies At 682301 | Close
+.</p>
       `,
       color: 'bg-purple-50 border-purple-200'
     },
@@ -58,11 +59,11 @@ const CompanyList = () => {
       id: 3,
       name: 'CENTRON',
       logo: '/images/lg_CENTRON.png',
-      shortName: 'CENTRON',
-      description: 'World\'s largest integrated film city and tourist attraction.',
+      shortName: 'CENTRON Constructions',
+      description: `Building tomorrow's landmarks today.`,
       details: `
-        <p><strong>Centron</strong> in Hyderabad is recognized by Guinness World Records as the world's largest film studio complex. Spanning over 1,666 acres, it's a complete ecosystem for film production.</p>
-        <p>Beyond film production, RFC is a major tourist attraction featuring theme parks, hotels, adventure zones, and entertainment venues visited by millions annually.</p>
+        <p>At <strong>Centron,</strong> we are dedicated to transforming visionary ideas into reality through our expertise in infrastructure projects, residential and commercial construction, and comprehensive real estate development. Our diverse range of services encompasses Design and Build Construction, Project Management, and Real Estate Development, all tailored to meet the dynamic needs of our clients. With a focus on delivering excellence and innovation, Centron Constructions stands at the forefront of the industry, backed by a leadership team with unparalleled expertise.</p>
+        <p>Our directors bring a wealth of knowledge, combining rigorous academic credentials from the prestigious institutions such as Indian Institute of Technology Madras (IIT), Royal Institution of Chartered Surveyors (RICS), and Project management Institute (PMI, USA) with extensive international and domestic experience. This blend of academic excellence and practical know-how empowers us to tackle complex projects with confidence and precision. At Centron Constructions, we are committed to exceeding expectations and shaping the future of construction and real estate development. Join us as we build tomorrow's landmarks today.</p>
       `,
       color: 'bg-amber-50 border-amber-200'
     },
@@ -73,20 +74,21 @@ const CompanyList = () => {
       shortName: 'WESTHILL',
       description: 'Leading film distribution company in South Indian cinema.',
       details: `
-        <p><strong>Westhill International</strong> is one of the leading film distribution companies in South India, with a strong presence across multiple states and languages.</p>
-        <p>The company has distributed numerous blockbuster films and plays a crucial role in the regional film industry's distribution network.</p>
+        <p>We, <strong>Westhill International</strong> We, Westhill International, emerged from a strategic foresight– to bridge the gap between India’s vast potential and the opportunities of the global marketplace. Recognizing the increasing interconnectedness of economies worldwide, a group of individuals came together to create a 360° business consultancy in India that could empower both businesses and individuals to thrive internationally. </p>
+        <p>As a core overseas business consultancy, we provide expert guidance and strategic solutions for companies seeking to expand their reach in international markets.</p>
       `,
       color: 'bg-red-50 border-red-200'
     },
     {
       id: 5,
       name: 'Coinplus',
-      logo: '/images/lg_coinplus.png',
+      logo: '/images/coinplus.png',
       shortName: 'Coinplus',
-      description: 'Diversified business group with interests in hotels and hospitality.',
+      description: 'An efficient fintech product from the leading financial service provider in India.',
       details: `
-        <p>The <strong>Coinplus</strong> manages a portfolio of hospitality and service businesses including luxury hotels, resorts, and convention centers.</p>
-        <p>Known for its premium properties and exceptional service standards, the group has established itself as a leader in the hospitality sector.</p>
+        <p><strong>Coinplus</strong>  is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.</p>
+        <p>Coinplus represents the evolution of the traditional “chits” into a modern, accessible,and transparent digital platform. It’s a 100% digital systematic savings plan designed to make saving easy, rewarding, and secure. Registered under the Chit Fund Act 1982,
+Coinplus ensures the protection of your investments.</p>
       `,
       color: 'bg-teal-50 border-teal-200'
     },
@@ -95,10 +97,10 @@ const CompanyList = () => {
       name: 'Gold Centro',
       logo: '/images/lg_goldcentro.png',
       shortName: 'CENTRON',
-      description: 'World\'s largest integrated film city and tourist attraction.',
+      description: 'Sell your old Gold / Release Your Pledged Gold ',
       details: `
-        <p><strong>Centron</strong> in Hyderabad is recognized by Guinness World Records as the world's largest film studio complex. Spanning over 1,666 acres, it's a complete ecosystem for film production.</p>
-        <p>Beyond film production, RFC is a major tourist attraction featuring theme parks, hotels, adventure zones, and entertainment venues visited by millions annually.</p>
+        <p> In India, pledging gold ornaments for quick financial relief is a long-ongoing practice, whether it is for medical emergencies, business funding, or education purposes. While it is still wise to choose a gold loan for small funding, it is not advised to pledge gold for large sums of money in the increasing interest rates and evolving market conditions; it is a high risk. </p>
+        <p>But if the high interest rates put you into more financial trouble, we can help you release your pledged gold. You can visit your nearest Gold Centro branch with all the documents, and we will clear your gold loan, release your pledged gold, and buy it from you at the current market price and the gold purity.</p>
       `,
       color: 'bg-amber-50 border-amber-200'
     },
@@ -107,10 +109,10 @@ const CompanyList = () => {
       name: 'WESTHILL Travel and Tours',
       logo: '/images/lg_travltour.png',
       shortName: 'WESTHILL',
-      description: 'Leading film distribution company in South Indian cinema.',
+      description: 'Your trusted partner in creating unforgettable global travel experiences',
       details: `
-        <p><strong>Westhill International</strong> is one of the leading film distribution companies in South India, with a strong presence across multiple states and languages.</p>
-        <p>The company has distributed numerous blockbuster films and plays a crucial role in the regional film industry's distribution network.</p>
+        <p><strong>Westhill Travel and Tourism</strong> we believe travel is more than just reaching a destination, it’s about the experiences you live, the memories you create, and the journeys that stay with you forever. And behind every great journey is a partner you can trust. That’s where we come in. holistic approach. That's why we offer a comprehensive suite of services designed to cater to every type of traveler and travel need.</p>
+        <p>For those seeking luxury, adventure, or relaxation, our curated leisure tours take you to the most captivating destinations around the world. Each itinerary is thoughtfully designed to combine comfort, convenience, and unique experiences that leave lasting memories.</p>
       `,
       color: 'bg-red-50 border-red-200'
     },
@@ -320,44 +322,44 @@ const CompanyList = () => {
                   <div className="text-center p-2 sm:p-3 md:p-4 bg-white rounded-lg shadow-sm">
                     <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1">
                       {activeCompany === 0 ? '24/7' : 
-                       activeCompany === 1 ? '40+' : 
-                       activeCompany === 2 ? '100+' :
-                       activeCompany === 3 ? '1666' :
-                       activeCompany === 4 ? '500+' : '15+'}
+                       activeCompany === 1 ? '3+ Years' : 
+                       activeCompany === 2 ? '10+' :
+                       activeCompany === 3 ? '' :
+                       activeCompany === 4 ? '' : ''}
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
-                      {activeCompany === 0 ? 'News Channels' : 
-                       activeCompany === 1 ? 'Editions' : 
+                      {activeCompany === 0 ? 'Service' : 
+                       activeCompany === 1 ? 'Experience' : 
                        activeCompany === 2 ? 'Businesses' :
-                       activeCompany === 3 ? 'Acres' :
-                       activeCompany === 4 ? 'Films' : 'Hotels'}
+                       activeCompany === 3 ? '' :
+                       activeCompany === 4 ? 'Travel and Tourism' : ''}
                     </div>
                   </div>
                   
                   <div className="text-center p-2 sm:p-3 md:p-4 bg-white rounded-lg shadow-sm">
                     <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1">
-                      {activeCompany === 0 ? 'Millions' : 
-                       activeCompany === 1 ? '5M+' : 
-                       activeCompany === 2 ? '5000+' :
-                       activeCompany === 3 ? '2M+' :
-                       activeCompany === 4 ? '1000+' : '5000+'}
+                      {activeCompany === 0 ? '1000 +' : 
+                       activeCompany === 1 ? '100%  Digital' : 
+                       activeCompany === 2 ? '100%' :
+                       activeCompany === 3 ? '24 * 7' :
+                       activeCompany === 4 ? '24 * 7' : ''}
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
-                      {activeCompany === 0 ? 'Viewers' : 
-                       activeCompany === 1 ? 'Readers' : 
-                       activeCompany === 2 ? 'Employees' :
-                       activeCompany === 3 ? 'Visitors/Year' :
-                       activeCompany === 4 ? 'Theaters' : 'Rooms'}
+                      {activeCompany === 0 ? 'Customers' : 
+                       activeCompany === 1 ? 'Digital & Secure' : 
+                       activeCompany === 2 ? 'Secure' :
+                       activeCompany === 3 ? 'Service' :
+                       activeCompany === 4 ? 'Service' : ''}
                     </div>
                   </div>
                   
                   <div className="text-center p-2 sm:p-3 md:p-4 bg-white rounded-lg shadow-sm">
                     <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1">
-                      {activeCompany === 0 ? '1995' : 
-                       activeCompany === 1 ? '1974' : 
+                      {activeCompany === 0 ? '2022' : 
+                       activeCompany === 1 ? '2023' : 
                        activeCompany === 2 ? '1976' :
                        activeCompany === 3 ? '1996' :
-                       activeCompany === 4 ? '1985' : '1990'}
+                       activeCompany === 4 ? '2025' : ''}
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
                       Established

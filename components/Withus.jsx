@@ -1,57 +1,57 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star, Users, Target, Award } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Users, Target, MapPin, UserCheck, ShieldCheck, FileText, Award } from "lucide-react";
 
 const Withus = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cardsPerSlide, setCardsPerSlide] = useState(2); // Default to 2 cards
   
   // Card data for carousel
-  const cards = [
-    {
-      id: 1,
-      title: "4200+ Employees",
-      description: "We owe our success to a talented, diverse team of 4200 employees who embody our values. Their dedication has propelled us to remarkable milestones and exceeded our goals.",
-      icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
-      color: "bg-blue-50 border-blue-100"
-    },
-    {
-      id: 2,
-      title: "61 Years of Excellence",
-      description: "Six decades of empowering dreams and goals. Celebrating 61 years of trust, growth, and financial empowerment across the nation.",
-      icon: <Award className="w-6 h-6 md:w-8 md:h-8" />,
-      color: "bg-purple-50 border-purple-100"
-    },
-    {
-      id: 3,
-      title: "No.1 Chit Fund Company",
-      description: "Your trusted partner for financial growth and security. With convenient savings and borrowing options, we help you plan for unforeseen circumstances.",
-      icon: <Star className="w-6 h-6 md:w-8 md:h-8" />,
-      color: "bg-green-50 border-green-100"
-    },
-    {
-      id: 4,
-      title: "Rs. 12,877 Crore Turnover",
-      description: "With 60+ years of consistent growth and current turnover of Rs. 12,877 crore, we are India's leading chit fund company.",
-      icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
-      color: "bg-orange-50 border-orange-100"
-    },
-    {
-      id: 5,
-      title: "60 Lakh+ Subscribers",
-      description: "Trusted by millions across the nation. Our consistent performance and ethical practices have earned us the loyalty of over 60 lakh subscribers.",
-      icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
-      color: "bg-red-50 border-red-100"
-    },
-    {
-      id: 6,
-      title: "128+ Branches",
-      description: "Widest network across India with 128+ branches serving customers in every major city. Our extensive reach ensures accessibility for all.",
-      icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
-      color: "bg-indigo-50 border-indigo-100"
-    }
-  ];
+ const cards = [
+  {
+    id: 1,
+    title: "10,000+ Happy Members",
+    description: "A growing community of trust. From saving for a home to funding education, we’ve already helped over 10,000 members move closer to their dreams.",
+    icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
+    color: "bg-blue-50 border-blue-100"
+  },
+  {
+    id: 2,
+    title: "Modern & Transparent",
+    description: "Built for today’s saver. We offer fully digital plans, real-time tracking, and clear terms—no hidden clauses, no surprises.",
+    icon: <Award className="w-6 h-6 md:w-8 md:h-8" />,
+    color: "bg-purple-50 border-purple-100"
+  },
+  {
+    id: 3,
+    title: "35+ Branch Network",
+    description: "Accessible where you are. With 35+ branches and growing, we bring trusted chit fund services closer to communities across the region.",
+    icon: <MapPin className="w-6 h-6 md:w-8 md:h-8" />, // Consider MapPin icon for branches
+    color: "bg-green-50 border-green-100"
+  },
+  {
+    id: 4,
+    title: "170+ Trusted Local Agents",
+    description: "Personal guidance in your neighborhood. Our network of 170+ agents provides face-to-face support and simplifies your chit journey.",
+    icon: <UserCheck className="w-6 h-6 md:w-8 md:h-8" />, // Or Users icon
+    color: "bg-orange-50 border-orange-100"
+  },
+  {
+    id: 5,
+    title: "100% Digital & Secure",
+    description: "Safe, smart, and paperless. From sign-up to withdrawals, every transaction is secured with bank-grade encryption and compliance.",
+    icon: <ShieldCheck className="w-6 h-6 md:w-8 md:h-8" />, // Security-focused icon
+    color: "bg-red-50 border-red-100"
+  },
+  {
+    id: 6,
+    title: "Backed by RBI Guidelines",
+    description: "Your trust is our priority. We operate under strict regulatory frameworks to ensure your savings are always protected and managed ethically.",
+    icon: <FileText className="w-6 h-6 md:w-8 md:h-8" />, // Represents compliance
+    color: "bg-indigo-50 border-indigo-100"
+  }
+];
 
   // Set responsive cards per slide
   useEffect(() => {
@@ -99,10 +99,10 @@ const Withus = () => {
         {/* Header Section */}
        <div className="text-left mb-4">
   <h1 className="text-3xl sm:text-4xl md:text-5xl  text-gray-900 mb-4">
-    Why us
+    Why Choose CoinPlus?
   </h1>
-  <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed text-left">
-    Backed by experience and trusted by the nation — secure your financial future with our expertise.
+  <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-full leading-relaxed text-left">
+    proven experience, national trust, and a commitment to your financial security.
   </p>
   <div className="w-32 h-1 bg-gradient-to-r from-primary to-primary/60 my-8 rounded-full"></div>
 </div>
@@ -117,18 +117,18 @@ const Withus = () => {
                 {/* Background Image Overlay */}
                 <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-20 rounded-2xl"></div>
                 
-                <span className="text-base sm:text-lg font-medium opacity-90 relative z-10">CELEBRATING</span>
-                <span className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold my-4 relative z-10">61</span>
-                <span className="text-lg sm:text-xl md:text-2xl font-semibold relative z-10 text-center">YEARS OF EMPOWERING</span>
-                <span className="text-base sm:text-lg md:text-xl relative z-10">DREAMS AND GOALS</span>
+                <span className="text-base sm:text-lg font-medium opacity-90 relative z-10">At </span>
+                <span className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold my-4 relative z-10"> CoinPlus,</span>
+                <span className="text-lg sm:text-xl md:text-2xl font-semibold relative z-10 text-center"></span>
+                <span className="text-base sm:text-lg md:text-xl relative z-10"> we're redefining  chit funds with modern tools and genuine commitment.</span>
                 
                 {/* Mergeders Text */}
                 <div className="mt-8 relative z-10 text-center">
-                  <p className="text-white font-bold text-xl sm:text-2xl">
-                    Mergeders!
+                  <p className="text-white  text-md sm:text-md">
+                  Powered by  
                   </p>
                   <p className="text-white/80 italic text-lg">
-                    OH! FUNDS MIGHT LIVED!
+                   Finovest
                   </p>
                 </div>
               </div>
@@ -167,11 +167,11 @@ const Withus = () => {
                                   {card.icon}
                                 </div>
                               </div>
-                              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 line-clamp-2">
+                              <h3 className="text-2xl sm:text-lg font-bold text-gray-800 line-clamp-2">
                                 {card.title}
                               </h3>
                             </div>
-                            <p className="text-gray-600 text-base leading-relaxed flex-grow line-clamp-6">
+                            <p className="text-gray-600 text-xl md:text-sm leading-relaxed flex-grow line-clamp-6">
                               {card.description}
                             </p>
                           </div>
