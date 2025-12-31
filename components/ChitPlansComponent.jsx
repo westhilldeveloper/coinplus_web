@@ -46,7 +46,13 @@ export default function ChitPlansComponent() {
       setLoading(false)
     }
   }
-  
+   // Get the state label
+  const getStateLabel = (stateCode) => {
+    if (!stateCode) return "All Branches";
+    const state = states.find(s => s.state === stateCode);
+    return state ? state.label : stateCode;
+  };
+
   const applyFilters = () => {
     let result = [...chits]
     
@@ -245,8 +251,12 @@ export default function ChitPlansComponent() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                         <div>
-                          <p className="font-medium text-white">{chit.location}</p>
-                          <p className="text-xs text-red-300">{chit.branch}, {chit.state}</p>
+                         <p className="font-medium text-white text-xs sm:text-sm leading-tight">
+                          {chit.location} {getStateLabel(chit.state)}
+                        </p>
+                        {chit.branch && (
+                          <p className="text-xs text-white">Branch: {chit.branch}</p>
+                        )}
                         </div>
                       </div>
                     </div>
@@ -256,7 +266,7 @@ export default function ChitPlansComponent() {
                       <div className=" px-4 rounded-lg">
                         
                         <p className="font-semibold text-white">
-                          {chit.monthly_contribution ? `₹${formatCurrency(chit.monthly_contribution)} /Month` : 'N/A'}
+                          {chit.monthly_contribution ? `₹${formatCurrency(chit.monthly_contribution)} / ${chit.duration_unit}` : 'N/A'}
                         </p>
                       </div>
                       
@@ -265,7 +275,13 @@ export default function ChitPlansComponent() {
     <svg className="w-4 h-4 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
     </svg>
-    <span>Duration: &nbsp; </span> {chit.duration_months || 'N/A'} months
+    <span>Duration: &nbsp; </span>  {chit.duration_value && chit.duration_unit ? (
+    <span className="text-green-400 text-lg font-bold">
+      {chit.duration_value}<span className="text-red-300 "> {chit.duration_unit}</span>
+    </span>
+  ) : (
+    <span className="text-gray-400">—</span>
+  )}
   </span>
 </div>
                     </div>
