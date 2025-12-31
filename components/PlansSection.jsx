@@ -20,6 +20,7 @@ export default function PlansSection() {
   const [chits, setChits] = useState([]);
   const [filteredChits, setFilteredChits] = useState([]);
 
+
   // Fetch states from database
   const fetchStates = async () => {
     try {
@@ -44,13 +45,13 @@ export default function PlansSection() {
     // Build query parameters
     const params = new URLSearchParams();
     params.append('limit', '100'); // Fetch more items
-    
+    console.log("params====>",params)
     // Add state filter directly (since chits have state field)
     if (selectedState && selectedState !== "") {
       params.append('state', selectedState);
     }
 
-    const response = await fetch(`/api/chits?${params.toString()}`);
+    const response = await fetch(`/api/chits/all?${selectedState}`);
     if (!response.ok) throw new Error('Failed to fetch chits');
     const data = await response.json();
     
@@ -125,9 +126,12 @@ export default function PlansSection() {
   };
 
   // Get the state label
-  const getStateLabel = (stateCode) => {
+ 
+  const getStateLabel = (stateCode) => { 
+  
     if (!stateCode) return "All Branches";
     const state = states.find(s => s.state === stateCode);
+      
     return state ? state.label : stateCode;
   };
 

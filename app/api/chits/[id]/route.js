@@ -38,6 +38,7 @@ function serializeBigInts(data) {
 export async function GET(request, { params }) {
   try {
     // Await params first
+    console.log("state===in backend==>", params)
     const { id } = await params
     const parsedId = parseInt(id)
 
