@@ -428,7 +428,7 @@ const BranchLocator = () => {
           <h2 className="text-md md:text-lg font-semibold text-gray-700 mb-4">
             Branches in {selectedState}
           </h2>
-          <div className="space-y-2 text-sm">
+          <div className="space-y-2 text-sm max-h-[400px] overflow-y-auto pr-2">
             {branchData[selectedState]?.map((branch) => (
               <button
                 key={branch.id}
