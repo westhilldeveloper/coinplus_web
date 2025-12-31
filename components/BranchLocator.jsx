@@ -304,12 +304,12 @@ const BranchLocator = () => {
                   >
                     {submitting ? (
                       <>
-                        <Loader2 className="w-8 h-8 animate-spin" />
+                        <Loader2 className="w-4 h-4 animate-spin" />
                         <span className="animate-pulse">🚀 SEARCHING BRANCHES...</span>
                       </>
                     ) : (
                       <>
-                        <Search className="w-8 h-8 animate-bounce" />
+                        {/* <Search className="w-4 h-4 animate-bounce" /> */}
                         <span className="tracking-widest">FIND MY BRANCH NOW!</span>
                       </>
                     )}
