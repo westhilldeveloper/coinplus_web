@@ -3,65 +3,15 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
-}
-
-model Chit {
-  id                   Int      @id @default(autoincrement())
-  chit_value           Float
-  location             String
-  state                String
-  branch               String
-  phone_number_1       String?
-  phone_number_2       String?
-  monthly_contribution Float?
-  chit_group           String?
-  duration_months      Int?
-  created_at           DateTime @default(now())
-  updated_at           DateTime @updatedAt
-
-  @@index([state])
-  @@index([branch])
-  @@index([chit_value])
-}
-
-model News {
-  id          Int      @id @default(autoincrement())
-  description String   @db.Text
-  imageUrl    String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([createdAt])
-}
-
-model Events {
-  id          Int      @id @default(autoincrement())
-  description String   @db.Text
-  imageUrl    String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([createdAt])
-}
-
-model Gallery {
-  id          Int        @id @default(autoincrement())
-  title       String
-  description String     @db.Text
-  images      String[]   // Array of image URLs
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
-
-  @@index([createdAt])
 }
 
 model Blog {
   id          Int      @id @default(autoincrement())
   title       String
-  description String   @db.Text  // This will store the formatted text
+  description String
   imageUrl    String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -70,21 +20,72 @@ model Blog {
 }
 
 model Branch {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  address   String
+  city      String
+  state     String
+  pincode   String
+  email     String
+  phone1    String
+  phone2    String?
+  latitude  Float?
+  longitude Float?
+  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([city])
+  @@index([name])
+  @@index([state])
+}
+
+model Chit {
+  id                   Int       @id @default(autoincrement())
+  chit_value           Float
+  location             String?    // Will make optional in migration
+  state                String?    // Will make optional in migration
+  branch               String?    // Will make optional in migration
+  phone_number_1       BigInt?   // Changed to BigInt? to match DB
+  phone_number_2       BigInt?   // Changed to BigInt? to match DB
+  monthly_contribution Float?
+  chit_group           String?
+  duration_value       Int?      // Original value entered by user
+  duration_unit        String? 
+  created_at           DateTime  @default(now())
+  updated_at           DateTime  @updatedAt  // Added @updatedAt
+
+  @@index([state])
+  @@index([branch])
+  @@index([chit_value])
+}
+
+model Events {
   id          Int      @id @default(autoincrement())
-  name        String   @unique
-  address     String   @db.Text
-  city        String
-  state       String
-  pincode     String
-  email       String
-  phone1      String
-  phone2      String?
-  latitude    Float?
-  longitude   Float?
+  description String
+  imageUrl    String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  @@index([state])
-  @@index([city])
-  @@index([name])
+  @@index([createdAt])
+}
+
+model Gallery {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  images      String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt 
+
+  @@index([createdAt])
+}
+
+model News {
+  id          Int      @id @default(autoincrement())
+  description String
+  imageUrl    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([createdAt])
 }

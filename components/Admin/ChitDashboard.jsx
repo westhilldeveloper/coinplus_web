@@ -787,88 +787,155 @@ export default function ChitDashboard() {
 
       {/* Edit Modal */}
       {editingChit && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            <div className="p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Edit Chit #{editingChit.id}</h2>
-                <button
-                  onClick={() => setEditingChit(null)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              
-              <form onSubmit={handleEditSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Chit Value</label>
-                    <input
-                      type="number"
-                      value={editingChit.chit_value}
-                      onChange={(e) => setEditingChit({...editingChit, chit_value: parseFloat(e.target.value)})}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
-                    <input
-                      type="text"
-                      value={editingChit.location}
-                      onChange={(e) => setEditingChit({...editingChit, location: e.target.value})}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">State</label>
-                    <input
-                      type="text"
-                      value={editingChit.state}
-                      onChange={(e) => setEditingChit({...editingChit, state: e.target.value})}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Branch</label>
-                    <input
-                      type="text"
-                      value={editingChit.branch}
-                      onChange={(e) => setEditingChit({...editingChit, branch: e.target.value})}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex justify-end space-x-4 pt-6">
-                  <button
-                    type="button"
-                    onClick={() => setEditingChit(null)}
-                    className="px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-50"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700"
-                  >
-                    Save Changes
-                  </button>
-                </div>
-              </form>
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+      <div className="p-8">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-900">Edit Chit #{editingChit.id}</h2>
+          <button
+            onClick={() => setEditingChit(null)}
+            className="text-gray-400 hover:text-gray-600"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        <form onSubmit={handleEditSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Chit Value */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Chit Value *</label>
+              <input
+                type="number"
+                value={editingChit.chit_value}
+                onChange={(e) => setEditingChit({...editingChit, chit_value: parseFloat(e.target.value)})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            
+            {/* Location */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+              <input
+                type="text"
+                value={editingChit.location || ''}
+                onChange={(e) => setEditingChit({...editingChit, location: e.target.value || null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+              />
+            </div>
+            
+            {/* State */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">State</label>
+              <input
+                type="text"
+                value={editingChit.state || ''}
+                onChange={(e) => setEditingChit({...editingChit, state: e.target.value || null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+              />
+            </div>
+            
+            {/* Branch */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Branch</label>
+              <input
+                type="text"
+                value={editingChit.branch || ''}
+                onChange={(e) => setEditingChit({...editingChit, branch: e.target.value || null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+              />
+            </div>
+            
+            {/* Phone Number 1 */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Primary Phone</label>
+              <input
+                type="text"
+                value={editingChit.phone_number_1 || ''}
+                onChange={(e) => setEditingChit({...editingChit, phone_number_1: e.target.value || null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+              />
+            </div>
+            
+            {/* Phone Number 2 */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Alternate Phone</label>
+              <input
+                type="text"
+                value={editingChit.phone_number_2 || ''}
+                onChange={(e) => setEditingChit({...editingChit, phone_number_2: e.target.value || null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+              />
+            </div>
+            
+            {/* Monthly Contribution */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Monthly Contribution</label>
+              <input
+                type="number"
+                value={editingChit.monthly_contribution || ''}
+                onChange={(e) => setEditingChit({...editingChit, monthly_contribution: e.target.value ? parseFloat(e.target.value) : null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+                min="0"
+                step="0.01"
+              />
+            </div>
+            
+            {/* Duration Months */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Duration (Months)</label>
+              <input
+                type="number"
+                value={editingChit.duration_months || ''}
+                onChange={(e) => setEditingChit({...editingChit, duration_months: e.target.value ? parseInt(e.target.value) : null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+                min="1"
+              />
+            </div>
+            
+            {/* Chit Group */}
+            <div className="md:col-span-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Chit Group Name</label>
+              <input
+                type="text"
+                value={editingChit.chit_group || ''}
+                onChange={(e) => setEditingChit({...editingChit, chit_group: e.target.value || null})}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
+                placeholder="Optional"
+              />
             </div>
           </div>
-        </div>
-      )}
+          
+          <div className="flex justify-end space-x-4 pt-6">
+            <button
+              type="button"
+              onClick={() => setEditingChit(null)}
+              className="px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-50"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700"
+            >
+              Save Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+)}
 
       {/* Delete Modal */}
       {showDeleteModal && chitToDelete && (

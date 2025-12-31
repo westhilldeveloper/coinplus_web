@@ -239,43 +239,57 @@ const BranchLocator = () => {
 
                 {/* Branch Selection - EXTREME */}
                 <div className="transform hover:scale-[1.02] transition-all duration-300">
-                  <label className="block text-sm font-extrabold text-white mb-3 tracking-wider">
-                    🏢 SELECT YOUR BRANCH 
-                  </label>
-                  <div className="relative group">
-                    <select
-                      value={selectedBranch}
-                      onChange={(e) => setSelectedBranch(e.target.value)}
-                      disabled={!selectedState || loadingBranches}
-                      className={`w-full px-4 py-4 pr-12 text-sm font-bold rounded-2xl border-[3px] transition-all appearance-none shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] ${
-                        !selectedState
-                          ? "bg-gray-800 border-gray-600 text-gray-500 cursor-not-allowed"
-                          : "bg-gradient-to-r from-gray-900 to-black text-white border-primary hover:border-yellow-400 hover:shadow-[0_0_30px_primary] focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/50 outline-none"
-                      }`}
-                      required
-                    >
-                      <option value="" className="bg-black">
-                        {loadingBranches ? "🔄 LOADING BRANCHES..." : 
-                         !selectedState ? "SELECT STATE FIRST" : 
-                         branches.length === 0 ? "❌ NO BRANCHES AVAILABLE" : 
-                         "CHOOSE YOUR BRANCH"}
-                      </option>
-                      {branches?.map((branch) => (
-                        <option key={branch.id} value={branch.id} className="bg-black text-white py-2">
-                          🏦 {branch.name.toUpperCase()} 🏦
-                        </option>
-                      ))}
-                    </select>
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                      {loadingBranches ? (
-                        <Loader2 className="text-yellow-400 animate-spin size-8" />
-                      ) : (
-                        <ChevronDown className="text-yellow-400 size-8 animate-bounce" />
-                      )}
-                    </div>
-                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  </div>
-                </div>
+  <label className="block text-sm font-extrabold text-white mb-3 tracking-wider">
+    🏢 SELECT YOUR BRANCH 
+  </label>
+  <div className="relative group">
+    <select
+      value={selectedBranch}
+      onChange={(e) => setSelectedBranch(e.target.value)}
+      disabled={!selectedState || loadingBranches}
+      className={`w-full px-4 py-4 pr-12 text-sm font-bold rounded-2xl border-[3px] transition-all appearance-none shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] ${
+        !selectedState
+          ? "bg-gray-800 border-gray-600 text-gray-500 cursor-not-allowed"
+          : "bg-gradient-to-r from-gray-900 to-black text-white border-primary hover:border-yellow-400 hover:shadow-[0_0_30px_primary] focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/50 outline-none"
+      }`}
+      required
+      style={{
+        height: '56px', // Fixed height for the select
+      }}
+    >
+      <option value="" className="bg-black py-3">
+        {loadingBranches ? "🔄 LOADING BRANCHES..." : 
+         !selectedState ? "SELECT STATE FIRST" : 
+         branches.length === 0 ? "❌ NO BRANCHES AVAILABLE" : 
+         "CHOOSE YOUR BRANCH"}
+      </option>
+      {branches?.map((branch) => (
+        <option 
+          key={branch.id} 
+          value={branch.id} 
+          className="bg-black text-white py-2 truncate"
+          title={branch.name.toUpperCase()} // Tooltip for full text
+          style={{
+            maxWidth: '100%',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          🏦 {branch.name.length > 25 ? branch.name.substring(0, 22).toUpperCase() + '...' : branch.name.toUpperCase()}
+        </option>
+      ))}
+    </select>
+    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+      {loadingBranches ? (
+        <Loader2 className="text-yellow-400 animate-spin size-8" />
+      ) : (
+        <ChevronDown className="text-yellow-400 size-8 animate-bounce" />
+      )}
+    </div>
+    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+  </div>
+</div>
 
                 {/* Submit Button - EXTREME */}
                 <div className="pt-6">

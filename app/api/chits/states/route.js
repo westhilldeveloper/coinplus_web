@@ -18,7 +18,7 @@ const STATE_MAP = {
 export async function GET() {
   try {
     // Get unique states from CHITS table (not branches)
-    const uniqueStates = await prisma.chit.groupBy({
+    const uniqueStates = await prisma.branch.groupBy({
       by: ['state'],
       _count: {
         id: true,

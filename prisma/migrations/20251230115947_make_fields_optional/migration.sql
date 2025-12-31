@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "Chit" 
+ALTER COLUMN "location" DROP NOT NULL,
+ALTER COLUMN "state" DROP NOT NULL,
+ALTER COLUMN "branch" DROP NOT NULL;

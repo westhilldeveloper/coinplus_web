@@ -132,7 +132,7 @@ export default function ChitPlansComponent() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
        
-        <div className="   px-2 ">
+        <div className="   px-0 ">
           <div className="flex justify-end">
   <div className="relative group bg-primary">
     <button
@@ -163,7 +163,7 @@ export default function ChitPlansComponent() {
   
 </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {/* State Filter */}
             <div className=''>
             
@@ -196,35 +196,7 @@ export default function ChitPlansComponent() {
               </select>
             </div>
             
-            {/* Duration Filter */}
-            <div>
-  <select
-    value={selectedState}
-    onChange={(e) => setSelectedState(e.target.value)}
-    className="w-full px-4 py-3 border-0  border-gray-300 text-white rounded-t-lg focus:ring-0 focus:outline-none focus:border-b-2 focus:border-blue-500 transition-colors"
-  >
-    {durations.map((duration) => (
-      <option key={duration} value={duration} className='text-gray-700'>
-        {duration === 'all' ? 'All Durations' : `${duration} months`}
-      </option>
-    ))}
-  </select>
-</div>
             
-            {/* Sort Filter */}
-            <div>
-            
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                 className="w-full px-4 py-3 border-0  border-gray-300 text-white rounded-t-lg focus:ring-0 focus:outline-none focus:border-b-2 focus:border-blue-500 transition-colors"
-  >
-                <option value="chit_value_desc" className='text-gray-800'>Chit Value: High to Low</option>
-                <option value="chit_value_asc" className='text-gray-800'>Chit Value: Low to High</option>
-                <option value="duration_asc" className='text-gray-800'>Duration: Low to High</option>
-                <option value="duration_desc" className='text-gray-800'>Duration: High to Low</option>
-              </select>
-            </div>
           </div>
           
          

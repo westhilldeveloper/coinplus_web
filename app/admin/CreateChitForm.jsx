@@ -10,16 +10,17 @@ export default function CreateChitForm() {
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState({})
   const [formData, setFormData] = useState({
-    chit_value: '',
-    location: '',
-    state: '',
-    branch: '',
-    phone_number_1: '',
-    phone_number_2: '',
-    monthly_contribution: '',
-    chit_group: '',
-    duration_months: ''
-  })
+  chit_value: '',
+  location: '',
+  state: '',
+  branch: '',
+  phone_number_1: '',
+  phone_number_2: '',
+  monthly_contribution: '',
+  chit_group: '',
+  duration_value: '', // Changed from duration_months
+  duration_unit: 'months' // New field: 'months' or 'weeks'
+})
 
   // Dynamic states and branches
   const [states, setStates] = useState([])
@@ -128,7 +129,9 @@ export default function CreateChitForm() {
       console.log("Selected state object:", stateObj)
     }
     
-    fetchBranchesByState(formData.state)
+    if (formData.state) {
+      fetchBranchesByState(formData.state)
+    }
   }, [formData.state, fetchBranchesByState, states])
 
   const handleChange = (e) => {
@@ -159,123 +162,115 @@ export default function CreateChitForm() {
   }
 
   const validateForm = () => {
-    const newErrors = {}
-    
-    // Required fields validation
-    if (!formData.chit_value.trim() || parseFloat(formData.chit_value) <= 0) {
-      newErrors.chit_value = 'Chit value must be a positive number'
-    }
-    
-    if (!formData.location.trim()) {
-      newErrors.location = 'Location is required'
-    }
-    
-    if (!formData.state.trim()) {
-      newErrors.state = 'State is required'
-    }
-    
-    if (!formData.branch.trim()) {
-      newErrors.branch = 'Branch is required'
-    }
-    
-    // Phone number validation (if provided)
-    if (formData.phone_number_1 && !/^\d{10}$/.test(formData.phone_number_1)) {
-      newErrors.phone_number_1 = 'Phone number must be 10 digits'
-    }
-    
-    if (formData.phone_number_2 && !/^\d{10}$/.test(formData.phone_number_2)) {
-      newErrors.phone_number_2 = 'Phone number must be 10 digits'
-    }
-    
-    // Optional field validation for numbers
-    if (formData.monthly_contribution && parseFloat(formData.monthly_contribution) <= 0) {
-      newErrors.monthly_contribution = 'Monthly contribution must be positive'
-    }
-    
-    if (formData.duration_months && parseInt(formData.duration_months) <= 0) {
-      newErrors.duration_months = 'Duration must be positive'
-    }
-    
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
+  const newErrors = {}
+  
+  // Required fields validation - only chit_value is required now
+  if (!formData.chit_value.trim() || parseFloat(formData.chit_value) <= 0) {
+    newErrors.chit_value = 'Chit value must be a positive number'
   }
+  
+  // Phone number validation (if provided)
+  if (formData.phone_number_1 && !/^\d{10}$/.test(formData.phone_number_1)) {
+    newErrors.phone_number_1 = 'Phone number must be 10 digits'
+  }
+  
+  if (formData.phone_number_2 && !/^\d{10}$/.test(formData.phone_number_2)) {
+    newErrors.phone_number_2 = 'Phone number must be 10 digits'
+  }
+  
+  // Optional field validation for numbers
+  if (formData.monthly_contribution && parseFloat(formData.monthly_contribution) <= 0) {
+    newErrors.monthly_contribution = 'Monthly contribution must be positive'
+  }
+  
+  if (formData.duration_value && parseInt(formData.duration_value) <= 0) {
+    newErrors.duration_value = 'Duration must be positive'
+  }
+  
+  setErrors(newErrors)
+  return Object.keys(newErrors).length === 0
+}
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    
-    if (!validateForm()) {
-      return
-    }
-    
-    setLoading(true)
-    setErrors({})
-    
-    try {
-      // Clean phone numbers (remove any non-digit characters)
-      const cleanPhoneNumber = (phone) => {
-        if (!phone) return null
-        return phone.replace(/\D/g, '') // Remove non-digits
-      }
-      
-      // Prepare data with proper type conversions
-      const dataToSend = {
-        chit_value: parseFloat(formData.chit_value),
-        location: formData.location.trim(),
-        state: formData.state.trim(),
-        branch: formData.branch.trim(),
-        // Clean phone numbers but keep as strings
-        phone_number_1: cleanPhoneNumber(formData.phone_number_1),
-        phone_number_2: cleanPhoneNumber(formData.phone_number_2),
-        monthly_contribution: formData.monthly_contribution ? 
-          parseFloat(formData.monthly_contribution) : null,
-        duration_months: formData.duration_months ? 
-          parseInt(formData.duration_months) : null,
-        chit_group: formData.chit_group.trim() || null
-      }
-      
-      const response = await fetch('/api/chits/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataToSend),
-      })
-      
-      const data = await response.json()
-      
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to create chit')
-      }
-      
-      // Success - reset form and show success message
-      setFormData({
-        chit_value: '',
-        location: '',
-        state: '',
-        branch: '',
-        phone_number_1: '',
-        phone_number_2: '',
-        monthly_contribution: '',
-        chit_group: '',
-        duration_months: ''
-      })
-      
-      // Show success toast
-      showToast('✅ Chit created successfully!', 'success')
-      
-      // Refresh the page
-      setTimeout(() => {
-        router.refresh()
-      }, 1500)
-      
-    } catch (error) {
-      console.error('Error creating chit:', error)
-      setErrors({ submit: error.message || 'Failed to create chit' })
-      showToast(`❌ ${error.message || 'Failed to create chit'}`, 'error')
-    } finally {
-      setLoading(false)
-    }
+  e.preventDefault()
+  
+  if (!validateForm()) {
+    return
   }
+  
+  setLoading(true)
+  setErrors({})
+  
+  try {
+    // Clean phone numbers (remove any non-digit characters)
+    const cleanPhoneNumber = (phone) => {
+      if (!phone) return null
+      return phone.replace(/\D/g, '') // Remove non-digits
+    }
+    
+    // Prepare data with proper type conversions
+    const dataToSend = {
+      chit_value: parseFloat(formData.chit_value),
+      location: formData.location.trim() || null,
+      state: formData.state.trim() || null,
+      branch: formData.branch.trim() || null,
+      // Clean phone numbers but keep as strings
+      phone_number_1: cleanPhoneNumber(formData.phone_number_1),
+      phone_number_2: cleanPhoneNumber(formData.phone_number_2),
+      monthly_contribution: formData.monthly_contribution ? 
+        parseFloat(formData.monthly_contribution) : null,
+      duration_value: formData.duration_value ? parseInt(formData.duration_value) : null,
+      duration_unit: formData.duration_unit,
+      chit_group: formData.chit_group.trim() || null
+    }
+    
+    console.log('Submitting chit data:', dataToSend)
+    
+    const response = await fetch('/api/chits/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataToSend),
+    })
+    
+    const data = await response.json()
+    
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to create chit')
+    }
+    
+    // Success - reset form and show success message
+    setFormData({
+      chit_value: '',
+      location: '',
+      state: '',
+      branch: '',
+      phone_number_1: '',
+      phone_number_2: '',
+      monthly_contribution: '',
+      chit_group: '',
+      duration_value: '',
+      duration_unit: 'months'
+    })
+    
+    // Show success toast
+    showToast('✅ Chit created successfully!', 'success')
+    
+    // Refresh the page
+    setTimeout(() => {
+      router.refresh()
+    }, 1500)
+    
+  } catch (error) {
+    console.error('Error creating chit:', error)
+    setErrors({ submit: error.message || 'Failed to create chit' })
+    showToast(`❌ ${error.message || 'Failed to create chit'}`, 'error')
+  } finally {
+    setLoading(false)
+  }
+}
+
 
   const showToast = (message, type) => {
     // Create toast element
@@ -355,7 +350,7 @@ export default function CreateChitForm() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Chit Value */}
+              {/* Chit Value - Only Required Field */}
               <div className="group">
                 <label htmlFor="chit_value" className="flex items-center text-sm font-medium text-gray-700 mb-2">
                   <svg className="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -391,15 +386,32 @@ export default function CreateChitForm() {
                   </p>
                 )}
               </div>
+            </div>
+          </div>
 
+          {/* Location, State, Branch - Now Optional Section */}
+          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-200">
+            <div className="flex items-center mb-6">
+              <div className="bg-gray-600 p-2 rounded-lg mr-3">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h2 className="text-xl font-bold text-gray-800">Location Details</h2>
+              <span className="ml-auto text-xs font-semibold bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
+                OPTIONAL
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Location */}
               <div className="group">
                 <label htmlFor="location" className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                  <svg className="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  Location *
+                  Location
                 </label>
                 <input
                   type="text"
@@ -411,25 +423,17 @@ export default function CreateChitForm() {
                   className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
                     errors.location ? 'border-red-300 bg-red-50' : 'border-gray-300 group-hover:border-blue-400'
                   }`}
-                  required
                 />
-                {errors.location && (
-                  <p className="mt-2 text-sm text-red-600 flex items-center">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {errors.location}
-                  </p>
-                )}
+                <p className="mt-2 text-xs text-gray-500">Optional: Specific area or landmark</p>
               </div>
 
               {/* State - Dynamic Dropdown */}
               <div className="group">
                 <label htmlFor="state" className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                  <svg className="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  State *
+                  State
                 </label>
                 <div className="relative">
                   <select
@@ -440,10 +444,9 @@ export default function CreateChitForm() {
                     className={`appearance-none w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
                       errors.state ? 'border-red-300 bg-red-50' : 'border-gray-300 group-hover:border-blue-400'
                     }`}
-                    required
                     disabled={loadingStates}
                   >
-                    <option value="">{loadingStates ? "Loading states..." : "Select a state..."}</option>
+                    <option value="">{loadingStates ? "Loading states..." : "Select a state (optional)..."}</option>
                     {states.map(state => (
                       <option key={state.code} value={state.code}>
                         {state.icon} {state.name}
@@ -458,23 +461,16 @@ export default function CreateChitForm() {
                     )}
                   </div>
                 </div>
-                {errors.state && (
-                  <p className="mt-2 text-sm text-red-600 flex items-center">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {errors.state}
-                  </p>
-                )}
+                <p className="mt-2 text-xs text-gray-500">Optional: Select a state</p>
               </div>
 
               {/* Branch - Dynamic Dropdown */}
               <div className="group">
                 <label htmlFor="branch" className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                  <svg className="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
-                  Branch *
+                  Branch
                 </label>
                 <div className="relative">
                   <select
@@ -487,14 +483,13 @@ export default function CreateChitForm() {
                     } ${
                       !formData.state ? 'bg-gray-50 text-gray-400' : ''
                     }`}
-                    required
                     disabled={!formData.state || loadingBranches}
                   >
                     <option value="">
                       {loadingBranches ? "Loading branches..." : 
                        !formData.state ? "Select a state first" : 
                        branches.length === 0 ? "No branches available in this state" : 
-                       "Select a branch..."}
+                       "Select a branch (optional)..."}
                     </option>
                     {branches?.map((branch) => (
                       <option key={branch.id} value={branch.name || branch.id}>
@@ -510,19 +505,12 @@ export default function CreateChitForm() {
                     )}
                   </div>
                 </div>
-                {errors.branch && (
-                  <p className="mt-2 text-sm text-red-600 flex items-center">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {errors.branch}
-                  </p>
-                )}
+                <p className="mt-2 text-xs text-gray-500">Optional: Select a branch (requires state)</p>
               </div>
             </div>
           </div>
 
-          {/* Optional Fields Section */}
+          {/* Additional Details Section */}
           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-200">
             <div className="flex items-center mb-6">
               <div className="bg-gray-600 p-2 rounded-lg mr-3">
@@ -648,39 +636,53 @@ export default function CreateChitForm() {
               </div>
 
               {/* Duration Months */}
-              <div className="group">
-                <label htmlFor="duration_months" className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                  <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Duration (Months)
-                </label>
-                <div className="relative">
-                  <input
-                    type="number"
-                    id="duration_months"
-                    name="duration_months"
-                    value={formData.duration_months}
-                    onChange={handleChange}
-                    placeholder="12"
-                    min="1"
-                    className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
-                      errors.duration_months ? 'border-red-300 bg-red-50' : 'border-gray-300 group-hover:border-blue-400'
-                    }`}
-                  />
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                    <span className="text-gray-500">months</span>
-                  </div>
-                </div>
-                {errors.duration_months && (
-                  <p className="mt-2 text-sm text-red-600 flex items-center">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {errors.duration_months}
-                  </p>
-                )}
-              </div>
+              <div className="group md:col-span-2">
+  <label className="flex items-center text-sm font-medium text-gray-700 mb-2">
+    <svg className="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    Duration
+  </label>
+  <div className="flex gap-4">
+    <div className="flex-1 relative">
+      <input
+        type="number"
+        id="duration_value"
+        name="duration_value"
+        value={formData.duration_value}
+        onChange={handleChange}
+        placeholder={formData.duration_unit === 'months' ? '12' : '52'}
+        min="1"
+        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
+          errors.duration_value ? 'border-red-300 bg-red-50' : 'border-gray-300 group-hover:border-blue-400'
+        }`}
+      />
+      <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+        <span className="text-gray-500">{formData.duration_unit}</span>
+      </div>
+    </div>
+    <div className="w-40">
+      <select
+        id="duration_unit"
+        name="duration_unit"
+        value={formData.duration_unit}
+        onChange={handleChange}
+        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      >
+        <option value="months">Months</option>
+        <option value="weeks">Weeks</option>
+      </select>
+    </div>
+  </div>
+  {errors.duration_value && (
+    <p className="mt-2 text-sm text-red-600 flex items-center">
+      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      {errors.duration_value}
+    </p>
+  )}
+</div>
 
               {/* Chit Group - Full Width */}
               <div className="md:col-span-2 group">
@@ -715,7 +717,7 @@ export default function CreateChitForm() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-800">Ready to Create Chit</h3>
-                  <p className="text-sm text-gray-600">Review your information before submitting</p>
+                  <p className="text-sm text-gray-600">Only chit value is required. All other fields are optional.</p>
                 </div>
               </div>
               
@@ -777,7 +779,7 @@ export default function CreateChitForm() {
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>Fields marked with * are required</span>
+              <span>Only chit value (*) is required</span>
             </div>
             <div className="flex items-center">
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

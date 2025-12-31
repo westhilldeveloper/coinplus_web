@@ -126,7 +126,7 @@ export default function PlansSection() {
 
   // Get the state label
   const getStateLabel = (stateCode) => {
-    if (!stateCode) return "All States";
+    if (!stateCode) return "All Branches";
     const state = states.find(s => s.state === stateCode);
     return state ? state.label : stateCode;
   };
@@ -283,7 +283,7 @@ export default function PlansSection() {
                     </div>
                     <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
                       <span className="text-primary font-bold text-sm sm:text-base">
-                        {chit.duration_months || 'N/A'}
+                        {chit.duration_value || 'N/A'}
                       </span>
                     </div>
                   </div>
@@ -291,7 +291,7 @@ export default function PlansSection() {
                   {/* Plan Details */}
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <div className="flex items-center justify-between py-1.5 sm:py-2 border-b border-gray-100">
-                      <span className="text-gray-600 text-sm sm:text-base">Monthly Contribution</span>
+                      <span className="text-gray-600 text-sm sm:text-base">Contribution</span>
                       <span className="font-semibold text-gray-900 text-sm sm:text-base">
                         ₹ {chit.monthly_contribution ? chit.monthly_contribution.toLocaleString("en-IN") : calculateEMI(chit).toLocaleString("en-IN")}
                       </span>
@@ -300,7 +300,13 @@ export default function PlansSection() {
                     <div className="flex items-center justify-between py-1.5 sm:py-2 border-b border-gray-100">
                       <span className="text-gray-600 text-sm sm:text-base">Duration</span>
                       <span className="font-semibold text-gray-900 text-sm sm:text-base">
-                        {chit.duration_months || 'N/A'} months
+                         {chit.duration_value && chit.duration_unit ? (
+    <span className="text-green-600">
+      {chit.duration_value}<span className="text-red-500"> {chit.duration_unit}</span>
+    </span>
+  ) : (
+    <span className="text-gray-400">—</span>
+  )}
                       </span>
                     </div>
                     
@@ -309,7 +315,7 @@ export default function PlansSection() {
                       <div>
                         <p className="text-gray-600 text-xs sm:text-sm">Available at</p>
                         <p className="font-medium text-gray-900 text-xs sm:text-sm leading-tight">
-                          {chit.location}, {getStateLabel(chit.state)}
+                          {chit.location} {getStateLabel(chit.state)}
                         </p>
                         {chit.branch && (
                           <p className="text-xs text-gray-500">Branch: {chit.branch}</p>
