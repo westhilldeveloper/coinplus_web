@@ -49,11 +49,7 @@ export default function AdminLogin() {
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Admin Login</h1>
           <p className="text-gray-600 mt-2">CoinPlus Chit Management System</p>
-          <div className="mt-4 text-sm text-gray-500 bg-yellow-50 p-3 rounded-lg">
-            <p className="font-medium">Default Credentials:</p>
-            <p>Username: <span className="font-mono">admin</span></p>
-            <p>Password: <span className="font-mono">admin123</span></p>
-          </div>
+         
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
