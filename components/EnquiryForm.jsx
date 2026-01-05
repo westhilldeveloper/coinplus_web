@@ -41,7 +41,7 @@ const EnquiryForm = () => {
         },
         body: JSON.stringify({
           to: 'care@coinplus.co.in',
-          subject: 'New Enquiry - Margadarsi Chit Fund',
+          subject: 'New Enquiry - Finovest Chit Fund',
           formData
         }),
       });
@@ -305,7 +305,7 @@ const EnquiryForm = () => {
                   className="mt-0.5 sm:mt-1 h-4 w-4 sm:h-5 sm:w-5 text-primary rounded focus:ring-primary"
                 />
                 <span className="text-primary text-xs sm:text-sm md:text-base">
-                  I hereby give my explicit consent to Margadarsi Chit Fund Pvt. Ltd. to contact me via phone, email, or other communication channels to discuss the interest I have expressed through this form and to offer suitable schemes tailored to my specific needs.
+                  I hereby give my explicit consent to Finovest Chit Fund Pvt. Ltd. to contact me via phone, email, or other communication channels to discuss the interest I have expressed through this form and to offer suitable schemes tailored to my specific needs.
                 </span>
               </label>
             </div>

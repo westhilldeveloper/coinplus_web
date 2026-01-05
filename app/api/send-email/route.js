@@ -33,7 +33,7 @@ export async function POST(request) {
         <body>
           <div class="container">
             <div class="header">
-              <h1>New Enquiry - Margadarsi Chit Fund</h1>
+              <h1>New Enquiry - Finovest Chit Fund</h1>
               <p>Submitted on: ${new Date().toLocaleString()}</p>
             </div>
             <div class="content">
@@ -90,7 +90,7 @@ export async function POST(request) {
 
     // Email options
     const mailOptions = {
-      from: `"Margadarsi Enquiry" <${process.env.EMAIL_USER}>`,
+      from: `"Finovest Enquiry" <${process.env.EMAIL_USER}>`,
       to: to,
       subject: subject,
       html: htmlContent,

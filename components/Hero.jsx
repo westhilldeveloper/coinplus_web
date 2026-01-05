@@ -5,6 +5,8 @@ import Image from 'next/image';
 export default function Hero() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const videoRef = useRef(null);
+  const youtubeVideoId = "Cxgy0EA_3f0";
+  const localVideoUrl = "https://coinplus.co.in/wp-content/uploads/2025/06/Coinplus_English.mp4";
 
   const handleVideoClick = () => {
     setIsVideoModalOpen(true);
@@ -23,6 +25,10 @@ export default function Hero() {
       videoRef.current.pause();
       videoRef.current.currentTime = 0; // Reset to beginning
     }
+  };
+
+    const getYouTubeEmbedUrl = (videoId, autoplay = true, controls = false) => {
+    return `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay ? 1 : 0}&mute=1&loop=1&playlist=${videoId}&controls=${controls ? 1 : 0}&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`;
   };
 
   return (
@@ -90,27 +96,30 @@ export default function Hero() {
                 onClick={handleVideoClick}
               >
                 {/* Thumbnail/Preview Video (muted autoplay) */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  aria-label="Background video showing Coinplus services"
-                  title="Click to play video in full screen"
-                >
-                  <source 
-                    src="https://coinplus.co.in/wp-content/uploads/2025/06/Coinplus_English.mp4" 
-                    type="video/mp4" 
-                  />
-                  <img 
-                    src="/images/cplogo.png" 
-                    alt="Coinplus chit fund services overview"
+               <div className="absolute inset-0 w-full h-full">
+                  <iframe
+                    src={getYouTubeEmbedUrl(youtubeVideoId, true, false)}
+                    title="Coinplus Background Video"
                     className="absolute inset-0 w-full h-full object-cover"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    style={{ pointerEvents: 'none' }} // Prevent iframe from capturing clicks
                   />
-                  Your browser does not support HTML5 video.
-                </video>
+                  
+                  {/* Fallback Image - Shows if YouTube fails */}
+                  <img 
+                    src={`https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg`}
+                    alt="Coinplus services overview"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.src = `/images/cplogo.png`;
+                    }}
+                    style={{ display: 'none' }} // Hidden unless YouTube fails
+                    id="youtube-fallback"
+                  />
+                </div>
                 
                 {/* Play Button Overlay */}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
@@ -143,7 +152,7 @@ export default function Hero() {
 
       {/* Video Modal/Popup */}
       {isVideoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white p-4">
           <div className="relative w-full max-w-4xl">
             {/* Close Button */}
             <button
@@ -157,7 +166,7 @@ export default function Hero() {
             </button>
             
             {/* Video Container */}
-            <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative bg-white rounded-lg overflow-hidden shadow-2xl">
               <video
                 ref={videoRef}
                 controls

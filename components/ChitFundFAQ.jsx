@@ -120,7 +120,7 @@ Potential for Returns: Chit funds often provide an opportunity for participants 
 
 Tax Free Dividends: From the tax point of view, while the overall income is subject to income tax, the dividends earned per month are neither taxable nor tax deductible. Any losses can be claimed as business losses.
 
-Trust and Transparency: Regulated and authorized chit fund companies, like Margadarsi, provide a high level of trust and transparency in the operations. Participants can rely on the professionalism and expertise of the chit fund organizers in managing the scheme effectively.
+Trust and Transparency: Regulated and authorized chit fund companies, like Finovest, provide a high level of trust and transparency in the operations. Participants can rely on the professionalism and expertise of the chit fund organizers in managing the scheme effectively.
 
 Social Connection: Chit funds often create a sense of community and social bonding among the participants. Members interact and engage with each other during the meetings and auction process, fostering a sense of camaraderie and support.
 

@@ -175,13 +175,13 @@ const RealStories = () => {
         console.error("Error fetching YouTube videos:", err);
         
         // Provide user-friendly error message
-        let errorMessage = "Failed to load videos. ";
+        let errorMessage = "Failed to load live videos. ";
         if (err.message.includes("quota")) {
           errorMessage += "API quota exceeded. Using sample videos.";
         } else if (err.message.includes("not found")) {
           errorMessage += "YouTube channel not found. Using sample videos.";
         } else {
-          errorMessage += "Check your internet connection. Using sample videos.";
+          errorMessage += "Using sample videos.";
         }
         
         setError(errorMessage);
