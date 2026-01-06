@@ -692,7 +692,7 @@ The non-prized subscriber who bids at the highest discount, not exceeding the sp
                 {/* Video Section */}
                 {hasVideo && (
                   <div className="space-y-4 sm:space-y-6">
-                    {/* Video Header - Responsive layout */}
+                    {/* Video Header - Responsive layout
                     <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-red-50/50 to-pink-50/50 backdrop-blur-sm">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                         <div className="flex items-center gap-2 sm:gap-3">
@@ -714,7 +714,7 @@ The non-prized subscriber who bids at the highest discount, not exceeding the sp
                           <span className="font-semibold">Watch</span>
                         </a>
                       </div>
-                    </div>
+                    </div> */}
                     
                     {/* Video Player - Responsive aspect ratio */}
                     <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl shadow-black/10 sm:shadow-black/20">

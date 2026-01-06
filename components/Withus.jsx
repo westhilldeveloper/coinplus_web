@@ -118,19 +118,24 @@ const Withus = () => {
                 <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-20 rounded-2xl"></div>
                 
                 <span className="text-base sm:text-lg font-medium opacity-90 relative z-10">At </span>
-                <span className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold my-4 relative z-10"> CoinPlus,</span>
+                <span className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold my-0 relative z-10"> CoinPlus,</span>
                 <span className="text-lg sm:text-xl md:text-2xl font-semibold relative z-10 text-center"></span>
                 <span className="text-base sm:text-lg md:text-xl relative z-10"> we're redefining  chit funds with modern tools and genuine commitment.</span>
                 
                 {/* Mergeders Text */}
-                <div className="mt-8 relative z-10 text-center">
-                  <p className="text-white  text-md sm:text-md">
-                  Powered by  
-                  </p>
-                  <p className="text-white/80 italic text-lg">
-                   Finovest
-                  </p>
-                </div>
+               <div className="mt-8 relative z-10 text-center">
+  <p className="text-white text-sm sm:text-md">
+    Powered by  
+  </p>
+  {/* Replace text with image */}
+  <div className="mt-2">
+    <img 
+      src="/images/lg_finovest.png" 
+      alt="Finovest" 
+      className="h-8 sm:h-10 md:h-12 mx-auto opacity-90"
+    />
+  </div>
+</div>
               </div>
             </div>
           </div>
@@ -171,7 +176,7 @@ const Withus = () => {
                                 {card.title}
                               </h3>
                             </div>
-                            <p className="text-gray-600 text-xl md:text-sm leading-relaxed flex-grow line-clamp-6">
+                            <p className="text-gray-600 text-md md:text-sm leading-relaxed flex-grow line-clamp-6">
                               {card.description}
                             </p>
                           </div>

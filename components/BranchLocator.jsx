@@ -187,22 +187,20 @@ const BranchLocator = () => {
               </div>
             </div> */}
             
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-white to-red-500 mb-6 leading-tight tracking-wider animate-bounce">
+            <h2 className="text-lg sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-white to-white mb-2 leading-tight tracking-wider ">
               FIND YOUR ULTIMATE CHIT DESTINATION!
             </h2>
             
-            <p className="text-md font-bold text-white/90 bg-black/40 p-4 rounded-xl border-l-[8px] border-primary mb-8 shadow-lg backdrop-blur-sm">
-               DISCOVER THE PERFECT CHIT PLAN AT YOUR NEAREST BRANCH! 
-            </p>
+           
             
           </div>
 
           {/* Right Section - Form with EXTREME styling */}
           <div className="w-full lg:w-1/2">
-            <div className="bg-gradient-to-br from-black/60 to-primary/20 backdrop-blur-xl rounded-3xl p-8 border-[3px] border-white/30 shadow-[0_0_50px_rgba(255,255,255,0.2)] transform hover:scale-[1.02] transition-all duration-500">
+            <div className="bg-gradient-to-br from-black/60 to-primary/20 backdrop-blur-xl rounded-3xl p-4 border-[3px] border-white/30 shadow-[0_0_50px_rgba(255,255,255,0.2)] transform hover:scale-[1.02] transition-all duration-500">
               
               
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 
                 {/* State Selection - EXTREME */}
                 <div className="transform hover:scale-[1.02] transition-all duration-300">
@@ -213,7 +211,7 @@ const BranchLocator = () => {
                     <select
                       value={selectedState}
                       onChange={(e) => handleStateChange(e.target.value)}
-                      className="w-full px-4 py-4 pr-12 bg-gradient-to-r from-gray-900 to-black text-white text-sm font-bold rounded-2xl border-[3px] border-primary focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/50 outline-none transition-all appearance-none shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_primary]"
+                      className="w-full px-4 py-2 pr-12 bg-gradient-to-r from-gray-900 to-black text-white text-sm font-bold rounded-2xl border-[3px] border-primary focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/50 outline-none transition-all appearance-none shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_primary]"
                       required
                       disabled={loadingStates}
                     >
@@ -228,9 +226,9 @@ const BranchLocator = () => {
                     </select>
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
                       {loadingStates ? (
-                        <Loader2 className="text-yellow-400 animate-spin size-8" />
+                        <Loader2 className="text-yellow-400 animate-spin size-4" />
                       ) : (
-                        <ChevronDown className="text-yellow-400 size-8 animate-bounce" />
+                        <ChevronDown className="text-yellow-400 size-4 animate-bounce" />
                       )}
                     </div>
                     <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -240,14 +238,14 @@ const BranchLocator = () => {
                 {/* Branch Selection - EXTREME */}
                 <div className="transform hover:scale-[1.02] transition-all duration-300">
   <label className="block text-sm font-extrabold text-white mb-3 tracking-wider">
-    🏢 SELECT YOUR BRANCH 
+  SELECT YOUR BRANCH 
   </label>
   <div className="relative group">
     <select
       value={selectedBranch}
       onChange={(e) => setSelectedBranch(e.target.value)}
       disabled={!selectedState || loadingBranches}
-      className={`w-full px-4 py-4 pr-12 text-sm font-bold rounded-2xl border-[3px] transition-all appearance-none shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] ${
+      className={`w-full px-4 py-2 pr-12 text-sm font-bold rounded-2xl border-[3px] transition-all appearance-none shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] ${
         !selectedState
           ? "bg-gray-800 border-gray-600 text-gray-500 cursor-not-allowed"
           : "bg-gradient-to-r from-gray-900 to-black text-white border-primary hover:border-yellow-400 hover:shadow-[0_0_30px_primary] focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/50 outline-none"
@@ -276,15 +274,15 @@ const BranchLocator = () => {
             whiteSpace: 'nowrap'
           }}
         >
-          🏦 {branch.name.length > 25 ? branch.name.substring(0, 22).toUpperCase() + '...' : branch.name.toUpperCase()}
+        {branch.name.length > 25 ? branch.name.substring(0, 22).toUpperCase() + '...' : branch.name.toUpperCase()}
         </option>
       ))}
     </select>
     <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
       {loadingBranches ? (
-        <Loader2 className="text-yellow-400 animate-spin size-8" />
+        <Loader2 className="text-yellow-400 animate-spin size-4" />
       ) : (
-        <ChevronDown className="text-yellow-400 size-8 animate-bounce" />
+        <ChevronDown className="text-yellow-400 size-4 animate-bounce" />
       )}
     </div>
     <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -299,7 +297,7 @@ const BranchLocator = () => {
                     className={`w-full py-5 text-lg font-black rounded-2xl transition-all duration-300 flex items-center justify-center gap-4 shadow-[0_0_40px_rgba(255,0,0,0.5)] hover:shadow-[0_0_60px_rgba(255,100,0,0.8)] active:scale-95 transform ${
                       submitting || !selectedState || !selectedBranch
                         ? 'bg-gray-700 text-gray-400 cursor-not-allowed opacity-70'
-                        : 'bg-gradient-to-r from-primary via-red-500 to-yellow-400 text-white hover:scale-105 hover:rotate-1'
+                        : 'bg-gradient-to-r from-primary via-white to-primary text-black hover:scale-105 hover:rotate-1'
                     }`}
                   >
                     {submitting ? (
@@ -310,7 +308,7 @@ const BranchLocator = () => {
                     ) : (
                       <>
                         {/* <Search className="w-4 h-4 animate-bounce" /> */}
-                        <span className="tracking-widest">FIND MY BRANCH NOW!</span>
+                        <span className="tracking-widest text-xs md:text-md">FIND MY BRANCH NOW!</span>
                       </>
                     )}
                   </button>
@@ -320,7 +318,7 @@ const BranchLocator = () => {
                     {[1, 2, 3, 4, 5].map((i) => (
                       <div 
                         key={i}
-                        className="w-3 h-3 bg-gradient-to-r from-primary to-yellow-400 rounded-full animate-ping"
+                        className="w-3 h-3 bg-gradient-to-r from-primary to-primary/20 rounded-full animate-ping"
                         style={{ animationDelay: `${i * 0.2}s` }}
                       ></div>
                     ))}

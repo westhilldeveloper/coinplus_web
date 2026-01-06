@@ -423,10 +423,10 @@ const ContactComponent = () => {
             </div>
             
             {/* Button section */}
-            <div className="lg:w-1/3 flex justify-center lg:justify-end">
+            <div className="lg:w-1/3  flex justify-center items-center ">
               <button 
                 onClick={handleButtonClick}
-                className="group relative flex items-center justify-center gap-4 bg-white/10 backdrop-blur-md text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-2xl transition-all duration-500 hover:bg-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 whitespace-nowrap overflow-hidden"
+                className="group relative flex items-center justify-center gap-4 bg-red-600 backdrop-blur-md text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-2xl transition-all duration-500 hover:bg-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 whitespace-nowrap overflow-hidden"
               >
                 {/* Button Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent group-hover:from-primary/40 transition-all duration-500"></div>
@@ -443,14 +443,14 @@ const ContactComponent = () => {
                 
                 
                 {/* Hover Arrow */}
-                <svg 
+                {/* <svg 
                   className="w-6 h-6 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                </svg> */}
                 
                 {/* Ripple Effect */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">

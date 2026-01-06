@@ -314,14 +314,14 @@ const RealStories = () => {
         )}
 
         {/* YouTube Channel Link */}
-        <div className="text-center mb-8">
+        <div className="text-center md:text-xl text-xs mb-8">
           <a
             href={`https://www.youtube.com/channel/${YOUTUBE_CHANNEL_ID}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
           >
-            <Youtube className="w-5 h-5" />
+            <Youtube className="w-8 h-8" />
             Visit Our YouTube Channel for More Stories
           </a>
         </div>
