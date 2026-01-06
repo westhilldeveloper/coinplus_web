@@ -20,7 +20,6 @@ export default function Home() {
       
       <main className="w-full mx-auto px-0 sm:px-2 lg:px-2">
         <Hero />
-       
         <section className="mt-4">
           <PlansSection/>
         </section>
