@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Home, GraduationCap, Heart, Briefcase, Landmark, Timer, ChevronDown, MapPin, Loader2 } from "lucide-react";
+import { Home, GraduationCap, Heart, Briefcase, Landmark, Timer, ChevronDown, MapPin, Asterisk, Loader2 } from "lucide-react";
 
 const TABS = [
   { key: "education", label: "Education Plan", icon: <GraduationCap size={20} /> },
@@ -12,7 +12,7 @@ const TABS = [
   { key: "all", label: "All Plans", icon: <Home size={20} /> },
 ];
 
-export default function PlansSection() {
+export default function   PlansSection() {
   const [activeTab, setActiveTab] = useState("all");
   const [selectedState, setSelectedState] = useState("");
   const [loading, setLoading] = useState(true);
@@ -135,6 +135,22 @@ export default function PlansSection() {
     return state ? state.label : stateCode;
   };
 
+ const getInstalmentRange = (total, duration, term) => {
+  if (!total) return "-";
+  console.log (total, duration, term)
+  //instalments
+  const monthlyInstalment = total/duration;
+  // Calculate 40% of the total
+  const fortyPercent = duration> 25 ? total * 0.25 : total * 0.20;
+  const weeklyPercent = total * 0.20;
+  
+  // Subtract 3500 from the 40% amount
+  const instalment = term == 'weeks' ? weeklyPercent/duration : fortyPercent / duration  
+  const divident = monthlyInstalment - instalment
+  
+  return divident;
+};
+
   // Get state from chit (try branch first, then chit state)
   const getChitState = (chit) => {
     // Try to get state from branch if available
@@ -226,7 +242,7 @@ export default function PlansSection() {
               className={`flex-shrink-0 px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-6 rounded-lg sm:rounded-xl flex items-center gap-1.5 sm:gap-2 font-medium border transition-all duration-300 whitespace-nowrap ${
                 activeTab === tab.key
                   ? "bg-primary/10 text-primary border-primary shadow-md sm:shadow-lg shadow-primary/20 transform scale-[1.02]"
-                  : "bg-primary text-white hover:text-primary border-gray-200 hover:bg-gray-100 hover:border-gray-300"
+                  : "bg-gradient-to-br from-primary via-purple-500 to-purple-800 text-white hover:text-primary border-gray-200 hover:bg-gray-100 hover:border-gray-300"
               }`}
             >
               <div className={activeTab === tab.key ? "text-white" : "text-white"}>
@@ -295,7 +311,7 @@ export default function PlansSection() {
                   {/* Plan Details */}
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <div className="flex items-center justify-between py-1.5 sm:py-2 border-b border-gray-100">
-                      <span className="text-gray-600 text-sm sm:text-base">Contribution</span>
+                      <span className="text-gray-600 text-sm sm:text-base">Monthly instalment</span>
                       <span className="font-semibold text-gray-900 text-sm sm:text-base">
                         ₹ {chit.monthly_contribution ? chit.monthly_contribution.toLocaleString("en-IN") : calculateEMI(chit).toLocaleString("en-IN")}
                       </span>
@@ -315,12 +331,12 @@ export default function PlansSection() {
                     </div>
                     
                     <div className="flex items-start gap-2 py-1.5 sm:py-2">
-                      <MapPin size={14} className="text-gray-400 mt-0.5 sm:mt-1 flex-shrink-0" />
+                      <Asterisk size={12} className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0" />
                       <div>
-                        <p className="text-gray-600 text-xs sm:text-sm">Available at</p>
-                        <p className="font-medium text-gray-900 text-xs sm:text-sm leading-tight">
-                          {chit.location} {getStateLabel(chit.state)}
-                        </p>
+                        <p className="text-gray-600 text-xs sm:text-sm">Instalment Range from</p>
+                        <span className="font-medium text-gray-900 text-xs sm:text-sm leading-tight">
+                         ₹ {getInstalmentRange(chit.chit_value,chit.duration_value,chit.duration_unit)}
+                        </span>
                         {chit.branch && (
                           <p className="text-xs text-gray-500">Branch: {chit.branch}</p>
                         )}

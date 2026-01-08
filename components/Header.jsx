@@ -217,7 +217,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="ml-4 px-6 py-2.5 bg-gradient-to-r from-primary to-primary/80 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
               >
-                Pay Now
+                Pay / Login
               </Link>
             </nav>
 

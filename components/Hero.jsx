@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Left Content - Same as before */}
         <div className="order-2 lg:order-1">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
-            Achieve Any Goal with <span className="text-primary">Coinplus Chits</span>
+            Achieve Any Goal with <span className="text-primary">Coinplus</span>
           </h1>
           
           <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-600 max-w-2xl">

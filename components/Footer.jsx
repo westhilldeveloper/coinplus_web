@@ -10,7 +10,7 @@ const Footer = () => {
         
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-primary mx-2 border-2 border-primary rounded-4xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-purple-600 to-purple-800 mx-2 border-2 border-primary rounded-4xl"></div>
         
         {/* Main Content - Added rounded-t-lg for top rounded corners only */}
         <div className="relative   rounded-t-lg z-10 mx-4 md:mx-12 px-4 sm:px-4 lg:px-4 py-6 md:py-10 overflow-hidden">

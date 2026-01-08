@@ -11,11 +11,11 @@ const ContactHead = () => {
       
         <div className="w-full lg:w-2/5 mb-6 lg:mb-10">
           <h2 className="text-md md:text-lg font-semibold text-gray-800 mb-2">
-            Monday - Saturday
+            24 x 7
           </h2>
           
           <div className="space-y-2 text-gray-700">
-            <p className="text-md">9 am - 5 pm</p>
+            <p className="text-md">Customer Support</p>
             
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
@@ -112,7 +112,7 @@ PIN: 691555
                 href="/branches"
                 className="inline-flex items-center justify-center px-4 md:px-6 py-2 md:py-3 text-primary font-semibold transition-colors duration-200 hover:text-primary-dark"
               >
-                View All Branches
+                View All Collection Centres
               </a>
             </div>
           </div>

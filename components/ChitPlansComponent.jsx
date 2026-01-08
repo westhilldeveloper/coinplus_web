@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Asterisk } from "lucide-react";
 
 export default function ChitPlansComponent() {
   const [chits, setChits] = useState([])
@@ -47,11 +48,21 @@ export default function ChitPlansComponent() {
     }
   }
    // Get the state label
-  const getStateLabel = (stateCode) => {
-    if (!stateCode) return "All Branches";
-    const state = states.find(s => s.state === stateCode);
-    return state ? state.label : stateCode;
-  };
+  const getStateLabel = (total, duration, term) => {
+  if (!total) return "-";
+  console.log (total, duration, term)
+  //instalments
+  const monthlyInstalment = total/duration;
+  // Calculate 40% of the total
+  const fortyPercent = duration> 25 ? total * 0.25 : total * 0.20;
+  const weeklyPercent = total * 0.20;
+  
+  // Subtract 3500 from the 40% amount
+  const instalment = term == 'weeks' ? weeklyPercent/duration : fortyPercent / duration  
+  const divident = monthlyInstalment - instalment
+  
+  return divident;
+};
 
   const applyFilters = () => {
     let result = [...chits]
@@ -164,7 +175,7 @@ export default function ChitPlansComponent() {
 </div>
 </div>
         {/* Filter Section */}
-        <div className="bg-primary  shadow-md p-2 mb-8">
+        <div className="bg-gradient-to-t from-primary via-purple-500 to-purple-800  shadow-md p-2 mb-8">
           <div className="flex justify-end">
   
 </div>
@@ -231,35 +242,20 @@ export default function ChitPlansComponent() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredChits.map((chit) => (
-                <div key={chit.id} className="bg-primary rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg md:mx-0 mx-10 transition-shadow">
+                <div key={chit.id} className="bg-gradient-to-br from-primary via-purple-600 to-purple-800 rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg md:mx-0 mx-10 transition-shadow">
                   <div className="p-4">
                    
                     
                     {/* Chit Value */}
                     <div className="mb-2">
+                       <p className="text-yellow-300 text-xs mt-1">Total Chit Value</p>
                       <h3 className="text-2xl md:text-3xl font-bold text-white">
                         ₹{formatCurrency(chit.chit_value)}
                       </h3>
-                      <p className="text-yellow-500 text-xs mt-1">Total Chit Value</p>
+                     
                     </div>
                     
-                    {/* Location */}
-                    <div className="mt-4">
-                      <div className="flex items-start">
-                        <svg className="w-5 h-5 text-white mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <div>
-                         <p className="font-medium text-white text-xs sm:text-sm leading-tight">
-                          {chit.location} {getStateLabel(chit.state)}
-                        </p>
-                        {chit.branch && (
-                          <p className="text-xs text-white">Branch: {chit.branch}</p>
-                        )}
-                        </div>
-                      </div>
-                    </div>
+                    
                     
                     {/* Details Grid */}
                     <div className=" justify-between items-center">
@@ -270,7 +266,7 @@ export default function ChitPlansComponent() {
                         </p>
                       </div>
                       
-                      <div className="flex items-center py-4 rounded-lg">
+                      <div className="flex items-center py-0 rounded-lg">
   <span className="text-sm font-medium text-white px-3 py-1 rounded-full flex items-center">
     <svg className="w-4 h-4 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
@@ -284,6 +280,22 @@ export default function ChitPlansComponent() {
   )}
   </span>
 </div>
+
+{/* instalment range */}
+                    <div className="my-4">
+                      <div className="flex items-start">
+                         <Asterisk size={12} className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0" />
+                        <div>
+                           <p className="text-white text-xs sm:text-sm">Instalment Range from</p>
+                         <p className="font-medium text-white text-xs sm:text-sm leading-tight">
+                          {chit.location} {getStateLabel(chit.chit_value,chit.duration_value,chit.duration_unit)}
+                        </p>
+                        {/* {chit.branch && (
+                          <p className="text-xs text-white">: {chit.branch}</p>
+                        )} */}
+                        </div>
+                      </div>
+                    </div>
                     </div>
                     
                     {/* Contact Information */}
@@ -292,10 +304,10 @@ export default function ChitPlansComponent() {
                       <div className="space-y-2">
                         {chit.phone_number_1 && (
                           <div className="flex items-center">
-                            <svg className="w-4 h-4 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-4 h-4 text-red-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
-                            <span className="text-sm text-green-600 font-semibold">{chit.phone_number_1}</span>
+                            <span className="text-sm text-green-300 font-semibold">{chit.phone_number_1}</span>
                           </div>
                         )}
                         

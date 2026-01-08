@@ -102,13 +102,11 @@ const EnquiryForm = ({ onClose }) => {
   ];
 
   const states = [
-    'Andhra Pradesh', 'Telangana', 'Tamil Nadu', 'Karnataka',
-    'Maharashtra', 'Delhi', 'Kerala', 'Other'
+    'Tamil Nadu',  'Other'
   ];
 
   const branches = [
-    'Hyderabad - Banjara Hills', 'Hyderabad - Secunderabad', 'Vijayawada', 'Visakhapatnam',
-    'Bengaluru', 'Chennai', 'Warangal', 'Guntur', 'Other'
+    'Pollachi', 'Other'
   ];
 
   return (

@@ -13,7 +13,7 @@ const ChitFundInteractive = () => {
     {
       id: 1,
       title: "A NEW ERA OF FINANCIAL EMPOWERMENT",
-      description: "While our journey officially began this year, we stand on the solid foundation and impressive scale of our parent company, Finovest. With a legacy of empowering dreams across generations and a robust operational history reflected in a turnover of thousands of crores, we bring proven strength and discipline to a new digital age. At Coinplus, we are channeling this expertise into a fresh, customer-first approach. We are dedicated to using this strong foundation not as a relic of the past, but as the engine for your future—providing you with the most responsive support, transparent service, and reliable financial tools to achieve your goals.",
+      description: "While our journey officially began this year, we stand on the solid foundation and impressive scale of our parent company, Finovest. With a legacy of empowering dreams across generations and a robust operational history reflected in a turnover of  crores, we bring proven strength and discipline to a new digital age. At Coinplus, we are channeling this expertise into a fresh, customer-first approach. We are dedicated to using this strong foundation not as a relic of the past, but as the engine for your future—providing you with the most responsive support, transparent service, and reliable financial tools to achieve your goals.",
       shortTitle: "New Start"
     },
     {
@@ -32,7 +32,7 @@ const ChitFundInteractive = () => {
       id: 4,
       title: "A Reliable Presence, Growing for You",
       description: "Building upon the strong, established foundation of our group, we operate with a significant national footprint that provides stability and deep-rooted trust. This widespread presence ensures a robust framework for all our operations. At Coinplus, we are leveraging this legacy of reliability to build a more connected and accessible future for you. Our focus is on ensuring that our modern digital services are supported by professional, local expertise, giving you the convenience of seamless online management with the assurance of a trusted, tangible presence committed to your financial well-being.",
-      shortTitle: "35 + Branches"
+      shortTitle: "35 + Collection Centres"
     },
     {
       id: 5,

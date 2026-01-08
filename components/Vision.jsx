@@ -21,7 +21,7 @@ export default function Vision() {
        <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
           
           {/* LEFT IMAGE WITH STATS - Enhanced */}
-          <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-primary to-primary/70 via-primary/80 text-white rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group w-full lg:w-2/3">
+          <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-primary via-purple-600 to-purple-900 via-primary/80 text-white rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group w-full lg:w-2/3">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -43,19 +43,20 @@ export default function Vision() {
             <div className="relative w-full lg:w-1/2">
               <div className="text-center mb-6 relative">
                 <div className="inline-block relative">
+                   <div className="absolute top-0 -left-2 w-6 h-6 bg-primary rounded-full animate-ping"></div>
                   <h2 className="text-2xl md:text-3xl font-bold inline-block pb-3 border-b-2 border-yellow-400">
-                    Coinplus chits
+                    Coinplus
                   </h2>
-                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+                 
                 </div>
                 <p className="opacity-90 text-sm mt-2 bg-white/10 px-4 py-1 rounded-full inline-block">
-                  Finovest Group
+                  Finovest Chits and Kuries Pvt Ltd
                 </p>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-4 md:gap-6">
-                <StatItem number="10 K+" label="Satisfied Subscribers" />
-                <StatItem number="35 +" label="Branches" />
+                <StatItem number="5 K+" label="Satisfied Subscribers" />
+                <StatItem number="35 +" label="Collection Centres" />
                 <StatItem number="170+" label="Agents" />
                 <StatItem number="100+" label="Employees" />
               </div>
@@ -85,7 +86,7 @@ export default function Vision() {
                     alt="arrow"
                     className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"
                   />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/40 rounded-full animate-ping"></div>
+                  {/* <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary/40 rounded-full animate-ping"></div> */}
                 </div>
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary drop-shadow-sm">
                   Our Vision

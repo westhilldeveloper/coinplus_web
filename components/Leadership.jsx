@@ -27,7 +27,7 @@ Coinplus is more than just a digital version of a chitti; it’s a carefully str
               
               <div className="pt-6 mt-6 border-t border-gray-200">
                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
-                   Sri Krishna Shankar
+                   Sri Krishna Shankar <span className='text-sm text-gray-400'>M Tech, LLM</span>
                 </h2>
                 <p className="text-gray-600 text-md">
                   Founder Chairperson-Finovest Group

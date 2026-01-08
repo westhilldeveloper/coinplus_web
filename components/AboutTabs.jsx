@@ -24,13 +24,13 @@ const AboutTabs = () => {
   
   const tabs = [
     {
-      title: 'Coinplus Chit Fund Private Limited',
+      title: 'Finovest Chits and Kuries Private Limited',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Coinplus Chit Fund Private Limited</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Finovest Chits and Kuries Private Limited</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-             Coinplus is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
+             Coinplus is the digital arm of Finovest Chits and Kuries Pvt Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
             </p>
             <p className="leading-relaxed">
              
@@ -49,7 +49,7 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">A Tradition of Excellence</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              At Coinplus Chits, our foundation is built on trust, community, and the diligent pursuit of our members' aspirations. While our current operations are proudly focused in the vibrant communities of Kerala and Tamil Nadu, our vision is to extend the reliability and benefits of our chit fund services to every corner of India. We are deeply committed to bringing this proven, disciplined form of saving and credit to a national audience, helping more families build financial security and realize their dreams.
+              At Coinplus, our foundation is built on trust, community, and the diligent pursuit of our members' aspirations. While our current operations are proudly focused in the vibrant communities of Kerala and Tamil Nadu, our vision is to extend the reliability and benefits of our chit fund services to every corner of India. We are deeply committed to bringing this proven, disciplined form of saving and credit to a national audience, helping more families build financial security and realize their dreams.
             </p>
             <p className="leading-relaxed">
               Our journey has taught us that true excellence is measured by the positive impact we create in people's lives. Every chit cycle we administer, every question we answer, and every promise we uphold reinforces our core values of transparency and unwavering support. As we look forward to expanding across India, we carry this dedication with us, promising the same standard of personalized service, absolute financial discipline, and community-centric values that have distinguished us in our home states.
@@ -107,7 +107,7 @@ const AboutTabs = () => {
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-blue-800 mb-3">Experience</h3>
-                <p className="text-gray-700">Backed by the decades of experience of Finovest Chit and Kuries Ltd.</p>
+                <p className="text-gray-700">Backed by the decades of experience of Finovest Chits and Kuries Pvt Ltd.</p>
               </div>
             </div>
             <div className="space-y-6">
@@ -149,20 +149,28 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Coinplus Works</h2>
           <div className="space-y-6 text-gray-700">
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 1: Join a Chit Group</h3>
-              <p>Browse and select a chit plan that fits your goals directly from our website or app. Complete your secure registration and pay the initial subscription online to officially join a group with a fixed value and duration.</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 1: </h3>
+              <p>Each month/week, a member from the group is selected as the Winner through an online auction. </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 2: Regular Contributions</h3>
-              <p>Once enrolled, you contribute a fixed monthly amount online. These automated, secure payments collectively build the total prize pool for your group, fostering a disciplined savings habit.</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 2:</h3>
+              <p>The customers who are the group can participate in live auction through Mob App or Website, provided he/she remitted the monthly subscription.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 3: Monthly Auctions</h3>
-              <p>Each month, the prize amount is auctioned digitally. Members can participate easily online, and the bidder willing to accept the lowest sum wins that month’s prize. The online system ensures a fair, transparent, and efficient process for everyone.</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 3: </h3>
+              <p>The minimum and maximum amount which a participant can bid shall be displayed during the auction.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 4: Continued Participation</h3>
-              <p>Even after receiving the prize, you continue your monthly payments until the cycle concludes. This ensures the group's stability and builds your financial credibility, often making you eligible for future chits on favorable terms.</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 4: </h3>
+              <p>If a subscriber can’t participate in live auction due to any reason he can place a bid amount after remittance of current instalment.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 5: </h3>
+              <p>The instalment shall be decided after each auction and will be displayed in Mob App or Website.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 6: </h3>
+              <p>The company receives a commission of 3% to 5% and rest of the discount will be distributed equally among all the subscribers of the group irrespective of Prized or Non-Prized subscriber.</p>
             </div>
           </div>
         </>
@@ -256,7 +264,7 @@ const AboutTabs = () => {
                           />
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-primary mb-2">
-                          1000 +
+                          5K +
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
                           Active Customers
@@ -272,7 +280,7 @@ const AboutTabs = () => {
                           />
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-primary mb-2">
-                          35
+                          35 +
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
                           Branches

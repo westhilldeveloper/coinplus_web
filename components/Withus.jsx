@@ -11,8 +11,8 @@ const Withus = () => {
  const cards = [
   {
     id: 1,
-    title: "10,000+ Happy Members",
-    description: "A growing community of trust. From saving for a home to funding education, we’ve already helped over 10,000 members move closer to their dreams.",
+    title: "5,000 + Happy Members",
+    description: "A growing community of trust. From saving for a home to funding education, we’ve already helped over 5,000 members move closer to their dreams.",
     icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
     color: "bg-blue-50 border-blue-100"
   },
@@ -25,7 +25,7 @@ const Withus = () => {
   },
   {
     id: 3,
-    title: "35+ Branch Network",
+    title: "35+ Collection Centres",
     description: "Accessible where you are. With 35+ branches and growing, we bring trusted chit fund services closer to communities across the region.",
     icon: <MapPin className="w-6 h-6 md:w-8 md:h-8" />, // Consider MapPin icon for branches
     color: "bg-green-50 border-green-100"
@@ -113,9 +113,9 @@ const Withus = () => {
           {/* Left Section - Years Badge */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-lg">
-              <div className="inline-flex flex-col items-center justify-center px-8 py-10 sm:px-12 sm:py-12 bg-gradient-to-br from-primary to-primary/80 text-white rounded-2xl shadow-xl w-full min-h-[400px]">
+              <div className="inline-flex flex-col items-center justify-center px-8 py-10 sm:px-12 sm:py-12 bg-gradient-to-br from-primary  via-purple-600 to-purple-900 text-white rounded-2xl shadow-xl w-full min-h-[400px]">
                 {/* Background Image Overlay */}
-                <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-20 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-10 rounded-2xl"></div>
                 
                 <span className="text-base sm:text-lg font-medium opacity-90 relative z-10">At </span>
                 <span className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold my-0 relative z-10"> CoinPlus,</span>
