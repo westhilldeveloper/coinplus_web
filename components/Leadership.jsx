@@ -15,12 +15,12 @@ const Leadership = () => {
             
             <div className="space-y-6 text-gray-700 text-md leading-relaxed">
               <p>
-                 ” My vision for Coinplus was simple: to take the core principles of chitti – trust, community, and disciplined savings – and translate them into a seamless, secure, and user-friendly digital experience. We wanted to create a platform that would not only benefit those already familiar with chittis, particularly our older generations who appreciate its time-tested approach, but also introduce its advantages to a new generation of savers. Young people today face a complex financial landscape, often bombarded with temptations like easy credit and instant gratification.
+                 ” My vision for CoinPlus was simple: to take the core principles of chitti – trust, community, and disciplined savings – and translate them into a seamless, secure, and user-friendly digital experience. We wanted to create a platform that would not only benefit those already familiar with chittis, particularly our older generations who appreciate its time-tested approach, but also introduce its advantages to a new generation of savers. Young people today face a complex financial landscape, often bombarded with temptations like easy credit and instant gratification.
               </p>
               
               <p>
-                We believe Coinplus offers a powerful alternative: a way to cultivate a strong savings habit, build financial security, and achieve long-term goals.
-Coinplus is more than just a digital version of a chitti; it’s a carefully structured and registered systematic savings plan (SSP) operating under the Chit Funds Act 1982. This ensures transparency, security, and peace of mind for all our members. We’ve built Coinplus with the highest standards of security and compliance, so you can focus on what matters most: growing your savings.”
+                We believe CoinPlus offers a powerful alternative: a way to cultivate a strong savings habit, build financial security, and achieve long-term goals.
+CoinPlus is more than just a digital version of a chitti; it’s a carefully structured and registered systematic savings plan (SSP) operating under the Chit Funds Act 1982. This ensures transparency, security, and peace of mind for all our members. We’ve built CoinPlus with the highest standards of security and compliance, so you can focus on what matters most: growing your savings.”
               </p>
               
              

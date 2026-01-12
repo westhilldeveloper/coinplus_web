@@ -308,7 +308,7 @@ const BranchLocator = () => {
   const [useInteractiveMap, setUseInteractiveMap] = useState(true);
   const [mapsScriptLoaded, setMapsScriptLoaded] = useState(false);
 
-  console.log("selected state and branch===>",selectedState, selectedBranch)
+ 
 
   // Pre-load Google Maps script when component mounts
   useEffect(() => {
@@ -426,7 +426,7 @@ const BranchLocator = () => {
 
         <div className="lg:w-1/3">
           <h2 className="text-md md:text-lg font-semibold text-gray-700 mb-4">
-            Branches in {selectedState}
+            Collection Centres in {selectedState}
           </h2>
           <div className="space-y-2 text-sm max-h-[400px] overflow-y-auto pr-2">
             {branchData[selectedState]?.map((branch) => (
@@ -446,7 +446,7 @@ const BranchLocator = () => {
         </div>
 
         <div className="lg:w-2/4">
-          <h2 className="text-md md:text-lg font-semibold text-gray-700 mb-4">Branch Details</h2>
+          <h2 className="text-md md:text-lg font-semibold text-gray-700 mb-4">Centres Details</h2>
           {selectedBranch ? (
             <div className="bg-white p-6 rounded-xl border border-gray-300 shadow-sm">
               <h3 className="text-lg md:text-xl font-bold text-primary mb-4">
@@ -534,7 +534,7 @@ const BranchLocator = () => {
                       <div className="text-gray-400 mb-2">📍</div>
                       <p className="text-gray-500 text-sm">No location coordinates available</p>
                       <p className="text-xs text-gray-400 mt-1">
-                        Latitude/Longitude not provided for this branch
+                        Latitude/Longitude not provided for this Centre
                       </p>
                     </div>
                   )}
@@ -557,7 +557,7 @@ const BranchLocator = () => {
             </div>
           ) : (
             <div className="bg-gray-50 p-8 rounded-xl border border-gray-300 text-center">
-              <p className="text-gray-500">Select a branch to view details</p>
+              <p className="text-gray-500">Select a centre to view details</p>
             </div>
           )}
         </div>

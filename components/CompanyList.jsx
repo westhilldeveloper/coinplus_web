@@ -23,30 +23,30 @@ const CompanyList = () => {
       name: 'Janashakti Agro',
       logo: '/images/lg_janashaktiagro.png',
       shortName: 'Janashakti Agro',
-      description: `FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's Annual General Meeting (AGM) was last held on 21 Dec 2023. and as per records from Ministry of Corporate Affairs (MCA), its balance sheet was last filed on 2023-03-31.FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's NIC code is 0112 (which is part of its CIN). As per the NIC code, it is inolved in Growing of vegetables, horticultural specialties and nursery products.`,
+      description: `"Janashakthi Agro" most likely refers to FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED, an active Indian agro-producer company`,
       details: `
         FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's Annual General Meeting (AGM) was last held on 21 Dec 2023. and as per records from Ministry of Corporate Affairs (MCA), its balance sheet was last filed on 2023-03-31.<strong>FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's</Strong> NIC code is 0112 (which is part of its CIN). As per the NIC code, it is inolved in Growing of vegetables, horticultural specialties and nursery products.
       `,
       color: 'bg-blue-50 border-blue-200'
     },
+    // {
+    //   id: 1,
+    //   name: 'JANASHAKTI FOUNDATION',
+    //   logo: '/images/lg_JANASHAKTI FOUNDATION.png',
+    //   shortName: 'Janashakti Foundation',
+    //   description: 'Get Instant Personal Loans of upto ₹25 Lakh with lower EMIs & minimal docs from FinCrif instant loan',
+    //   details: `
+    //     <p>Finovest Janashakti Foundation is a non-govt company recognized under RoC-Ernakulam. Rooted in reliability and customer-centricity, the organization blends disciplined execution with a pragmatic, outcomes-first mindset. By aligning with established industry practices and transparent governance, it has cultivated a strong reputation among customers, partners, and stakeholders.</p>
+    //     <p>The company's core strength lies in its ability to translate market needs into practical, scalable solutions. From onboarding to post-delivery support, processes are designed to be clear, auditable, and responsive—ensuring consistency without losing agility. This balance helps Finovest Janashakti Foundation maintain trust and deliver value across engagements.</p>
+    //   `,
+    //   color: 'bg-green-50 border-green-200'
+    // },
     {
       id: 1,
-      name: 'JANASHAKTI FOUNDATION',
-      logo: '/images/lg_JANASHAKTI FOUNDATION.png',
-      shortName: 'Janashakti Foundation',
-      description: 'Get Instant Personal Loans of upto ₹25 Lakh with lower EMIs & minimal docs from FinCrif instant loan',
-      details: `
-        <p>Finovest Janashakti Foundation is a non-govt company recognized under RoC-Ernakulam. Rooted in reliability and customer-centricity, the organization blends disciplined execution with a pragmatic, outcomes-first mindset. By aligning with established industry practices and transparent governance, it has cultivated a strong reputation among customers, partners, and stakeholders.</p>
-        <p>The company's core strength lies in its ability to translate market needs into practical, scalable solutions. From onboarding to post-delivery support, processes are designed to be clear, auditable, and responsive—ensuring consistency without losing agility. This balance helps Finovest Janashakti Foundation maintain trust and deliver value across engagements.</p>
-      `,
-      color: 'bg-green-50 border-green-200'
-    },
-    {
-      id: 2,
       name: 'Finovest Chits and Kuries PVT.LTD ',
       logo: '/images/lg_finovest.png',
       shortName: 'Finovest Chits and Kuries',
-      description: 'Parent company of Coinplus  chit.',
+      description: 'Parent company of CoinPlus  chit.',
       details: `
         <p><strong>FINOVEST CHITS & KURIES PRIVATE LIMITED</strong> is involved in activities such as Other financial service activities, except insurance and pension funding activities, n.e.c.</p>
         <p>FINOVEST CHITS & KURIES PVT LTD's registered office address is Door No. 37 /1314 E, Kalyana Krishna Samskrithi Bhavan, West Of Boys Hs Road, Kannankulangara Junction, Tripunithura, Ernakulam, Ernakulam, Kerala, India, 682301
@@ -56,7 +56,7 @@ click Here For All The Companies At 682301 | Close
       color: 'bg-purple-50 border-purple-200'
     },
     {
-      id: 3,
+      id: 2,
       name: 'CENTRON',
       logo: '/images/lg_CENTRON.png',
       shortName: 'CENTRON Constructions',
@@ -68,11 +68,11 @@ click Here For All The Companies At 682301 | Close
       color: 'bg-amber-50 border-amber-200'
     },
     {
-      id: 4,
+      id: 3,
       name: 'WESTHILL international',
       logo: '/images/lg_WESTHILL LOGO.png',
       shortName: 'WESTHILL',
-      description: 'Leading film distribution company in South Indian cinema.',
+      description: 'Overseas Business Consultancy',
       details: `
         <p>We, <strong>Westhill International</strong> We, Westhill International, emerged from a strategic foresight– to bridge the gap between India’s vast potential and the opportunities of the global marketplace. Recognizing the increasing interconnectedness of economies worldwide, a group of individuals came together to create a 360° business consultancy in India that could empower both businesses and individuals to thrive internationally. </p>
         <p>As a core overseas business consultancy, we provide expert guidance and strategic solutions for companies seeking to expand their reach in international markets.</p>
@@ -80,20 +80,20 @@ click Here For All The Companies At 682301 | Close
       color: 'bg-red-50 border-red-200'
     },
     {
-      id: 5,
-      name: 'Coinplus',
+      id: 4,
+      name: 'CoinPlus',
       logo: '/images/coinplus.png',
-      shortName: 'Coinplus',
+      shortName: 'CoinPlus',
       description: 'An efficient fintech product from the leading financial service provider in India.',
       details: `
-        <p><strong>Coinplus</strong>  is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.</p>
-        <p>Coinplus represents the evolution of the traditional “chits” into a modern, accessible,and transparent digital platform. It’s a 100% digital systematic savings plan designed to make saving easy, rewarding, and secure. Registered under the Chit Fund Act 1982,
-Coinplus ensures the protection of your investments.</p>
+        <p><strong>CoinPlus</strong>  is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.</p>
+        <p>CoinPlus represents the evolution of the traditional “chits” into a modern, accessible,and transparent digital platform. It’s a 100% digital systematic savings plan designed to make saving easy, rewarding, and secure. Registered under the Chit Fund Act 1982,
+CoinPlus ensures the protection of your investments.</p>
       `,
       color: 'bg-teal-50 border-teal-200'
     },
      {
-      id: 6,
+      id: 5,
       name: 'Gold Centro',
       logo: '/images/lg_goldcentro.png',
       shortName: 'CENTRON',
@@ -104,18 +104,18 @@ Coinplus ensures the protection of your investments.</p>
       `,
       color: 'bg-amber-50 border-amber-200'
     },
-    {
-      id: 7,
-      name: 'WESTHILL Travel and Tours',
-      logo: '/images/lg_travltour.png',
-      shortName: 'WESTHILL',
-      description: 'Your trusted partner in creating unforgettable global travel experiences',
-      details: `
-        <p><strong>Westhill Travel and Tourism</strong> we believe travel is more than just reaching a destination, it’s about the experiences you live, the memories you create, and the journeys that stay with you forever. And behind every great journey is a partner you can trust. That’s where we come in. holistic approach. That's why we offer a comprehensive suite of services designed to cater to every type of traveler and travel need.</p>
-        <p>For those seeking luxury, adventure, or relaxation, our curated leisure tours take you to the most captivating destinations around the world. Each itinerary is thoughtfully designed to combine comfort, convenience, and unique experiences that leave lasting memories.</p>
-      `,
-      color: 'bg-red-50 border-red-200'
-    },
+    // {
+    //   id: 7,
+    //   name: 'WESTHILL Travel and Tours',
+    //   logo: '/images/lg_travltour.png',
+    //   shortName: 'WESTHILL',
+    //   description: 'Your trusted partner in creating unforgettable global travel experiences',
+    //   details: `
+    //     <p><strong>Westhill Travel and Tourism</strong> we believe travel is more than just reaching a destination, it’s about the experiences you live, the memories you create, and the journeys that stay with you forever. And behind every great journey is a partner you can trust. That’s where we come in. holistic approach. That's why we offer a comprehensive suite of services designed to cater to every type of traveler and travel need.</p>
+    //     <p>For those seeking luxury, adventure, or relaxation, our curated leisure tours take you to the most captivating destinations around the world. Each itinerary is thoughtfully designed to combine comfort, convenience, and unique experiences that leave lasting memories.</p>
+    //   `,
+    //   color: 'bg-red-50 border-red-200'
+    // },
   ];
 
   const handleCompanySelect = (id) => {
@@ -225,7 +225,7 @@ Coinplus ensures the protection of your investments.</p>
                       <div className={`${company.color} p-2 sm:p-3 md:p-4 rounded-full border border-gray-200 shadow-md sm:shadow-lg transition-all duration-300 ${
                         activeCompany === company.id ? 'border-primary ring-2 sm:ring-3 md:ring-4 ring-primary/20' : 'hover:shadow-lg sm:hover:shadow-xl border-gray-200'
                       }`}>
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 flex items-center justify-center bg-white rounded-full p-1 sm:p-2">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 flex items-center justify-center bg-white rounded-full p-0 sm:p-0">
                           <img 
                             src={company.logo}
                             alt={company.name}
@@ -282,12 +282,12 @@ Coinplus ensures the protection of your investments.</p>
             <div className="p-4 sm:p-6 md:p-8 lg:p-10 h-full">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 md:mb-8">
                 <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-0">
-                  <div className={`${companies[activeCompany].color} p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl border border-primary/30`}>
-                    <div className="w-12 h-full sm:w-14 sm:h-full md:w-16 md:h-full">
+                  <div className={`${companies[activeCompany].color} p-2 sm:p-2 md:p-2 rounded-lg sm:rounded-xl border border-primary/30`}>
+                    <div className="w-full h-full ">
                       <img 
                         src={companies[activeCompany].logo}
                         alt={companies[activeCompany].name}
-                        className="w-full h-auto object-contain"
+                        className="w-24 h-auto object-contain"
                       />
                     </div>
                   </div>
@@ -310,10 +310,10 @@ Coinplus ensures the protection of your investments.</p>
                 </p>
               </div>
 
-              <div 
+              {/* <div 
                 className="prose prose-sm sm:prose-base md:prose-lg max-w-none text-gray-700 mb-4 sm:mb-6 md:mb-8"
                 dangerouslySetInnerHTML={{ __html: companies[activeCompany].details }}
-              />
+              /> */}
 
               {/* Company Stats */}
               <div className="bg-gray-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 lg:p-6">

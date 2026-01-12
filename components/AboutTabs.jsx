@@ -30,13 +30,13 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Finovest Chits and Kuries Private Limited</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-             Coinplus is the digital arm of Finovest Chits and Kuries Pvt Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
+             CoinPlus is the digital arm of Finovest Chits and Kuries Pvt Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
             </p>
             <p className="leading-relaxed">
              
             </p>
             <p className="leading-relaxed">
-              As a new chapter begins, Coinplus is built on a fresh promise: to redefine the digital chit fund experience from the ground up. We are establishing our leadership not on legacy, but on the pillars of exceptional customer support, transparent service, and unwavering financial discipline. Our commitment is to provide every member with responsive, personalized service and the utmost clarity, ensuring a secure and empowering financial journey. This customer-first ethos is the foundation of our identity and our promise to stand out in the industry.
+              As a new chapter begins, CoinPlus is built on a fresh promise: to redefine the digital chit fund experience from the ground up. We are establishing our leadership not on legacy, but on the pillars of exceptional customer support, transparent service, and unwavering financial discipline. Our commitment is to provide every member with responsive, personalized service and the utmost clarity, ensuring a secure and empowering financial journey. This customer-first ethos is the foundation of our identity and our promise to stand out in the industry.
             </p>
           </div>
         </>
@@ -49,7 +49,7 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">A Tradition of Excellence</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              At Coinplus, our foundation is built on trust, community, and the diligent pursuit of our members' aspirations. While our current operations are proudly focused in the vibrant communities of Kerala and Tamil Nadu, our vision is to extend the reliability and benefits of our chit fund services to every corner of India. We are deeply committed to bringing this proven, disciplined form of saving and credit to a national audience, helping more families build financial security and realize their dreams.
+              At CoinPlus, our foundation is built on trust, community, and the diligent pursuit of our members' aspirations. While our current operations are proudly focused in the vibrant communities of Kerala and Tamil Nadu, our vision is to extend the reliability and benefits of our chit fund services to every corner of India. We are deeply committed to bringing this proven, disciplined form of saving and credit to a national audience, helping more families build financial security and realize their dreams.
             </p>
             <p className="leading-relaxed">
               Our journey has taught us that true excellence is measured by the positive impact we create in people's lives. Every chit cycle we administer, every question we answer, and every promise we uphold reinforces our core values of transparency and unwavering support. As we look forward to expanding across India, we carry this dedication with us, promising the same standard of personalized service, absolute financial discipline, and community-centric values that have distinguished us in our home states.
@@ -68,7 +68,7 @@ const AboutTabs = () => {
               For centuries, chit funds have been a cornerstone of community finance in India, rooted in trust and collective savings. Traditionally, they operate on a simple principle: a group contributes a fixed sum regularly, and each member takes turns receiving the pooled fund, providing both a disciplined savings habit and timely access to capital.
             </p>
             <p className="leading-relaxed">
-              Today, Coinplus is redefining this trusted model for the digital age. While honoring the core community spirit of chit funds, we bring a new standard of professional integrity, technological transparency, and unwavering customer support. Our mission is to transform this timeless financial instrument into a secure, accessible, and empowering tool for a new generation, building a future where disciplined savings and financial growth are within everyone's reach.
+              Today, CoinPlus is redefining this trusted model for the digital age. While honoring the core community spirit of chit funds, we bring a new standard of professional integrity, technological transparency, and unwavering customer support. Our mission is to transform this timeless financial instrument into a secure, accessible, and empowering tool for a new generation, building a future where disciplined savings and financial growth are within everyone's reach.
             </p>
           </div>
         </>
@@ -83,7 +83,7 @@ const AboutTabs = () => {
 </h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              In the modern chit fund landscape, trust is built on transparency, robust processes, and direct accountability. At Coinplus, we recognize that our greatest asset is our professional framework and the dedicated team that upholds it.
+              In the modern chit fund landscape, trust is built on transparency, robust processes, and direct accountability. At CoinPlus, we recognize that our greatest asset is our professional framework and the dedicated team that upholds it.
             </p>
             <p className="leading-relaxed">
               We have built a system where technology-driven oversight ensures absolute financial discipline and clarity for every member. Our customer support and service teams are rigorously trained to embody our core values of transparency, integrity, and exceptional service. Serving as your primary and trusted point of contact, they ensure every interaction is handled with the utmost care, professionalism, and a commitment to your financial well-being.
@@ -95,7 +95,7 @@ const AboutTabs = () => {
       )
     },
     {
-      title: 'Why Coinplus?',
+      title: 'Why CoinPlus?',
       content: (
         <>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Your Trusted Financial Partner</h2>
@@ -131,7 +131,7 @@ const AboutTabs = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Our Commitment to Kerala and Tamil Nadu</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              Coinplus has established a strong and growing presence in the vibrant communities of Kerala and Tamil Nadu. We are dedicated to being a trusted financial partner for individuals and families across these key regions, building our reputation on modern service and reliable solutions. Our focus here reflects our core mission: to provide accessible and empowering financial tools where they are needed most.
+              CoinPlus has established a strong and growing presence in the vibrant communities of Kerala and Tamil Nadu. We are dedicated to being a trusted financial partner for individuals and families across these key regions, building our reputation on modern service and reliable solutions. Our focus here reflects our core mission: to provide accessible and empowering financial tools where they are needed most.
             </p>
             <p className="leading-relaxed">
               Through a deep understanding of the local financial landscape and a network of dedicated professionals on the ground, we serve the unique needs of our members in Kerala and Tamil Nadu. We are committed to delivering the same standard of exceptional customer support, absolute transparency, and financial discipline in every interaction, laying a solid foundation for the communities we serve today and as we look toward future growth.
@@ -143,10 +143,10 @@ const AboutTabs = () => {
       )
     },
     {
-      title: 'How Coinplus Works',
+      title: 'How CoinPlus Works',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Coinplus Works</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How CoinPlus Works</h2>
           <div className="space-y-6 text-gray-700">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 1: </h3>
@@ -177,16 +177,16 @@ const AboutTabs = () => {
       )
     },
     {
-      title: 'Coinplus, a Lifelong Friend',
+      title: 'CoinPlus, a Lifelong Friend',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Coinplus, Your Partner in Progress</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">CoinPlus, Your Partner in Progress</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-              At Coinplus, we believe in building financial relationships that last. From the very first interaction, we strive to be more than just a service provider—we aim to be a reliable partner in your journey toward financial well-being. We are here to support your goals, celebrate your milestones, and help you build a more secure future.
+              At CoinPlus, we believe in building financial relationships that last. From the very first interaction, we strive to be more than just a service provider—we aim to be a reliable partner in your journey toward financial well-being. We are here to support your goals, celebrate your milestones, and help you build a more secure future.
             </p>
             <p className="leading-relaxed">
-              Our commitment extends far beyond a simple transaction. We focus on building trust, understanding your unique aspirations, and providing flexible, transparent financial solutions designed to adapt to your life's changing chapters. This foundation of partnership and personalized support is what we are building today, and it's the reason families are choosing Coinplus as their trusted financial ally for the long term.
+              Our commitment extends far beyond a simple transaction. We focus on building trust, understanding your unique aspirations, and providing flexible, transparent financial solutions designed to adapt to your life's changing chapters. This foundation of partnership and personalized support is what we are building today, and it's the reason families are choosing CoinPlus as their trusted financial ally for the long term.
             </p>
           </div>
         </>
@@ -283,7 +283,7 @@ const AboutTabs = () => {
                           35 +
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
-                          Branches
+                          Centres
                         </div>
                       </div>
                       

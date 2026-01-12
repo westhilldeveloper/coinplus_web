@@ -49,7 +49,7 @@ model Chit {
   phone_number_2       BigInt?   // Changed to BigInt? to match DB
   monthly_contribution Float?
   chit_group           String?
-  duration_value       Int?      // Original value entered by user
+  duration_value       Int?      
   duration_unit        String? 
   created_at           DateTime  @default(now())
   updated_at           DateTime  @updatedAt  // Added @updatedAt

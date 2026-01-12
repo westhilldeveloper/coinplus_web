@@ -19,24 +19,24 @@ const BranchLocator = () => {
   const fetchStates = async () => {
     setLoadingStates(true);
     try {
-      console.log("Fetching states...");
+     
       const response = await fetch('/api/chits/states');
-      console.log("States response status:", response.status);
+     
       
       if (!response.ok) {
-        console.error("States fetch failed:", response.status, response.statusText);
+      
         throw new Error('Failed to fetch states');
       }
       
       const data = await response.json();
-      console.log("States API response:", data);
+     
       
       if (data.success) {
         const statesList = data.states.map(state => ({
           code: state.state,
           name: state.label || state.state
         }));
-        console.log("Processed states:", statesList);
+       
         setStates(statesList);
       } else {
         console.error("States API success is false:", data);
@@ -50,10 +50,10 @@ const BranchLocator = () => {
 
   // Fetch branches for selected state
   const fetchBranchesByState = useCallback(async (stateCode) => {
-    console.log('fetchBranchesByState called with stateCode:', stateCode);
+   
     
     if (!stateCode) {
-      console.log('No state code provided, clearing branches');
+   
       setBranches([]);
       return;
     }
@@ -63,32 +63,27 @@ const BranchLocator = () => {
     
     try {
       const url = `/api/branches?state=${encodeURIComponent(stateCode)}`;
-      console.log('Fetching from URL:', url);
+     
       
       const response = await fetch(url);
-      console.log('Branches response status:', response.status);
-      console.log('Branches response headers:', [...response.headers.entries()]);
+     
       
       if (!response.ok) {
-        console.error('Branches fetch failed:', response.status, response.statusText);
+       
         throw new Error(`Failed to fetch branches: ${response.status} ${response.statusText}`);
       }
       
       const result = await response.json();
-      console.log('Branches API response:', result);
 
-      console.log('Response success:', result.success);
-      console.log('Response data type:', typeof result.data);
-      console.log('Is data array?', Array.isArray(result.data));
-      console.log('Data length:', result.data?.length || 0);
+   
       
       // Check if the response has the expected structure
       if (result.success && Array.isArray(result.data)) {
-        console.log('Setting branches:', result.data);
+       
         setBranches(result.data);
       } else if (Array.isArray(result)) {
         // Fallback: if API returns array directly
-        console.log('Setting branches (direct array):', result);
+       
         setBranches(result);
       } else {
         console.error('Unexpected API response structure:', result);
@@ -96,29 +91,28 @@ const BranchLocator = () => {
       }
       
     } catch (error) {
-      console.error('Error fetching branches:', error);
-      console.error('Error details:', error.message);
+      // console.error('Error fetching branches:', error);
+      // console.error('Error details:', error.message);
       setBranches([]);
     } finally {
       setLoadingBranches(false);
-      console.log('Loading branches completed');
+      
     }
   }, []);
 
   // Initial data fetch - only fetch states
   useEffect(() => {
-    console.log("Component mounted, fetching states...");
+   
     fetchStates();
   }, []);
 
   // Fetch branches when state changes
   useEffect(() => {
-    console.log("selectedState changed:", selectedState);
-    console.log("Current states array:", states);
+   
     
     if (selectedState) {
       const stateObj = states.find(s => s.code === selectedState);
-      console.log("Selected state object:", stateObj);
+     
     }
     
     fetchBranchesByState(selectedState);
@@ -133,7 +127,7 @@ const BranchLocator = () => {
     e.preventDefault();
     
     if (!selectedState || !selectedBranch) {
-      alert("Please select both state and branch");
+      alert("Please select both state and centre");
       return;
     }
 
@@ -238,7 +232,7 @@ const BranchLocator = () => {
                 {/* Branch Selection - EXTREME */}
                 <div className="transform hover:scale-[1.02] transition-all duration-300">
   <label className="block text-sm font-extrabold text-white mb-3 tracking-wider">
-  SELECT YOUR BRANCH 
+  YOUR COLLECTION CENTRE 
   </label>
   <div className="relative group">
     <select
@@ -256,10 +250,10 @@ const BranchLocator = () => {
       }}
     >
       <option value="" className="bg-black py-3">
-        {loadingBranches ? "🔄 LOADING BRANCHES..." : 
+        {loadingBranches ? "🔄 LOADING CENTRES..." : 
          !selectedState ? "SELECT STATE FIRST" : 
-         branches.length === 0 ? "❌ NO BRANCHES AVAILABLE" : 
-         "CHOOSE YOUR BRANCH"}
+         branches.length === 0 ? "❌ NO CENTRES AVAILABLE" : 
+         "CHOOSE YOUR CENTRE"}
       </option>
       {branches?.map((branch) => (
         <option 
@@ -303,12 +297,12 @@ const BranchLocator = () => {
                     {submitting ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        <span className="animate-pulse">🚀 SEARCHING BRANCHES...</span>
+                        <span className="animate-pulse">🚀 SEARCHING CENTRES...</span>
                       </>
                     ) : (
                       <>
                         {/* <Search className="w-4 h-4 animate-bounce" /> */}
-                        <span className="tracking-widest text-xs md:text-md">FIND MY BRANCH NOW!</span>
+                        <span className="tracking-widest text-xs md:text-md">FIND MY CENTRE NOW!</span>
                       </>
                     )}
                   </button>

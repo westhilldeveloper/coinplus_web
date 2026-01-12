@@ -96,13 +96,12 @@ const EnquiryForm = () => {
   ];
 
   const states = [
-    'Andhra Pradesh', 'Telangana', 'Tamil Nadu', 'Karnataka',
-    'Maharashtra', 'Delhi', 'Kerala', 'Other'
+     'Tamil Nadu',
+     'Kerala', 'Other'
   ];
 
   const branches = [
-    'Hyderabad - Banjara Hills', 'Hyderabad - Secunderabad', 'Vijayawada', 'Visakhapatnam',
-    'Bengaluru', 'Chennai', 'Warangal', 'Guntur', 'Other'
+    "ENATHU", "POOVATTOOR", "KODUMON", "HARIPAD", "THRIPPUNITHURA", "CHETTIKULANGARA", "MUTHUKULAM", "KARUNAGAPALLY", "CHETTIKULANGARA", "MAIN", "KULATHUPUZHA", "MULAKKUZHA", "KATTANAM", "KUMBANAD", "RANNI", "VAIKOM", "ALAPPUZHA", "PALLIKATHODU", "PUTHOOR", "PATHANAMTHITTA", "MANNAR", "PRAVINKODU", "KOTTARAKKARA", "ANCHAL", "THRIPPUNITHURA TOWN", "MUVATTUPUZHA", "KOTHAMANGALAM", "THOPPUMPODY", "PATHANAPURAM", "MATTANCHERRY", "ATHANI", "KECHERY", "VADANAPALLI", "KALMANDAPAM"
   ];
 
   return (
@@ -121,7 +120,7 @@ const EnquiryForm = () => {
         {/* Header Section */}
         <div className="text-white relative z-10 py-2 px-4 md:px-6 lg:px-12">
           <h1 className="text-lg sm:text-lg md:text-xl lg:text-xl font-bold text-center mb-2 sm:mb-3">
-            Invest smart - with Coinplus
+            Invest smart - with CoinPlus
           </h1>
           <p className="text-center text-sm sm:text-sm md:text-md lg:text-lg opacity-90">
             Enquire today
@@ -270,7 +269,7 @@ const EnquiryForm = () => {
                   required
                   className="w-full px-1 py-1 text-sm sm:text-base border-0 border-b-2 border-gray-300 focus:border-b-red-600 focus:outline-none text-white focus:border-transparent"
                 >
-                  <option value="" className="text-gray-400 text-sm sm:text-base">Select branch</option>
+                  <option value="" className="text-gray-400 text-sm sm:text-base">Select Centre</option>
                   {branches.map((branch, index) => (
                     <option className="text-primary text-sm sm:text-base" key={index} value={branch}>{branch}</option>
                   ))}

@@ -94,37 +94,8 @@ const ChitFundFAQ = () => {
   const faqItems = [
      {
       id: 1,
-      question: "Why should I join Coinplus?",
-      answer: `Coinplus brings the trusted tradition of systematic savings plans (SSPs), also known as “chits,” into the digital age. Manage everything from the convenience of your phone, with complete transparency and ease. Coinplus fosters a compulsory savings habit, helping you achieve your financial goals.`,
-      videoId: videoData.benefits,
-      icon: <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-purple-500 to-pink-500",
-      glow: "shadow-purple-500/20 sm:shadow-purple-500/30"
-    },
-    {
-      id: 2,
-      question: "What are the benefits of a chit fund?",
-      answer: `Savings: Chit funds provide a disciplined savings mechanism where individuals can contribute fixed amounts regularly. This helps in cultivating a habit of saving and building a corpus over time.
-
-Investment and a Borrowing Tool: In chit funds, when you pay the monthly installment, you invest that money and when you win the auction, you borrow against the subsequent installments (future savings).
-
-Access to Funds: Participants in a chit fund have the opportunity to access a lump sum of money through the auction or lottery system. This can be beneficial for those who need funds for various purposes such as emergencies, education, starting a business or making investments.
-
-No Interest Payments: Unlike traditional loans or credit options, the rate of interest is much lower on the funds received.
-
-Flexibility: Chit funds offer flexibility in terms of the amount of contribution and the duration of the scheme. Participants can choose the chit value and the duration that suits their financial goals and requirements.
-
-Risk Distribution: The collective nature of chit funds spreads the risk among the participants. Each member has an equal chance of receiving the chit value, ensuring fairness and equal opportunity for all.
-
-Potential for Returns: Chit funds often provide an opportunity for participants to earn returns beyond their contributions. If participants win the bid for the chit value early in the scheme, they can benefit from the surplus funds contributed by other members. There will be a compulsory saving which will earn dividends every month. Even if you claim in the last month, the total dividends earned will be more than the bank interest rate.
-
-Tax Free Dividends: From the tax point of view, while the overall income is subject to income tax, the dividends earned per month are neither taxable nor tax deductible. Any losses can be claimed as business losses.
-
-Trust and Transparency: Regulated and authorized chit fund companies, like Finovest, provide a high level of trust and transparency in the operations. Participants can rely on the professionalism and expertise of the chit fund organizers in managing the scheme effectively.
-
-Social Connection: Chit funds often create a sense of community and social bonding among the participants. Members interact and engage with each other during the meetings and auction process, fostering a sense of camaraderie and support.
-
-Level Playing Field: To some extent, chit funds level the playing field by providing access to money for financially excluded communities.`,
+      question: "Why should I join CoinPlus?",
+      answer: `CoinPlus brings the trusted tradition of systematic savings plans (SSPs), also known as “chits,” into the digital age. Manage everything from the convenience of your phone, with complete transparency and ease. CoinPlus fosters a compulsory savings habit, helping you achieve your financial goals.`,
       videoId: videoData.benefits,
       icon: <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-purple-500 to-pink-500",
@@ -132,7 +103,7 @@ Level Playing Field: To some extent, chit funds level the playing field by provi
     },
    
     {
-      id: 3,
+      id: 2,
       question: "How are Chit funds (SSPs) beneficial?",
       answer: `Chit funds (SSPs) are beneficial because they act as a dual instrument—they help you save consistently until the end of the chit, often yielding better returns than a bank savings account or recurring deposit (RD). They also allow you to borrow. In case of any unforeseen circumstances, you can lend more than what you have saved, providing financial flexibility. Additionally, the dividends received from chits are tax-free, making them a tax-efficient savings and borrowing tool.`,
       videoId: videoData.operation,
@@ -140,28 +111,11 @@ Level Playing Field: To some extent, chit funds level the playing field by provi
       gradient: "from-purple-500 to-pink-500",
       glow: "shadow-purple-500/20 sm:shadow-purple-500/30"
     },
+   
     {
-      id: 4,
-      question: "How does a chit fund operate?",
-      answer: `A chit is a mutually beneficial scheme where a group of people contribute towards the chit value. Each month, a member from the group is selected as the prized subscriber, receiving the prize amount.
-Dividends are distributed among the remaining members.
-The maximum bid allowed is 40% of the chit value.
-The company receives a 5% commission, and the rest of the discount amount is distributed equally among the members.
-Dividends earned represent the interest on members' installment payments.
-Non-Prized Subscribers whose payments are up to date can participate in the auctions.
-Successful Bidders must provide required sureties based on future chit liability.
-Monthly installments must be paid by the prized subscriber until the termination of the chit.
-If there are no bidders, the auction is decided by lot among Non-Prized Subscribers.
-The dividend accrued over 50 months is the return on investment for monthly subscriptions made by members.`,
-      videoId: videoData.operation,
-      icon: <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-blue-500 to-cyan-500",
-      glow: "shadow-blue-500/20 sm:shadow-blue-500/30"
-    },
-    {
-      id: 5,
-      question: "What are the modes of payment on Coinplus?",
-      answer: `Coinplus supports multiple payment modes, including:
+      id: 3,
+      question: "What are the modes of payment on CoinPlus?",
+      answer: `CoinPlus supports multiple payment modes, including:
 
 UPI: Use your preferred UPI app for seamless contributions.
 Netbanking: Transfer funds securely from your bank account.
@@ -173,35 +127,11 @@ Cash collection & UPI payment at doorstep: Convenient doorstep services.`,
       gradient: "from-emerald-500 to-green-500",
       glow: "shadow-emerald-500/20 sm:shadow-emerald-500/30"
     },
+    
+    
+   
     {
-      id: 6,
-      question: "When can I participate in the auction?",
-      answer: "A member can participate in the auction starting from the very first auction, provided that their payments are up to date. If payment is made by cheque, it must be cleared before the auction date. A defaulter, whose payments are not up to date before the auction, is not eligible to take part in the auction.",
-      videoId: videoData.auction,
-      icon: <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-amber-500 to-orange-500",
-      glow: "shadow-amber-500/20 sm:shadow-amber-500/30"
-    },
-    {
-      id: 7,
-      question: "What is the purpose of bidding?",
-      answer: "In each chit group, certain members will require funds. Therefore, all members in need of funds will participate in the auction for bidding. The objective of bidding is to determine the successful bidder who places the highest bid amount (which must not exceed the maximum limit) within the designated auction duration of 5 minutes.",
-      videoId: videoData.bidding,
-      icon: <Gavel className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-red-500 to-rose-500",
-      glow: "shadow-red-500/20 sm:shadow-red-500/30"
-    },
-    {
-      id: 8,
-      question: "What are the Income Tax benefits?",
-      answer: "The dividends earned in a chit are not subject to taxation. If you intend to declare the bid amount as a loss, then these dividends must be presented as revenue income during the assessment. As a result, the entirety of the dividend earned in a chit is exempt from taxation if you choose not to declare the bid amount as a loss.",
-      videoId: videoData.tax,
-      icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-indigo-500 to-violet-500",
-      glow: "shadow-indigo-500/20 sm:shadow-indigo-500/30"
-    },
-    {
-      id: 9,
+      id: 4,
       question: "What are the sureties accepted while availing the prize money?",
       answer: `The following sureties are accepted:
 
@@ -210,52 +140,17 @@ Non-Prized Chit (NPC)
 Fixed Deposits (FDs) from Nationalized and scheduled banks
 Surrender value of LIC policies
 Personal guarantee of salaried professionals
-Bonds/Debentures/Deposits of Group Firms
 Bank guarantee from scheduled commercial banks
 Unencumbered Land & Building`,
-      videoId: videoData.security,
       icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-indigo-500 to-violet-500",
       glow: "shadow-indigo-500/20 sm:shadow-indigo-500/30"
     },
+    
+    
+   
     {
-      id: 10,
-      question: "What are the sureties to be submitted?",
-      answer: `A member can provide sureties based on the future liability of the chit. The following are the sureties typically offered by members:
-
-Personal Surety:Any salaried individual employed in State/Central Government, Public Limited Companies, Banks, and other Reputed Companies will be accepted as a surety.
-Bank Guarantee:A guarantee provided by a Scheduled Bank in a specified format can be submitted as surety.
-Income Tax Assessor:Any individual with Income Tax assessment records for the previous three years, involving business or a profession, can serve as a surety.
-Property Pledge:Depositing title deeds of urban property can be presented as surety. Third-party property can also be used as surety.`,
-      videoId: videoData.sureties,
-      icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-sky-500 to-blue-500",
-      glow: "shadow-sky-500/20 sm:shadow-sky-500/30"
-    },
-    {
-      id: 11,
-      question: "How soon can I expect payment?",
-      answer: `Once a member is declared a successful bidder, it becomes their responsibility to provide satisfactory sureties or guarantors based on the future liability as specified in the bylaws. Upon receiving the surety form, the Branch forwards it to the Corporate Office for a Guarantor search. The liabilities of both the member and the guarantors are verified. If the guarantors are deemed acceptable, the form is returned to the Branch for documentation. The Branch is responsible for preparing the required documents, which primarily include the guarantor bond and promissory note, along with other necessary requirements depending on the type of sureties submitted.
-
-Once the documentation and verification processes are complete, the documents are forwarded to the Corporate Office. The Corporate Office meticulously reviews the documents, and if they are found to be satisfactory, payment is released within 2 days.
-
-In the majority of cases, the entire transaction is completed within 10 days, although this timeframe significantly depends on the type of sureties provided and the documents furnished by the member. Members who make regular payments and promptly submit the required documents will have the best chance of receiving expedited payment.`,
-      videoId: videoData.payment,
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 12,
-      question: "What is a ticket?",
-      answer: `A "ticket" means the share of a subscriber in a chit. The foreman always has the first ticket.`,
-      videoId: videoData.payout,
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 13,
+      id: 5,
       question: "What does a share of discount or dividend mean?",
       answer: `In chit funds, dividends represent the portion of profits or returns distributed to members, typically after each auction or on a monthly basis, continuing until the chit cycle concludes.`,
       
@@ -264,7 +159,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
-      id: 14,
+      id: 6,
       question: "What happens if nobody participates in an auction?",
       answer: `If no one participates in an auction, one of the prompt, non-prized subscribers will be selected through a high-tech lottery process, ensuring transparency and fairness.`,
       
@@ -273,7 +168,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
-      id: 15,
+      id: 7,
       question: "Is online auction legal in India?",
       answer: `Yes, online auctions are legal in India as per the Amendment Bill 2019 of Chit Fund Act 1982.`,
     
@@ -282,7 +177,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
-      id: 16,
+      id: 8,
       question: "What are the charges to join an SSP?",
       answer: `The charges to join an SSP are 0.1% of the chit value, subject to a minimum of ₹200 and a maximum of ₹500. This is a one-time membership fee, and you can join as many groups as you wish.`,
      
@@ -291,7 +186,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
-      id: 17,
+      id: 9,
       question: "Can NRIs join in chit groups?",
       answer: `Yes, NRIs can join chit groups. NRIs need to provide a valid passport and visa, while`,
      
@@ -300,7 +195,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
-      id: 18,
+      id: 10,
       question: " Can Business entities join in chit groups?",
       answer: `Yes, GST registered business entities can join chit groups.`,
      
@@ -309,7 +204,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
-      id: 19,
+      id: 11,
       question: "Can a single person join multiple chit groups?",
       answer: `Yes, you can join multiple groups. However, you will need to furnish sufficient securities while releasing the prized amount.`,
      
@@ -317,87 +212,7 @@ In the majority of cases, the entire transaction is completed within 10 days, al
       gradient: "from-teal-500 to-emerald-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
-    {
-      id: 20,
-      question: "What does a bid mean in the chit-fund process?",
-      answer: `Bidding is nothing but a discount, which is a quantum of the amount that a subscriber forgoes in a draw in order to get the prize amount. The subscribers forego the highest discount during the prescribed time limit within the ceiling fixed by the Chit Funds Act, 1982, i.e. 40%.`,
-    
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 21,
-      question: "What happens if nobody bids in the auction?",
-      answer: `In the event that no bidder is forthcoming in an auction, a lot will be drawn from the non-prized subscribers at the close of the prescribed time (i.e. 5 minutes), and the subscriber drawn will be declared as a prized subscriber. He will be entitled to receive the gross chit amount for his ticket less the foreman commission.`,
-      
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 22,
-      question: "Who is a Prized Subscriber?",
-      answer: `A Prized Subscriber means a subscriber who has either received or is entitled to receive the net chit amount. The prized subscriber who draws the net chit amount shall pay the Foreman the amount due for his ticket for each instalment on or before the due date of each such auction.
-
-The prized subscriber who is entitled to receive the net chit amount must furnish necessary security or sureties to the satisfaction of the foreman for due payment of future subscriptions to draw the net chit amount.`,
-     
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 23,
-      question: "What does an auction mean in the chit-fund process?",
-      answer: `In a Chit Fund Organisation, auctions play a vital role, which is crucial for identifying the prized subscriber in each auction. The subscriber who is to get the prize amount at any instalment shall be determined by a lot or by an auction at the place and time mentioned in the chit agreement. The time allowed for the auction is 5 minutes from the commencement of the proceedings. The proceedings will be regulated by the foreman, and in case of a dispute, the decision of the foreman is final.
-
-The prime eligibility for subscribers to participate in an auction is to make up-to-date payments. The subscribers can submit written bid offers stating the maximum amount of discount they are willing to forego, which must be received by the foreman at least one day before the concerned auction, and it can be withdrawn only 24 hours before the auction time. Only subscribers or their authorised persons/proxies will be allowed to take part in the auction. Such authorisations shall be in writing.
-
-The auction shall start from a foreman’s commission of 5% of the chit value, and bidders may, in the auction, raise a discount to the maximum of 25/30/35/40 per cent of the chit value, which is mentioned in the chit agreement. Each time, the bid shall be raised by rupees hundred or multiples thereof.
-
-The non-prized subscriber who bids at the highest discount, not exceeding the specified maximum discount, will be declared as the prized subscriber. If there is more than one bidder for the maximum discount, the auction will be decided by lot among such bidders.`,
-      
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 24,
-      question: "Who is a foreman?",
-      answer: `Among various rights and duties of the foreman, the following are crucial for the proper conducting of the chit.
-
-It is the Right of the Foreman-
-
-To obtain the gross chit amount without deducing the discount at the instalment specified in the chit agreement.
-To entitle 5% of gross chit amount as may be fixed in the chit agreement by way of commission or remuneration for meeting the expenses for running the chit.
-To collect interest and penalty, if any, payable on any default in the payment instalments under the provisions of the chit agreement.
-To receive and realise all subscriptions from the subscribers and to distribute the prize amounts to the prized subscribers.
-To demand sufficient security from any prized subscriber for the due payment of future subscriptions payable by him.
-It is the duty of foreman-
-
-To be bound to pay the net chit amount to the prized subscriber on furnishing sufficient security for the due payment of future subscriptions.
-To deposit the unpaid net chit amount in a separate account in an approved bank mentioned in the chit agreement where the prized subscriber is unable to draw the net chit amount until the next succeeding auction. To intimate in writing the fact of such deposit and the reasons to the prized subscriber as well as the registrar.
-To distribute a share of discount or dividend among the subscribers by way of adjustment towards the subscriptions payable for the next instalment, in accordance with the chit agreement.`,
-     
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
-    {
-      id: 25,
-      question: "What are the rights and duties of the foreman?",
-      answer: `In a Chit Fund Organisation, auctions play a vital role, which is crucial for identifying the prized subscriber in each auction. The subscriber who is to get the prize amount at any instalment shall be determined by a lot or by an auction at the place and time mentioned in the chit agreement. The time allowed for the auction is 5 minutes from the commencement of the proceedings. The proceedings will be regulated by the foreman, and in case of a dispute, the decision of the foreman is final.
-
-The prime eligibility for subscribers to participate in an auction is to make up-to-date payments. The subscribers can submit written bid offers stating the maximum amount of discount they are willing to forego, which must be received by the foreman at least one day before the concerned auction, and it can be withdrawn only 24 hours before the auction time. Only subscribers or their authorised persons/proxies will be allowed to take part in the auction. Such authorisations shall be in writing.
-
-The auction shall start from a foreman’s commission of 5% of the chit value, and bidders may, in the auction, raise a discount to the maximum of 25/30/35/40 per cent of the chit value, which is mentioned in the chit agreement. Each time, the bid shall be raised by rupees hundred or multiples thereof.
-
-The non-prized subscriber who bids at the highest discount, not exceeding the specified maximum discount, will be declared as the prized subscriber. If there is more than one bidder for the maximum discount, the auction will be decided by lot among such bidders.`,
-     
-      icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
-      glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
-    },
+   
     
   ];
 
@@ -406,7 +221,6 @@ The non-prized subscriber who bids at the highest discount, not exceeding the sp
       id: 'm1',
       question: "Why choose Finovest?",
       answer: "Finovest is a trusted chit fund company with transparency, compliance, and timely payouts.",
-      videoId: videoData.finovest,
       icon: <Award className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-fuchsia-500 to-purple-500",
       glow: "shadow-fuchsia-500/20 sm:shadow-fuchsia-500/30"
@@ -423,7 +237,7 @@ The non-prized subscriber who bids at the highest discount, not exceeding the sp
     {
       id: 'm3',
       question: "What are the durations?",
-      answer: "Durations range from 10 to 60 months based on scheme and value.",
+      answer: "Durations range from 10 to 60 months/weeks based on scheme and value.",
       icon: <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-cyan-500 to-blue-500",
       glow: "shadow-cyan-500/20 sm:shadow-cyan-500/30"
@@ -448,34 +262,7 @@ The non-prized subscriber who bids at the highest discount, not exceeding the sp
     }
   ];
 
-  const supportItems = [
-    {
-      id: 's1',
-      question: "Bid Offer in Advance",
-      answer: "Subscribers can place advance bids for future auctions.",
-      icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-violet-500 to-purple-500",
-      glow: "shadow-violet-500/20 sm:shadow-violet-500/30"
-    },
-    {
-      id: 's2',
-      question: "Online Auction Participation",
-      answer: "Participate securely via mobile app or web portal.",
-      videoId: videoData['online-auction'],
-      icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-rose-500 to-pink-500",
-      glow: "shadow-rose-500/20 sm:shadow-rose-500/30"
-    },
-    {
-      id: 's3',
-      question: "Customer Support",
-      answer: "Support via helpline, WhatsApp, email, and branches.",
-      icon: <HeadphonesIcon className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-blue-500 to-indigo-500",
-      glow: "shadow-blue-500/20 sm:shadow-blue-500/30"
-    }
-  ];
-
+  
   /* ===================== RESPONSIVE LOGIC ===================== */
 
   const toggleItem = (id) => {
@@ -898,28 +685,7 @@ The non-prized subscriber who bids at the highest discount, not exceeding the sp
                 {FinovestItems.map(renderItem)}
               </section>
 
-              {/* Support Section */}
-              <section 
-                id="support" 
-                ref={el => sectionRefs.current['support'] = el} 
-                className="mb-12 sm:mb-16 scroll-mt-20 sm:scroll-mt-24"
-              >
-                <div className="relative mb-6 sm:mb-8">
-                  <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" />
-                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-emerald-50 to-teal-50 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-emerald-100">
-                    <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
-                        <HeadphonesIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800 truncate">Support & Resources</h3>
-                        <p className="text-gray-600 text-sm sm:text-base truncate">Get the help you need</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {supportItems.map(renderItem)}
-              </section>
+             
 
               {/* YouTube Channel Section - Responsive layout */}
               <div className="relative mt-12 sm:mt-16 md:mt-20">

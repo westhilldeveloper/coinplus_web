@@ -38,6 +38,11 @@ export default function   PlansSection() {
     }
   };
 
+   // Helper function to get first letter of unit
+  const getFirstLetterOfUnit = (unit) => {
+    if (!unit) return 'M'; // Default to 'M' for months
+    return unit.charAt(0).toUpperCase();
+  }
   // Fetch chits data with filters - MODIFIED TO USE branch PARAM
   const fetchChits = async () => {
   setLoading(true);
@@ -181,7 +186,7 @@ export default function   PlansSection() {
             <MapPin size={14} className="sm:size-4" />
             <span>Filter by State</span>
           </div>
-          <div className="relative group">
+          <div className="relative group  ">
             <select
               value={selectedState}
               onChange={(e) => {
@@ -234,7 +239,7 @@ export default function   PlansSection() {
 
       {/* Tabs Navigation */}
       <div className="relative">
-        <div className="flex overflow-x-auto pb-3 sm:pb-4 gap-1.5 sm:gap-2 scrollbar-hide">
+        <div className="flex  px-2 justify-start items-center overflow-x-auto sm:pb-4 gap-1.5 sm:gap-2 scrollbar-hide">
           {TABS.map((tab) => (
             <button
               key={tab.key}
@@ -294,16 +299,16 @@ export default function   PlansSection() {
                   {/* Plan Header */}
                   <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div>
-                      <span className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-1.5 sm:mb-2">
+                      {/* <span className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-1.5 sm:mb-2">
                         {chit.chit_group?.toUpperCase() || activeTab.toUpperCase()}
-                      </span>
+                      </span> */}
                       <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                         ₹ {getDisplayAmount(chit).toLocaleString("en-IN")}
                       </h3>
                     </div>
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <div className="w-12 h-12 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
                       <span className="text-primary font-bold text-sm sm:text-base">
-                        {chit.duration_value || 'N/A'}
+                        {chit.duration_value  || 'N/A'} { getFirstLetterOfUnit(chit.duration_unit) || "-"}
                       </span>
                     </div>
                   </div>

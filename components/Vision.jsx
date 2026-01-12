@@ -45,7 +45,7 @@ export default function Vision() {
                 <div className="inline-block relative">
                    <div className="absolute top-0 -left-2 w-6 h-6 bg-primary rounded-full animate-ping"></div>
                   <h2 className="text-2xl md:text-3xl font-bold inline-block pb-3 border-b-2 border-yellow-400">
-                    Coinplus
+                    CoinPlus
                   </h2>
                  
                 </div>

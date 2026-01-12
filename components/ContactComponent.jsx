@@ -290,7 +290,7 @@ const EnquiryForm = ({ onClose }) => {
                     required
                     className="w-full px-4 py-3 border-0 border-b-2 border-gray-300 focus:border-b-red-600 bg-transparent focus:ring-0 focus:outline-none text-white"
                   >
-                    <option value="" className="text-gray-400">Select branch</option>
+                    <option value="" className="text-gray-400">Select centre</option>
                     {branches.map((branch, index) => (
                       <option key={index} value={branch} className="text-primary">{branch}</option>
                     ))}

@@ -26,7 +26,7 @@ const Withus = () => {
   {
     id: 3,
     title: "35+ Collection Centres",
-    description: "Accessible where you are. With 35+ branches and growing, we bring trusted chit fund services closer to communities across the region.",
+    description: "Accessible where you are. With 35+ centres and growing, we bring trusted chit fund services closer to communities across the region.",
     icon: <MapPin className="w-6 h-6 md:w-8 md:h-8" />, // Consider MapPin icon for branches
     color: "bg-green-50 border-green-100"
   },
@@ -128,7 +128,7 @@ const Withus = () => {
     Powered by  
   </p>
   {/* Replace text with image */}
-  <div className="mt-2">
+  <div className="mt-2 bg-white px-2 rounded-md shadow-lg shadow-gray-300">
     <img 
       src="/images/lg_finovest.png" 
       alt="Finovest" 

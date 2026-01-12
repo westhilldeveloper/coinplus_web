@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Left Content - Same as before */}
         <div className="order-2 lg:order-1">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight sm:leading-tight md:leading-tight lg:leading-tight">
-            Achieve Any Goal with <span className="text-primary">Coinplus</span>
+            Achieve Any Goal with <span className="text-primary">CoinPlus</span>
           </h1>
           
           <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-600 max-w-2xl">
@@ -58,7 +58,7 @@ export default function Hero() {
           {/* Stats - Responsive grid */}
           <div className="mt-6 md:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 max-w-full">
             <div className="bg-slate-50 p-4 sm:p-5 rounded-lg shadow-sm">
-              <div className="text-xs sm:text-sm text-slate-500">Branches</div>
+              <div className="text-xs sm:text-sm text-slate-500">Centres</div>
               <div className="font-semibold flex items-center text-lg sm:text-xl md:text-2xl">
                 35  
                 <img 
@@ -197,7 +197,7 @@ export default function Hero() {
 
             {/* Optional: Video Title */}
             <div className="mt-4 text-center">
-              <h3 className="text-white text-lg md:text-xl font-semibold">Coinplus - Your Financial Partner</h3>
+              <h3 className="text-white text-lg md:text-xl font-semibold">CoinPlus - Your Financial Partner</h3>
               <p className="text-gray-300 text-sm md:text-base">Watch our full introduction video</p>
             </div>
           </div>
