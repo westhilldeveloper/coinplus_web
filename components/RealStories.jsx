@@ -319,9 +319,9 @@ const RealStories = () => {
             href={`https://www.youtube.com/channel/${YOUTUBE_CHANNEL_ID}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-gradient-to-b from-red-800 via-red-500 to-red-700 text-red-200 md:text-red-900 hover:text-red-200 px-6 py-3 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
           >
-            <Youtube className="w-8 h-8" />
+            <Youtube className="w-8 h-8 " />
             Visit Our YouTube Channel for More Stories
           </a>
         </div>

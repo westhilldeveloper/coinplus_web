@@ -27,7 +27,7 @@ export default function Vision() {
        <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
           
           {/* LEFT IMAGE WITH STATS - Enhanced */}
-          <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-primary via-purple-600 to-purple-900 via-primary/80 text-white rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group w-full lg:w-2/3 animate-gradient">
+          <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-primary via-purple-600 to-purple-900 via-primary/80 text-white rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group w-full lg:w-2/3 ">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -200,7 +200,7 @@ function StatItem({ number, label }) {
 
 function ValueCard({ image, title }) {
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-primary/80 to-purple-600 border border-primary/20 p-4 rounded-2xl shadow-lg hover:shadow-lg transition-all duration-300 cursor-pointer text-center flex flex-col items-center justify-center gap-4 hover:scale-[1.02] min-h-[120px] animate-gradient">
+    <div className="relative bg-gradient-to-r from-purple-600 via-purple-700 to-purple-600 border border-primary/20 p-4 rounded-2xl shadow-lg hover:shadow-lg transition-all duration-300 cursor-pointer text-center flex flex-col items-center justify-center gap-4 hover:scale-[1.02] min-h-[120px] animate-gradient">
       <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
         <img 
           src={image} 

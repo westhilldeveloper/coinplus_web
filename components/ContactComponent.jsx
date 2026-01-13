@@ -424,7 +424,7 @@ const ContactComponent = () => {
             <div className="lg:w-1/3  flex justify-center items-center ">
               <button 
                 onClick={handleButtonClick}
-                className="group relative flex items-center justify-center gap-4 bg-red-600 backdrop-blur-md text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-2xl transition-all duration-500 hover:bg-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 whitespace-nowrap overflow-hidden"
+                className="group relative flex items-center justify-center gap-4 bg-gradient-to-br from-red-700 via-red-500 to-red-700 backdrop-blur-md text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-xl transition-all duration-500  hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 whitespace-nowrap overflow-hidden"
               >
                 {/* Button Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent group-hover:from-primary/40 transition-all duration-500"></div>
