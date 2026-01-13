@@ -27,7 +27,7 @@ export default function Vision() {
        <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
           
           {/* LEFT IMAGE WITH STATS - Enhanced */}
-          <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-primary via-purple-600 to-purple-900 via-primary/80 text-white rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group w-full lg:w-2/3">
+          <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-br from-primary via-purple-600 to-purple-900 via-primary/80 text-white rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group w-full lg:w-2/3 animate-gradient">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -94,7 +94,7 @@ export default function Vision() {
           </div>
 
           {/* VISION CARD - Enhanced */}
-          <div className="flex-1 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl p-6 md:p-8 border-2 border-primary/30 relative overflow-hidden group">
+          <div className="flex-1 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl p-6 md:p-8 border-2 border-primary/30 relative overflow-hidden group ">
             {/* Animated corner elements */}
             <div className="absolute top-0 left-0 w-16 h-16">
               <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary/30 rounded-tl-lg"></div>
@@ -184,19 +184,6 @@ export default function Vision() {
           </div>
         </div>
 
-        {/* ALTERNATIVE: VALUES IN A SEPARATE ROW (if you prefer) */}
-        {/* 
-        <div className="mt-10">
-          <h3 className="text-2xl font-bold text-primary mb-6 text-center">Our Values</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
-            <ValueCard image="/images/honesty.gif" title="Honesty" />
-            <ValueCard image="/images/document-analysis.gif" title="Compliance" />
-            <ValueCard image="/images/leadership.gif" title="Empathy" />
-            <ValueCard image="/images/shield.gif" title="Best Practices" />
-            <ValueCard image="/images/justice.gif" title="Integrity" />
-          </div>
-        </div>
-        */}
       </div>
     </div>
   );
@@ -213,7 +200,7 @@ function StatItem({ number, label }) {
 
 function ValueCard({ image, title }) {
   return (
-    <div className="bg-primary/10 border border-primary/20 p-4 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer text-center flex flex-col items-center justify-center gap-4 hover:scale-[1.02] min-h-[120px]">
+    <div className="relative bg-gradient-to-r from-purple-600 via-primary/80 to-purple-600 border border-primary/20 p-4 rounded-2xl shadow-lg hover:shadow-lg transition-all duration-300 cursor-pointer text-center flex flex-col items-center justify-center gap-4 hover:scale-[1.02] min-h-[120px] animate-gradient">
       <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
         <img 
           src={image} 
@@ -221,7 +208,7 @@ function ValueCard({ image, title }) {
           className="w-full h-full rounded-full object-contain"
         />
       </div>
-      <h4 className="font-medium text-primary text-sm md:text-base">{title}</h4>
+      <h4 className="font-medium text-white text-sm md:text-base">{title}</h4>
     </div>
   );
 }
