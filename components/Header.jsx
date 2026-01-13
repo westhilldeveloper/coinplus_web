@@ -112,7 +112,7 @@ export default function Header() {
   return (
     <>
       {/* TopBar with slide animation */}
-      <div className={`transition-all duration-500 ease-out ${
+      <div className={`transition-all  duration-500 ease-out ${
         showTopBar 
           ? 'transform translate-y-0 opacity-100' 
           : 'transform -translate-y-full opacity-0'
@@ -149,7 +149,7 @@ export default function Header() {
               </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center  gap-1">
               {navItems.map((item, index) => (
                 <div 
                   key={item.label}
@@ -215,7 +215,7 @@ export default function Header() {
                 href="https://subscriber.coinplus.co.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-4 px-6 py-2.5 bg-gradient-to-r from-primary to-primary/80 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
+                className="ml-4 px-6 py-2.5 bg-gradient-to-r from-primary via-purple-600 to-primary/80 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 Pay / Login
               </Link>

@@ -24,9 +24,7 @@ const CompanyList = () => {
       logo: '/images/lg_janashaktiagro.png',
       shortName: 'Janashakti Agro',
       description: `"Janashakthi Agro" most likely refers to FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED, an active Indian agro-producer company`,
-      details: `
-        FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's Annual General Meeting (AGM) was last held on 21 Dec 2023. and as per records from Ministry of Corporate Affairs (MCA), its balance sheet was last filed on 2023-03-31.<strong>FINOVEST JANASHAKTI AGRO PRODUCER COMPANY LIMITED's</Strong> NIC code is 0112 (which is part of its CIN). As per the NIC code, it is inolved in Growing of vegetables, horticultural specialties and nursery products.
-      `,
+      details: `visit our webiste: https://westhillinternational.com`,
       color: 'bg-blue-50 border-blue-200'
     },
     // {
@@ -48,10 +46,7 @@ const CompanyList = () => {
       shortName: 'Finovest Chits and Kuries',
       description: 'Parent company of CoinPlus  chit.',
       details: `
-        <p><strong>FINOVEST CHITS & KURIES PRIVATE LIMITED</strong> is involved in activities such as Other financial service activities, except insurance and pension funding activities, n.e.c.</p>
-        <p>FINOVEST CHITS & KURIES PVT LTD's registered office address is Door No. 37 /1314 E, Kalyana Krishna Samskrithi Bhavan, West Of Boys Hs Road, Kannankulangara Junction, Tripunithura, Ernakulam, Ernakulam, Kerala, India, 682301
-click Here For All The Companies At 682301 | Close
-.</p>
+       Visit us: https://www.finovestgroup.com
       `,
       color: 'bg-purple-50 border-purple-200'
     },
@@ -61,10 +56,10 @@ click Here For All The Companies At 682301 | Close
       logo: '/images/lg_CENTRON.png',
       shortName: 'CENTRON Constructions',
       description: `Building tomorrow's landmarks today.`,
-      details: `
-        <p>At <strong>Centron,</strong> we are dedicated to transforming visionary ideas into reality through our expertise in infrastructure projects, residential and commercial construction, and comprehensive real estate development. Our diverse range of services encompasses Design and Build Construction, Project Management, and Real Estate Development, all tailored to meet the dynamic needs of our clients. With a focus on delivering excellence and innovation, Centron Constructions stands at the forefront of the industry, backed by a leadership team with unparalleled expertise.</p>
-        <p>Our directors bring a wealth of knowledge, combining rigorous academic credentials from the prestigious institutions such as Indian Institute of Technology Madras (IIT), Royal Institution of Chartered Surveyors (RICS), and Project management Institute (PMI, USA) with extensive international and domestic experience. This blend of academic excellence and practical know-how empowers us to tackle complex projects with confidence and precision. At Centron Constructions, we are committed to exceeding expectations and shaping the future of construction and real estate development. Join us as we build tomorrow's landmarks today.</p>
-      `,
+      // details: `
+      //   <p>At <strong>Centron,</strong> we are dedicated to transforming visionary ideas into reality through our expertise in infrastructure projects, residential and commercial construction, and comprehensive real estate development. Our diverse range of services encompasses Design and Build Construction, Project Management, and Real Estate Development, all tailored to meet the dynamic needs of our clients. With a focus on delivering excellence and innovation, Centron Constructions stands at the forefront of the industry, backed by a leadership team with unparalleled expertise.</p>
+      //   <p>Our directors bring a wealth of knowledge, combining rigorous academic credentials from the prestigious institutions such as Indian Institute of Technology Madras (IIT), Royal Institution of Chartered Surveyors (RICS), and Project management Institute (PMI, USA) with extensive international and domestic experience. This blend of academic excellence and practical know-how empowers us to tackle complex projects with confidence and precision. At Centron Constructions, we are committed to exceeding expectations and shaping the future of construction and real estate development. Join us as we build tomorrow's landmarks today.</p>
+      // `,
       color: 'bg-amber-50 border-amber-200'
     },
     {
@@ -73,10 +68,10 @@ click Here For All The Companies At 682301 | Close
       logo: '/images/lg_WESTHILL LOGO.png',
       shortName: 'WESTHILL',
       description: 'Overseas Business Consultancy',
-      details: `
-        <p>We, <strong>Westhill International</strong> We, Westhill International, emerged from a strategic foresight– to bridge the gap between India’s vast potential and the opportunities of the global marketplace. Recognizing the increasing interconnectedness of economies worldwide, a group of individuals came together to create a 360° business consultancy in India that could empower both businesses and individuals to thrive internationally. </p>
-        <p>As a core overseas business consultancy, we provide expert guidance and strategic solutions for companies seeking to expand their reach in international markets.</p>
-      `,
+      // details: `
+      //   <p>We, <strong>Westhill International</strong> We, Westhill International, emerged from a strategic foresight– to bridge the gap between India’s vast potential and the opportunities of the global marketplace. Recognizing the increasing interconnectedness of economies worldwide, a group of individuals came together to create a 360° business consultancy in India that could empower both businesses and individuals to thrive internationally. </p>
+      //   <p>As a core overseas business consultancy, we provide expert guidance and strategic solutions for companies seeking to expand their reach in international markets.</p>
+      // `,
       color: 'bg-red-50 border-red-200'
     },
     {
@@ -85,11 +80,11 @@ click Here For All The Companies At 682301 | Close
       logo: '/images/coinplus.png',
       shortName: 'CoinPlus',
       description: 'An efficient fintech product from the leading financial service provider in India.',
-      details: `
-        <p><strong>CoinPlus</strong>  is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.</p>
-        <p>CoinPlus represents the evolution of the traditional “chits” into a modern, accessible,and transparent digital platform. It’s a 100% digital systematic savings plan designed to make saving easy, rewarding, and secure. Registered under the Chit Fund Act 1982,
-CoinPlus ensures the protection of your investments.</p>
-      `,
+//       details: `
+//         <p><strong>CoinPlus</strong>  is the digital arm of Finovest Chits and Kuries Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.</p>
+//         <p>CoinPlus represents the evolution of the traditional “chits” into a modern, accessible,and transparent digital platform. It’s a 100% digital systematic savings plan designed to make saving easy, rewarding, and secure. Registered under the Chit Fund Act 1982,
+// CoinPlus ensures the protection of your investments.</p>
+//       `,
       color: 'bg-teal-50 border-teal-200'
     },
      {
@@ -98,10 +93,10 @@ CoinPlus ensures the protection of your investments.</p>
       logo: '/images/lg_goldcentro.png',
       shortName: 'CENTRON',
       description: 'Sell your old Gold / Release Your Pledged Gold ',
-      details: `
-        <p> In India, pledging gold ornaments for quick financial relief is a long-ongoing practice, whether it is for medical emergencies, business funding, or education purposes. While it is still wise to choose a gold loan for small funding, it is not advised to pledge gold for large sums of money in the increasing interest rates and evolving market conditions; it is a high risk. </p>
-        <p>But if the high interest rates put you into more financial trouble, we can help you release your pledged gold. You can visit your nearest Gold Centro branch with all the documents, and we will clear your gold loan, release your pledged gold, and buy it from you at the current market price and the gold purity.</p>
-      `,
+      // details: `
+      //   <p> In India, pledging gold ornaments for quick financial relief is a long-ongoing practice, whether it is for medical emergencies, business funding, or education purposes. While it is still wise to choose a gold loan for small funding, it is not advised to pledge gold for large sums of money in the increasing interest rates and evolving market conditions; it is a high risk. </p>
+      //   <p>But if the high interest rates put you into more financial trouble, we can help you release your pledged gold. You can visit your nearest Gold Centro branch with all the documents, and we will clear your gold loan, release your pledged gold, and buy it from you at the current market price and the gold purity.</p>
+      // `,
       color: 'bg-amber-50 border-amber-200'
     },
     // {
@@ -310,10 +305,10 @@ CoinPlus ensures the protection of your investments.</p>
                 </p>
               </div>
 
-              {/* <div 
+              <div 
                 className="prose prose-sm sm:prose-base md:prose-lg max-w-none text-gray-700 mb-4 sm:mb-6 md:mb-8"
                 dangerouslySetInnerHTML={{ __html: companies[activeCompany].details }}
-              /> */}
+              />
 
               {/* Company Stats */}
               <div className="bg-gray-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 lg:p-6">

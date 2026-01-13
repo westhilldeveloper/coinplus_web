@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a 
               href="/chitplans" 
-              className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors text-center text-sm md:text-base"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-primary via-purple-600 to-primary/80 text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors text-center text-sm md:text-base"
             >
               View Plans
             </a>

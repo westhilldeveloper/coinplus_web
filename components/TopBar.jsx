@@ -25,8 +25,8 @@ export default function TopBar() {
   }, []);
 
   return (
-    <div className="w-full bg-gradient-to-r from-primary/60 to-primary text-white py-2">
-      <div className="container mx-auto flex items-center justify-between px-4">
+    <div className="w-full   bg-gradient-to-r from-primary via-purple-900 to-purple-600  text-white py-2 rounded-b-2xl border-b-3 border-b-gray-600  ">
+      <div className="container mx-auto flex items-center   justify-between rounded-b-2xl px-4">
 
         {/* Left Section: Current Time */}
         <div className="flex items-center gap-3">

@@ -14,6 +14,12 @@ import {
 } from "lucide-react";
 
 export default function Vision() {
+   const youtubeVideoId = "4uT5mVZZuyo";
+  const localVideoUrl = "https://coinplus.co.in/wp-content/uploads/2025/06/Coinplus_English.mp4";
+
+ const getYouTubeEmbedUrl = (videoId, autoplay = true, controls = false, muted = true) => {
+  return `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay ? 1 : 0}&mute=${muted ? 1 : 0}&loop=1&playlist=${videoId}&controls=${controls ? 1 : 0}&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1`;
+};
   return (
     <div className="w-full py-4 md:py-16 px-0 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-full mx-auto">
@@ -30,11 +36,30 @@ export default function Vision() {
             
             <div className="relative w-full lg:w-1/2 mb-6 lg:mb-0 lg:pr-6 overflow-hidden rounded-2xl">
               <div className="relative rounded-2xl overflow-hidden border-2 border-white/30 shadow-xl group-hover:shadow-2xl transition-all duration-500">
-                <img
-                  src="/images/family.png"
-                  alt="about"
-                  className="w-full max-w-md mx-auto transform transition-transform duration-700 group-hover:scale-110"
-                />
+              <div className="absolute md:opacity-100 opacity-0 top-4 left-4 h-4 w-4 bg-[radial-gradient(circle_at_center,_#948C8B,_#000,_#000)] rounded-full border-1 border-gray-600"></div>
+              <div className="absolute md:opacity-100 opacity-0 top-1/2 -translate-y-1/2 right-2 h-8 w-8 bg-gradient-to-br from-black via-gray-700 to-black rounded-full border-1 border-black"></div>
+                <iframe
+            src={getYouTubeEmbedUrl(youtubeVideoId, true, false, true)}
+            title="Coinplus Background Video"
+            className=" top-0 left-0 w-full h-full "  // Scale to fill
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            style={{ pointerEvents: 'none' }}
+          />
+          
+          {/* Fallback Image - Also fill container */}
+          <img 
+            src={`https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg`}
+            alt="Coinplus services overview"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            onError={(e) => {
+              e.currentTarget.src = `/images/cplogo.png`;
+            }}
+            style={{ display: 'none' }}
+            id="youtube-fallback"
+          />
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>

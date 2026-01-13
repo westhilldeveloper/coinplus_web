@@ -352,7 +352,7 @@ export default function   PlansSection() {
                   {/* CTA Button */}
                   <button 
                     onClick={() => window.open("https://subscriber.coinplus.co.in", "_blank")}
-                    className="w-full bg-gradient-to-r from-primary to-primary/90 text-white py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+                    className="w-full bg-gradient-to-r from-purple-600 via-primary to-purple-800 text-white py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-sm sm:text-base hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Invest Now
                   </button>
