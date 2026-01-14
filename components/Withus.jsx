@@ -112,33 +112,67 @@ const Withus = () => {
           
           {/* Left Section - Years Badge */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-lg">
-              <div className="inline-flex flex-col items-center justify-center px-8 py-10 sm:px-12 sm:py-12 bg-gradient-to-br from-primary  via-purple-600 to-purple-900 text-white rounded-2xl shadow-xl w-full min-h-[400px]">
-                {/* Background Image Overlay */}
-                <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-10 rounded-2xl"></div>
-                
-                <span className="text-base sm:text-lg font-medium opacity-90 relative z-10">At </span>
-                <span className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold my-0 relative z-10"> CoinPlus,</span>
-                <span className="text-lg sm:text-xl md:text-2xl font-semibold relative z-10 text-center"></span>
-                <span className="text-base sm:text-lg md:text-xl relative z-10"> we're redefining  chit funds with modern tools and genuine commitment.</span>
-                
-                {/* Mergeders Text */}
-               <div className="mt-8 relative z-10 text-center">
-  <p className="text-white text-sm sm:text-md">
-    Powered by  
-  </p>
-  {/* Replace text with image */}
-  <div className="mt-2 bg-white px-2 rounded-md shadow-lg shadow-gray-300">
-    <img 
-      src="/images/lg_finovest.png" 
-      alt="Finovest" 
-      className="h-8 sm:h-10 md:h-12 mx-auto opacity-90"
-    />
+  <div className="relative w-full max-w-lg">
+    <div className="relative px-8 py-10 sm:px-12 sm:py-12 text-white rounded-2xl shadow-xl w-full min-h-[400px] overflow-hidden">
+      {/* Gradient top section (before wave) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-purple-600 to-purple-900 z-0"></div>
+      
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-10 rounded-2xl z-0"></div>
+      
+      {/* Wave divider with reflective white below */}
+      <div className="absolute  -bottom-40 left-0 right-0 z-10">
+        {/* Wave SVG with smooth transition */}
+        <svg 
+          viewBox="0 0 1200 120" 
+          preserveAspectRatio="none" 
+          className="w-full h-16 sm:h-30 rotate-180 "
+        >
+        
+          <path 
+            d="M0,0V5.63C149.93,49,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" 
+            className="fill-white "
+          />
+           
+        </svg>
+        
+        {/* Reflective white area below wave */}
+        <div className="bg-white h-78 sm:h-76 border relative">
+          {/* Reflection effect using gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent"></div>
+          
+          {/* Subtle pattern for reflective effect */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="w-full h-full bg-[radial-gradient(circle_at_50%_50%,#000_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Content positioned above everything */}
+      <div className="relative z-20">
+        <span className="text-base sm:text-lg font-medium opacity-90 block text-center">At </span>
+        <span className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold my-0 block text-center"> CoinPlus,</span>
+        <span className="text-base sm:text-lg md:text-xl relative z-10 text-center block mt-4">
+          we're redefining chit funds with modern tools and genuine commitment.
+        </span>
+        
+        {/* Powered by section */}
+        <div className="mt-8 text-center">
+          <p className="text-white text-sm sm:text-md mb-2">
+            Powered by  
+          </p>
+          <div className="mt-2   px-4 py-2 rounded-md  inline-block">
+            <img 
+              src="/images/lg_finovest.png" 
+              alt="Finovest" 
+              className="h-26 mx-auto opacity-90"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-              </div>
-            </div>
-          </div>
 
           {/* Right Section - Cards Carousel */}
           <div className="w-full lg:w-1/2">

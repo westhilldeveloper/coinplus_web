@@ -10,7 +10,7 @@ const Footer = () => {
         
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-purple-600 to-purple-800 mx-2 border-2 border-primary rounded-4xl"></div>
+        <div className="absolute inset-0 bg-white mx-2 border-2 border-primary rounded-4xl"></div>
         
         {/* Main Content - Added rounded-t-lg for top rounded corners only */}
         <div className="relative   rounded-t-lg z-10 mx-4 md:mx-8 px-4 sm:px-4 lg:px-4 py-6 md:py-10 overflow-hidden">
@@ -20,29 +20,25 @@ const Footer = () => {
                  <img 
                 src="/images/lg_finovest.png" 
                 alt="Get a Quote" 
-                className="w-20 h-12"
+                className="w-full h-auto"
               />
-               <img 
-                src="/images/lg_coinplus.png" 
-                alt="Get a Quote" 
-                className="w-3/4"
-              />
+              
              
               </div>
               <img 
                 src="/images/brandLogo.png" 
                 alt="Get a QR Code" 
-                className="w-3/4"
+                className="w-full h-auto"
               />
             </div>
             
             {/* Left Column - Chit Plans */}
-           <div className="flex flex-col justify-start text-white">
-  <h2 className="text-md md:text-xl font-bold md:mb-6 mb-2">Chit Plans</h2>
+           <div className="flex flex-col justify-start text-black">
+  <h2 className="text-primary text-md md:text-xl font-bold md:mb-6 mb-2">Chit Plans</h2>
   <div className="space-y-1">
-    <div className="text-sm md:text-md font-semibold text-yellow-300">Pay Installments</div>
-    <div className="text-sm md:text-md font-semibold text-yellow-300">Online Auctions</div>
-    <div className="text-sm md:text-md font-semibold mb-2 text-yellow-300">Download App</div>
+    <div className="text-sm md:text-md font-semibold text-purple-300">Pay Installments</div>
+    <div className="text-sm md:text-md font-semibold text-purple-300">Online Auctions</div>
+    <div className="text-sm md:text-md font-semibold mb-2 text-purple-500">Download App</div>
   </div>
   <div className="flex justify-start w-1/3"> {/* Added w-full */}
     <img 
@@ -59,7 +55,7 @@ const Footer = () => {
 </div>
 
             {/* Middle Column - Quick Links */}
-            <div className="text-white">
+            <div className="text-primary">
               <h3 className="text-md md:text-xl font-bold md:mb-6 mb-2">Quick Links</h3>
               <div className="grid grid-cols-2 gap-1">
                 <Link href="/about" className="hover:text-yellow-300 text-sm transition-colors">About us</Link>
@@ -78,7 +74,7 @@ const Footer = () => {
             </div>
 
             {/* Right Column - Contact Info */}
-            <div className="text-white">
+            <div className="text-primary">
               <h3 className="text-md md:text-xl font-bold md:mb-6 mb-2">Contact Us</h3>
               <div className="space-y-6">
                 <div>
