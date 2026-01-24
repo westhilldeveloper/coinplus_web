@@ -78,7 +78,7 @@ const Footer = () => {
               <h3 className="text-md md:text-xl font-bold md:mb-6 mb-2">Contact Us</h3>
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-sm font-semibold text-yellow-300 mb-2">Finovest Chits & Kuries Pvt Ltd. </h4>
+                  <h4 className="text-sm font-semibold text-primary mb-2">Finovest Chits & Kuries Pvt Ltd. </h4>
                   <p className="text-sm md:text-sm">Kalyana Krishna Samskrithibhavan, BHS Rd, Kannankulangara, Thrippunithura, Ernakulam, Kochi, Kerala- 682301.</p>
                   <p className="text-sm md:text-sm mt-1">Phone : +91 97460 03484</p>
                   <p className="text-sm md:text-sm">Mail : care@coinplus.co.in</p>

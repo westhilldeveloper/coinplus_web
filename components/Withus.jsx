@@ -121,23 +121,17 @@ const Withus = () => {
       <div className="absolute inset-0 bg-[url('/images/coinadv.jpeg')] bg-cover bg-center opacity-10 rounded-2xl z-0"></div>
       
       {/* Wave divider with reflective white below */}
-      <div className="absolute  -bottom-40 left-0 right-0 z-10">
+      <div className="absolute  -bottom-32 left-0 right-0 z-10">
         {/* Wave SVG with smooth transition */}
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
           className="w-full h-16 sm:h-30 rotate-180 "
         >
-        
-          <path 
-            d="M0,0V5.63C149.93,49,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" 
-            className="fill-white "
-          />
-           
         </svg>
         
         {/* Reflective white area below wave */}
-        <div className="bg-white h-78 sm:h-76 border relative">
+        <div className="bg-white h-85 sm:h-86 border relative">
           {/* Reflection effect using gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent"></div>
           
@@ -157,11 +151,11 @@ const Withus = () => {
         </span>
         
         {/* Powered by section */}
-        <div className="mt-8 text-center">
-          <p className="text-white text-sm sm:text-md mb-2">
+        <div className="pt-20 text-center ">
+          <p className="text-primary pt-2 text-sm sm:text-md mb-0">
             Powered by  
           </p>
-          <div className="mt-2   px-4 py-2 rounded-md  inline-block">
+          <div className="mt-0   px-4 py-0 rounded-md  inline-block">
             <img 
               src="/images/lg_finovest.png" 
               alt="Finovest" 
