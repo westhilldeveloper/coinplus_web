@@ -109,7 +109,7 @@ const EnquiryForm = () => {
       <div
   className="relative rounded-2xl shadow-2xl overflow-hidden"
   style={{
-    backgroundImage: 'url(/images/hp_fmly.jpg)',
+    backgroundImage: 'url(/images/hppy_fam.jpg)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

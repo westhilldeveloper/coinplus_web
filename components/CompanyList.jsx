@@ -77,7 +77,7 @@ const CompanyList = () => {
     {
       id: 4,
       name: 'CoinPlus',
-      logo: '/images/coinplus.png',
+      logo: '/images/coin_plus.png',
       shortName: 'CoinPlus',
       description: 'An efficient fintech product from the leading financial service provider in India.',
 //       details: `
