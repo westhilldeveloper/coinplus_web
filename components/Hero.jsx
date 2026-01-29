@@ -57,9 +57,17 @@ export default function Hero() {
 
           {/* Stats - Responsive grid */}
           <div className="mt-6 md:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 max-w-full">
-            <div className="bg-slate-50 p-4 sm:p-5 rounded-lg shadow-sm">
-              <div className="text-xs sm:text-sm text-slate-500">Centres</div>
-              <div className="font-semibold flex items-center text-lg sm:text-xl md:text-2xl">
+            <div className="bg-slate-50 p-4 sm:p-5 rounded-lg shadow-sm  ">
+              <div className='flex items-center'>
+              <img 
+                  src="/images/location.gif" 
+                  alt="arrow"
+                  className="w-10 h-10 opacity-80 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300"
+                />
+              <div className="text-xs sm:text-sm text-slate-500">Locations</div>
+              </div>
+
+              <div className="font-semibold flex items-center ml-8  text-lg sm:text-xl md:text-2xl">
                 35  
                 <img 
                   src="/images/add.gif" 
@@ -68,10 +76,18 @@ export default function Hero() {
                 />
               </div>
             </div>
+            
             <div className="bg-slate-50 p-4 sm:p-5 rounded-lg shadow-sm">
-              <div className="text-xs sm:text-sm text-slate-500">Members</div>
-              <div className="flex items-center font-semibold text-lg sm:text-xl md:text-2xl">
-                1000
+              <div className='flex items-center'>
+              <img 
+                  src="/images/members.gif" 
+                  alt="arrow"
+                  className="w-10 h-10 opacity-80 group-hover:translate-x-1 group-hover:opacity-100 transition-all duration-300"
+                />
+              <div className="text-xs sm:text-sm text-slate-500">Subscribers</div>
+              </div>
+              <div className="flex items-center font-semibold ml-8 text-lg sm:text-xl md:text-2xl">
+                5000
                 <img 
                   src="/images/add.gif" 
                   alt="arrow"

@@ -24,13 +24,13 @@ const AboutTabs = () => {
   
   const tabs = [
     {
-      title: 'Finovest Chits and Kuries Private Limited',
+      title: 'Finovest Chits & Kuries Private Limited',
       content: (
         <>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Finovest Chits and Kuries Private Limited</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Finovest Chits & Kuries Private Limited</h2>
           <div className="space-y-4 text-gray-700">
             <p className="leading-relaxed">
-             CoinPlus is the digital arm of Finovest Chits and Kuries Pvt Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
+             CoinPlus is the digital platform of Finovest Chits & Kuries Pvt Ltd., a trusted name in the financial services industry. With many years of experience, Finovest has been empowering individuals and families to achieve their financial dreams. Now, we’re embarking on a digital transformation to bring the benefits of systematic savings to a wider audience.
             </p>
             <p className="leading-relaxed">
              
@@ -107,7 +107,7 @@ const AboutTabs = () => {
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-blue-800 mb-3">Experience</h3>
-                <p className="text-gray-700">Backed by the decades of experience of Finovest Chits and Kuries Pvt Ltd.</p>
+                <p className="text-gray-700">Backed by the decades of experience of Finovest Chits & Kuries Pvt Ltd.</p>
               </div>
             </div>
             <div className="space-y-6">
@@ -267,7 +267,7 @@ const AboutTabs = () => {
                           5K +
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
-                          Active Customers
+                          Active Subscribers
                         </div>
                       </div>
                       
@@ -283,7 +283,7 @@ const AboutTabs = () => {
                           35 +
                         </div>
                         <div className="text-sm md:text-lg font-semibold text-gray-800">
-                          Centres
+                          Locations
                         </div>
                       </div>
                       

@@ -399,7 +399,7 @@ const ContactComponent = () => {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -bottom-20 -left-20 w-full h-64 bg-white/30 rounded-full blur-3xl animate-pulse delay-4000"></div>
         </div>
         
         <div className="relative z-10 w-full mx-auto">
@@ -424,13 +424,13 @@ const ContactComponent = () => {
             <div className="lg:w-1/3  flex justify-center items-center ">
               <button 
                 onClick={handleButtonClick}
-                className="group relative flex items-center justify-center gap-4 bg-gradient-to-br from-red-700 via-red-500 to-red-700 backdrop-blur-md text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-xl transition-all duration-500  hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 whitespace-nowrap overflow-hidden"
+                className="group relative flex items-center justify-center gap-4  backdrop-blur-md text-white font-bold py-4 px-8 md:py-5 md:px-10 rounded-xl transition-all duration-500  hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 whitespace-nowrap overflow-hidden"
               >
                 {/* Button Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent group-hover:from-primary/40 transition-all duration-500"></div>
                 
                 {/* Animated Border */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/50 rounded-full transition-all duration-500"></div>
+                {/* <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/50 rounded-full transition-all duration-500"></div> */}
                 
                 {/* Button Content */}
                 <img 

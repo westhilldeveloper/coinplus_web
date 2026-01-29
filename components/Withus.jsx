@@ -11,8 +11,8 @@ const Withus = () => {
  const cards = [
   {
     id: 1,
-    title: "5,000 + Happy Members",
-    description: "A growing community of trust. From saving for a home to funding education, we’ve already helped over 5,000 members move closer to their dreams.",
+    title: "10,000 + Happy Members",
+    description: "A growing community of trust. From saving for a home to funding education, we’ve already helped over 10,000 members move closer to their dreams.",
     icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
     color: "bg-blue-50 border-blue-100"
   },

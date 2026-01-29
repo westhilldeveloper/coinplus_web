@@ -121,7 +121,7 @@ export default function GalleryDisplay() {
                           <img
                             src={image}
                             alt={`${gallery.title} - Image ${index + 1}`}
-                            className="w-full h-full object-fit group-hover:scale-110 transition-transform duration-500"
+                            className="w-full h-full object-full group-hover:scale-110 transition-transform duration-500"
                             loading="lazy"
                           />
                           {/* Image number overlay */}

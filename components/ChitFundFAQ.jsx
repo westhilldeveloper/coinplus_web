@@ -46,8 +46,8 @@ const ChitFundFAQ = () => {
 
   // Sample video data
   const videoData = {
-    'benefits': '7E_WfBXfTIg',
-    'operation': 'zzz_HabBI3M',
+    'benefits': '9nte4r_FiGQ',
+    'operation': '0e3JYDJXFzg',
     'payment': 'LT8mDipP92I',
     'auction': 'XZufAD-u0C4',
     'bidding': '9nte4r_FiGQ',
@@ -56,9 +56,10 @@ const ChitFundFAQ = () => {
     'payout': '0e3JYDJXFzg',
     'finovest': '9nte4r_FiGQ',
     'values': 'QYUnKj8RmnU',
-    'enroll': '6v-1Xk1eLaM',
+    'enroll': '4uT5mVZZuyo',
     'security': 'zzz_HabBI3M',
-    'online-auction': 'elrf36X5_m4'
+    'online-auction': 'elrf36X5_m4',
+    'whatis':'Cxgy0EA_3f0'
   };
 
   /* ===================== HELPER FUNCTIONS ===================== */
@@ -93,12 +94,21 @@ const ChitFundFAQ = () => {
 
   const faqItems = [
      {
+      id: 0,
+      question: "what is  CoinPlus?",
+      answer: `CoinPlus brings the trusted tradition of systematic savings plans (SSPs), also known as “chits,” into the digital age. Manage everything from the convenience of your phone, with complete transparency and ease. CoinPlus fosters a compulsory savings habit, helping you achieve your financial goals.`,
+      videoId: videoData.whatis,
+      icon: <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />,
+      gradient: "from-purple-600 to-pink-500",
+      glow: "shadow-purple-500/20 sm:shadow-purple-500/30"
+    },
+     {
       id: 1,
       question: "Why should I join CoinPlus?",
       answer: `CoinPlus brings the trusted tradition of systematic savings plans (SSPs), also known as “chits,” into the digital age. Manage everything from the convenience of your phone, with complete transparency and ease. CoinPlus fosters a compulsory savings habit, helping you achieve your financial goals.`,
       videoId: videoData.benefits,
       icon: <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-purple-500/20 sm:shadow-purple-500/30"
     },
    
@@ -108,7 +118,7 @@ const ChitFundFAQ = () => {
       answer: `Chit funds (SSPs) are beneficial because they act as a dual instrument—they help you save consistently until the end of the chit, often yielding better returns than a bank savings account or recurring deposit (RD). They also allow you to borrow. In case of any unforeseen circumstances, you can lend more than what you have saved, providing financial flexibility. Additionally, the dividends received from chits are tax-free, making them a tax-efficient savings and borrowing tool.`,
       videoId: videoData.operation,
       icon: <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-purple-500/20 sm:shadow-purple-500/30"
     },
    
@@ -122,9 +132,9 @@ Netbanking: Transfer funds securely from your bank account.
 Cheque: Traditional payment method.
 Auto-Debit: Set up automatic recurring payments for hassle-free savings.
 Cash collection & UPI payment at doorstep: Convenient doorstep services.`,
-      videoId: videoData.payment,
+      // videoId: videoData.payment,
       icon: <DollarSign className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-emerald-500 to-green-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-emerald-500/20 sm:shadow-emerald-500/30"
     },
     
@@ -143,7 +153,7 @@ Personal guarantee of salaried professionals
 Bank guarantee from scheduled commercial banks
 Unencumbered Land & Building`,
       icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-indigo-500 to-violet-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-indigo-500/20 sm:shadow-indigo-500/30"
     },
     
@@ -155,7 +165,7 @@ Unencumbered Land & Building`,
       answer: `In chit funds, dividends represent the portion of profits or returns distributed to members, typically after each auction or on a monthly basis, continuing until the chit cycle concludes.`,
       
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
@@ -164,7 +174,7 @@ Unencumbered Land & Building`,
       answer: `If no one participates in an auction, one of the prompt, non-prized subscribers will be selected through a high-tech lottery process, ensuring transparency and fairness.`,
       
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
@@ -173,7 +183,7 @@ Unencumbered Land & Building`,
       answer: `Yes, online auctions are legal in India as per the Amendment Bill 2019 of Chit Fund Act 1982.`,
     
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
@@ -182,7 +192,7 @@ Unencumbered Land & Building`,
       answer: `The charges to join an SSP are 0.1% of the chit value, subject to a minimum of ₹200 and a maximum of ₹500. This is a one-time membership fee, and you can join as many groups as you wish.`,
      
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
@@ -191,7 +201,7 @@ Unencumbered Land & Building`,
       answer: `Yes, NRIs can join chit groups. NRIs need to provide a valid passport and visa, while`,
      
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
@@ -200,7 +210,7 @@ Unencumbered Land & Building`,
       answer: `Yes, GST registered business entities can join chit groups.`,
      
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
     {
@@ -209,7 +219,7 @@ Unencumbered Land & Building`,
       answer: `Yes, you can join multiple groups. However, you will need to furnish sufficient securities while releasing the prized amount.`,
      
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
-      gradient: "from-teal-500 to-emerald-500",
+      gradient: "from-purple-600 to-pink-500",
       glow: "shadow-teal-500/20 sm:shadow-teal-500/30"
     },
    
@@ -222,6 +232,7 @@ Unencumbered Land & Building`,
       question: "Why choose Finovest?",
       answer: "Finovest is a trusted chit fund company with transparency, compliance, and timely payouts.",
       icon: <Award className="w-4 h-4 sm:w-5 sm:h-5" />,
+      videoId: videoData.benefits,
       gradient: "from-fuchsia-500 to-purple-500",
       glow: "shadow-fuchsia-500/20 sm:shadow-fuchsia-500/30"
     },
@@ -229,7 +240,7 @@ Unencumbered Land & Building`,
       id: 'm2',
       question: "What chit values are available?",
       answer: "Chit values range from ₹50,000 to ₹1,00,00,000.",
-      videoId: videoData.values,
+      // videoId: videoData.values,
       icon: <Target className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-orange-500 to-red-500",
       glow: "shadow-orange-500/20 sm:shadow-orange-500/30"
@@ -255,7 +266,7 @@ Unencumbered Land & Building`,
       id: 'm5',
       question: "How secure is my money?",
       answer: "Registered under the Chit Funds Act with full regulatory compliance.",
-      videoId: videoData.security,
+      // videoId: videoData.security,
       icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-amber-500 to-yellow-500",
       glow: "shadow-amber-500/20 sm:shadow-amber-500/30"
@@ -400,13 +411,13 @@ Unencumbered Land & Building`,
                   )}
                 </div>
                 
-                <div className="flex-1 min-w-0">
+                <div className="flex justify-between w-full min-w-0">
                   <span className="font-bold text-xs sm:text-sm md:text-md text-gray-800 group-hover:text-gray-900 block truncate sm:whitespace-normal">
                     {item.question}
                   </span>
                   {hasVideo && (
                     <div className="flex items-center gap-1 sm:gap-2 mt-1">
-                      <span className="px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm sm:shadow-lg shadow-red-500/20 sm:shadow-red-500/30 flex-shrink-0">
+                      <span className="px-0 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm sm:shadow-lg shadow-red-500/20 sm:shadow-red-500/30 flex-shrink-0">
                         <Youtube className="w-2 h-2 sm:w-3 sm:h-3" /> 
                         <span className="hidden xs:inline">Video</span>
                       </span>
@@ -441,7 +452,7 @@ Unencumbered Land & Building`,
                         return (
                           <div key={index} className="mb-2">
                             <h4 className="font-bold text-gray-800 text-sm sm:text-base flex items-center gap-2">
-                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-br from-blue-500 to-purple-500" />
+                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-br from-purple-600 to-pink-500" />
                               {line.text}
                             </h4>
                           </div>
@@ -479,29 +490,7 @@ Unencumbered Land & Building`,
                 {/* Video Section */}
                 {hasVideo && (
                   <div className="space-y-4 sm:space-y-6">
-                    {/* Video Header - Responsive layout
-                    <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-red-50/50 to-pink-50/50 backdrop-blur-sm">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div className="flex items-center gap-2 sm:gap-3">
-                          <div className="p-1.5 sm:p-2 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg shadow-sm sm:shadow-lg flex-shrink-0">
-                            <Youtube className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-gray-800 text-sm sm:text-base">Video Tutorial</h4>
-                            <p className="text-gray-600 text-xs sm:text-sm">Watch and learn visually</p>
-                          </div>
-                        </div>
-                        <a
-                          href={`https://www.youtube.com/watch?v=${item.videoId}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-red-600 to-pink-600 text-white rounded-lg hover:shadow-lg hover:shadow-red-500/20 sm:hover:shadow-red-500/30 transition-all duration-300 text-sm sm:text-base whitespace-nowrap"
-                        >
-                          <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
-                          <span className="font-semibold">Watch</span>
-                        </a>
-                      </div>
-                    </div> */}
+                   
                     
                     {/* Video Player - Responsive aspect ratio */}
                     <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl shadow-black/10 sm:shadow-black/20">
@@ -558,17 +547,17 @@ Unencumbered Land & Building`,
         {/* Main Content */}
         <div className="relative">
           {/* Glass Morphism Container - Responsive border radius */}
-          <div className="backdrop-blur-lg sm:backdrop-blur-xl bg-white/80 rounded-2xl sm:rounded-3xl border border-gray-200 shadow-lg sm:shadow-2xl shadow-black/5 sm:shadow-black/10 overflow-hidden">
+          <div className="backdrop-blur-lg sm:backdrop-blur-xl bg-white/80 rounded-md sm:rounded-3xl border border-gray-200 shadow-lg sm:shadow-2xl shadow-black/5 sm:shadow-black/10 overflow-hidden">
             {/* Sticky Navigation - Responsive layout */}
             <div className="sticky top-0 z-50">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 backdrop-blur-lg sm:backdrop-blur-xl border-b border-gray-200">
+              <div className="bg-gradient-to-r from-primary to-purple-900 backdrop-blur-lg sm:backdrop-blur-xl border-b border-gray-200">
                 <div className="p-4 sm:p-6">
                   <div className="flex items-center justify-between">
                     <div className="flex-1 min-w-0">
-                      <h2 className="font-bold text-md sm:text-lg md:text-xl text-gray-800 truncate">
+                      <h2 className="font-bold text-md sm:text-lg md:text-xl text-white truncate">
                         Interactive FAQ Explorer
                       </h2>
-                      <p className="text-xs sm:text-sm font-normal text-gray-600 mt-1 truncate">
+                      <p className="text-xs sm:text-sm font-normal text-gray-200 mt-1 truncate">
                         <Sparkles className="inline w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-500" />
                         {activeSection === 'about-chit-fund' && 'Explore Chit Fund Fundamentals'}
                         {activeSection === 'about-Finovest' && 'Discover Finovest Excellence'}
@@ -587,7 +576,7 @@ Unencumbered Land & Building`,
                           className={`
                             px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base whitespace-nowrap
                             ${activeSection === section 
-                              ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg' 
+                              ? 'bg-white  text-primary shadow-lg' 
                               : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                             }
                           `}
@@ -649,12 +638,12 @@ Unencumbered Land & Building`,
                   <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" />
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-50 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-blue-100">
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
+                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
                         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                       </div>
                       <div className="min-w-0">
-                        <h3 className="text-sm  md:text-md font-bold text-gray-800 truncate">Master Chit Funds</h3>
-                        <p className="text-gray-600 text-xs sm:text-sm truncate">Learn everything about chit funds</p>
+                        <h3 className="text-sm  md:text-md font-bold text-gray-800 truncate"> CoinPlus Chits</h3>
+                        <p className="text-gray-600 text-xs sm:text-sm truncate">Learn everything about CoinPlus Chits</p>
                       </div>
                     </div>
                   </div>
@@ -669,10 +658,10 @@ Unencumbered Land & Building`,
                 className="mb-12 sm:mb-16 scroll-mt-20 sm:scroll-mt-24"
               >
                 <div className="relative mb-6 sm:mb-8">
-                  <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" />
+                  <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" />
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-purple-50 to-pink-50 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-purple-100">
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
+                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
                         <Award className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                       </div>
                       <div className="min-w-0">

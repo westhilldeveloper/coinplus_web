@@ -29,20 +29,20 @@ const ContactHead = () => {
             
           
             <div className="mt-4 md:mt-6">
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <div className="flex items-center gap-2 mb-1">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
                   <span className="font-semibold text-sm md:text-base text-gray-800">Coimbathore</span>
                 </div>
                 <p className="text-sm md:text-base font-medium text-gray-900">+91 97460 03484</p>
-              </div>
+              </div> */}
               
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-1">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
                   <span className="font-semibold text-sm md:text-base text-gray-800">Ernakulam</span>
                 </div>
-                <p className="text-sm md:text-base font-medium text-gray-900">+91 6238795305</p>
+                <p className="text-sm md:text-base font-medium text-gray-900">+91 7994461572</p>
               </div>
               
              
@@ -61,9 +61,9 @@ const ContactHead = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6 justify-start">
            
-            <div className="bg-white p-4 md:p-6 rounded-xl border border-gray-300 shadow-sm">
+            {/* <div className="bg-white p-4 md:p-6 rounded-xl border border-gray-300 shadow-sm">
               <h3 className="text-sm md:text-base font-bold text-gray-900 mb-3">
-                Finovest Chits & Kuries Pvt Ltd. Tamil Nadu (Head office)
+                Finovest Chits & Kuries Pvt Ltd. (Head office)
               </h3>
               <div className="space-y-2 text-gray-700">
                 <div className="flex items-start gap-2">
@@ -79,26 +79,26 @@ const ContactHead = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
           
             <div className="bg-white p-4 md:p-6 rounded-xl border border-gray-300 shadow-sm">
-              <h3 className="text-sm md:text-base font-bold text-gray-900 mb-3">
-                FINOVEST GROUP. kerala (Regional office)
+              <h3 className="text-sm md:text-base font-bold text-primary mb-3">
+                FINOVEST GROUP
               </h3>
               <div className="space-y-2 text-gray-700">
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 text-red-600 mt-1 flex-shrink-0" />
                   <p className="text-xs md:text-sm">
-                    MADATHILAYATHU BUILDINGS, NEAR KAIRALI LAB, KODUMON
-PIN: 691555
+                   Kalyana Krishna Samskrithibhavan, BHS Rd, Kannankulangara, Thrippunithura, Ernakulam, Kochi,
+Kerala- 682301.
 
                   </p>
                 </div>
                 <div className="flex items-center gap-2 mt-3">
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
                   <p className="text-xs md:text-sm">
-                    <span className="font-semibold">Phone:</span> 0473-4270040  +91 97460 03484
+                    <span className="font-semibold">Phone:</span> +91 6238795305   +91&nbsp;7994461572
                   </p>
                 </div>
               </div>

@@ -80,7 +80,7 @@ export default function Vision() {
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-4 md:gap-6">
-                <StatItem number="5 K+" label="Satisfied Subscribers" />
+                <StatItem number="10 K+" label="Satisfied Subscribers" />
                 <StatItem number="35 +" label="Collection Centres" />
                 <StatItem number="170+" label="Agents" />
                 <StatItem number="100+" label="Employees" />

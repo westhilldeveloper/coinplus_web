@@ -19,14 +19,14 @@ const ChitFundInteractive = () => {
     {
       id: 2,
       title: "A Heritage of Scale, A Focus on You",
-      description: "While CoinPlus is a new chapter in digital finance, we are powered by the extensive operational backbone of the Finovest Group. This includes a seasoned professional workforce of thousands, ensuring that behind our modern interface lies decades of institutional expertise in financial discipline and security. For you, this translates into a unique advantage: the reliability and scale of an industry leader, combined with the fresh energy, agile service, and direct customer focus of a new company. Our dedicated teams are committed to channelling this collective strength into providing you with exceptional, personalized support and a seamless experience.",
+      description: "While CoinPlus is a new chapter in digital finance, we are powered by the extensive operational backbone of the Finovest Group. This includes a seasoned professional workforce of hundreds, ensuring that behind our modern interface lies decades of institutional expertise in financial discipline and security. For you, this translates into a unique advantage: the reliability and scale of an industry leader, combined with the fresh energy, agile service, and direct customer focus of a new company. Our dedicated teams are committed to channelling this collective strength into providing you with exceptional, personalized support and a seamless experience.",
       shortTitle: "100+ Employees"
     },
     {
       id: 3,
       title: "Expert Guidance, Wherever You Are",
-      description: "As part of the Finovest Group, we benefit from one of the industry's most extensive networks, connecting us to communities nationwide. This vast reach is a testament to our deep-rooted presence and trust. For our members at CoinPlus, this network is more than a number—it's your direct link to knowledgeable, local support. It ensures you have access to personalized guidance and our services right in your community, all backed by the disciplined framework and responsive customer care that defines our new, modern approach.",
-      shortTitle: "100+ Agents"
+      description: "As part of the Finovest Group, we are powered by a dedicated network of business associates who form the backbone of our operations. This extensive, nationwide network is a testament to our deep-rooted presence and trust. For our members at CoinPlus, these associates are your direct link to knowledgeable, local support, ensuring access to personalized guidance and services right in your community. All this is delivered through the disciplined framework and responsive care that defines our modern approach.",
+      shortTitle: "50+ Associates"
     },
     {
       id: 4,

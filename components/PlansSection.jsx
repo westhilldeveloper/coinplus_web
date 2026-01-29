@@ -85,24 +85,25 @@ export default function   PlansSection() {
   useEffect(() => {
     if (activeTab === "all") {
       setFilteredChits(chits);
+     
     } else {
       const filtered = chits.filter(chit => {
         const chitGroup = chit.chit_group?.toLowerCase() || '';
         const chitValue = chit.chit_value;
+        const chitduration =  chit.duration_value;
         
+         console.log("========>",chits)
         switch (activeTab) {
           case "education":
             return chitGroup.includes('education') || chitGroup.includes('edu') || 
                    (chitValue >= 1000000 && chitValue <= 5000000);
           case "home":
-            return chitGroup.includes('home') || chitGroup.includes('family') ||
-                   (chitValue >= 500000 && chitValue <= 10000000);
+            return (chitValue >= 500000 && chitValue <= 10000000);
           case "wedding":
             return chitGroup.includes('wedding') || chitGroup.includes('marriage') ||
                    (chitValue >= 300000 && chitValue <= 2000000);
           case "short":
-            return chitGroup.includes('short') || chitGroup.includes('term') ||
-                   (chitValue <= 500000 && (chit.duration_months || 0) <= 12);
+            return ( chitduration  <= 30);
           case "retirement":
             return chitGroup.includes('retirement') || chitGroup.includes('pension') ||
                    (chitValue >= 1000000 && chitValue <= 5000000);
