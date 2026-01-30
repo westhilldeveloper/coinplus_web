@@ -30,6 +30,7 @@ import {
   Circle
 } from 'lucide-react';
 import YouTubePlayer from './YouTubePlayer';
+import Image from 'next/image';
 
 const ChitFundFAQ = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -135,7 +136,8 @@ Cash collection & UPI payment at doorstep: Convenient doorstep services.`,
       // videoId: videoData.payment,
       icon: <DollarSign className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-purple-600 to-pink-500",
-      glow: "shadow-emerald-500/20 sm:shadow-emerald-500/30"
+      glow: "shadow-emerald-500/20 sm:shadow-emerald-500/30",
+      image:'/images/mode.png'
     },
     
     
@@ -344,107 +346,121 @@ Unencumbered Land & Building`,
 
   /* ===================== RENDER FUNCTION WITH BULLETS ===================== */
 
-  const renderItem = (item) => {
-    const hasVideo = item.videoId;
-    const isActive = activeItem === item.id;
-    const isHovered = hoveredItem === item.id;
-    const parsedAnswer = parseAnswerToBullets(item.answer);
+ const renderItem = (item) => {
+  const hasVideo = item.videoId;
+  const hasImage = item.image; // Check if image exists
+  const isActive = activeItem === item.id;
+  const isHovered = hoveredItem === item.id;
+  const parsedAnswer = parseAnswerToBullets(item.answer);
 
-    return (
-      <div 
-        key={item.id} 
-        className={`
-          relative mb-2 sm:mb-2 group cursor-pointer
-          transform transition-all duration-300 
-          active:scale-[0.99] sm:hover:scale-[1.01] ${isActive ? 'scale-[1.01]' : ''}
-        `}
-        onMouseEnter={() => !window.matchMedia('(max-width: 640px)').matches && setHoveredItem(item.id)}
-        onMouseLeave={() => !window.matchMedia('(max-width: 640px)').matches && setHoveredItem(null)}
-      >
-        {/* Animated Background Glow - Reduced on mobile */}
+  return (
+    <div 
+      key={item.id} 
+      className={`
+        relative mb-2 sm:mb-2 group cursor-pointer
+        transform transition-all duration-300 
+        active:scale-[0.99] sm:hover:scale-[1.01] ${isActive ? 'scale-[1.01]' : ''}
+      `}
+      onMouseEnter={() => !window.matchMedia('(max-width: 640px)').matches && setHoveredItem(item.id)}
+      onMouseLeave={() => !window.matchMedia('(max-width: 640px)').matches && setHoveredItem(null)}
+    >
+      {/* Animated Background Glow - Reduced on mobile */}
+      <div className={`
+        absolute inset-0 rounded-lg  blur-lg opacity-10 sm:opacity-20 
+        sm:group-hover:opacity-40 transition-all duration-300 ${item.glow}
+        ${isActive ? 'opacity-20 sm:opacity-40' : ''}
+      `} />
+      
+      {/* Main Card - Mobile optimized padding */}
+      <div className={`
+        relative overflow-hidden rounded-lg  border border-white/10 sm:border-white/20
+        backdrop-blur-sm bg-gradient-to-br from-white/90 via-white/80 to-white/70
+        sm:from-white/80 sm:via-white/60 sm:to-white/40
+        shadow-md sm:shadow-lg shadow-black/5
+        ${isActive ? 'ring-1 sm:ring-2 ring-white/30 sm:ring-white/50' : ''}
+      `}>
+        {/* Animated Gradient Border - Simplified on mobile */}
         <div className={`
-          absolute inset-0 rounded-xl sm:rounded-2xl blur-lg opacity-10 sm:opacity-20 
-          sm:group-hover:opacity-40 transition-all duration-300 ${item.glow}
-          ${isActive ? 'opacity-20 sm:opacity-40' : ''}
-        `} />
-        
-        {/* Main Card - Mobile optimized padding */}
-        <div className={`
-          relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 sm:border-white/20
-          backdrop-blur-sm bg-gradient-to-br from-white/90 via-white/80 to-white/70
-          sm:from-white/80 sm:via-white/60 sm:to-white/40
-          shadow-md sm:shadow-lg shadow-black/5
-          ${isActive ? 'ring-1 sm:ring-2 ring-white/30 sm:ring-white/50' : ''}
+          absolute inset-0 rounded-lg  p-[1px] sm:p-[2px] bg-gradient-to-r ${item.gradient} opacity-0
+          sm:group-hover:opacity-100 transition-opacity duration-300
+          ${isActive ? 'opacity-100' : ''}
         `}>
-          {/* Animated Gradient Border - Simplified on mobile */}
-          <div className={`
-            absolute inset-0 rounded-xl sm:rounded-2xl p-[1px] sm:p-[2px] bg-gradient-to-r ${item.gradient} opacity-0
-            sm:group-hover:opacity-100 transition-opacity duration-300
-            ${isActive ? 'opacity-100' : ''}
-          `}>
-            <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-white/90 sm:bg-white/80 backdrop-blur-sm" />
-          </div>
-          
-          {/* Content - Mobile optimized layout */}
-          <div className="relative z-10">
-            <button
-              onClick={() => toggleItem(item.id)}
-              className="w-full p-2 sm:p-4 flex justify-between items-center text-left"
-            >
-              <div className="flex gap-3 sm:gap-4 items-center flex-1 min-w-0">
-                {/* Icon with Gradient Background - Responsive sizing */}
-                <div className={`
-                  relative p-2 sm:p-3 rounded-lg sm:rounded-xl bg-gradient-to-br ${item.gradient} 
-                  shadow-md sm:shadow-lg ${item.glow} flex-shrink-0
-                  transform transition-transform duration-300
-                  active:scale-95 sm:group-hover:scale-110 ${isActive ? 'scale-95 sm:scale-110' : ''}
-                `}>
-                  <div className="relative text-white">
-                    {item.icon}
-                  </div>
-                  {/* Floating particles effect - Hidden on mobile */}
-                  {isHovered && !window.matchMedia('(max-width: 640px)').matches && (
-                    <>
-                      <div className="absolute -top-1 -right-1 w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full animate-ping" />
-                      <div className="absolute -bottom-1 -left-1 w-1 h-1 sm:w-2 sm:h-2 bg-white/50 rounded-full animate-ping" />
-                    </>
-                  )}
+          <div className="absolute inset-0 rounded-lg  bg-white/90 sm:bg-white/80 backdrop-blur-sm" />
+        </div>
+        
+        {/* Content - Mobile optimized layout */}
+        <div className="relative z-10">
+          <button
+            onClick={() => toggleItem(item.id)}
+            className="w-full p-2 sm:p-4 flex justify-between items-center text-left"
+          >
+            <div className="flex gap-3 sm:gap-4 items-center flex-1 min-w-0">
+              {/* Icon with Gradient Background - Responsive sizing */}
+              <div className={`
+                relative p-2 sm:p-3 rounded-lg sm:rounded-xl bg-gradient-to-br ${item.gradient} 
+                shadow-md sm:shadow-lg ${item.glow} flex-shrink-0
+                transform transition-transform duration-300
+                active:scale-95 sm:group-hover:scale-110 ${isActive ? 'scale-95 sm:scale-110' : ''}
+              `}>
+                <div className="relative text-white">
+                  {item.icon}
                 </div>
-                
-                <div className="flex justify-between w-full min-w-0">
-                  <span className="font-bold text-xs sm:text-sm md:text-md text-gray-800 group-hover:text-gray-900 block truncate sm:whitespace-normal">
-                    {item.question}
-                  </span>
-                  {hasVideo && (
-                    <div className="flex items-center gap-1 sm:gap-2 mt-1">
-                      <span className="px-0 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm sm:shadow-lg shadow-red-500/20 sm:shadow-red-500/30 flex-shrink-0">
-                        <Youtube className="w-2 h-2 sm:w-3 sm:h-3" /> 
-                        <span className="hidden xs:inline">Video</span>
-                      </span>
-                      <Sparkles className="w-2 h-2 sm:w-3 sm:h-3 text-yellow-500 animate-pulse flex-shrink-0" />
-                    </div>
-                  )}
-                </div>
+                {/* Floating particles effect - Hidden on mobile */}
+                {isHovered && !window.matchMedia('(max-width: 640px)').matches && (
+                  <>
+                    <div className="absolute -top-1 -right-1 w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full animate-ping" />
+                    <div className="absolute -bottom-1 -left-1 w-1 h-1 sm:w-2 sm:h-2 bg-white/50 rounded-full animate-ping" />
+                  </>
+                )}
               </div>
               
-              {/* Animated Chevron - Responsive sizing */}
-              <div className={`
-                p-1 sm:p-2 rounded-full bg-gradient-to-br from-white to-gray-100 ml-2 flex-shrink-0
-                shadow-sm sm:shadow-lg transform transition-all duration-300
-                ${isActive ? 'rotate-180' : ''}
-              `}>
-                {isActive ? 
-                  <ChevronUp className="text-gray-600 w-4 h-4 sm:w-5 sm:h-5" /> : 
-                  <ChevronDown className="text-gray-600 w-4 h-4 sm:w-5 sm:h-5" />
-                }
+              <div className="flex justify-between w-full min-w-0">
+                <span className="font-bold text-xs sm:text-sm md:text-md text-gray-800 group-hover:text-gray-900 block truncate sm:whitespace-normal">
+                  {item.question}
+                </span>
+                {hasVideo && (
+                  <div className="flex items-center gap-1 sm:gap-2 mt-1">
+                    <span className="px-0 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-semibold rounded-full flex items-center gap-1 shadow-sm sm:shadow-lg shadow-red-500/20 sm:shadow-red-500/30 flex-shrink-0">
+                      <Youtube className="w-2 h-2 sm:w-3 sm:h-3" /> 
+                      <span className="hidden xs:inline">Video</span>
+                    </span>
+                    <Sparkles className="w-2 h-2 sm:w-3 sm:h-3 text-yellow-500 animate-pulse flex-shrink-0" />
+                  </div>
+                )}
               </div>
-            </button>
+            </div>
+            
+            {/* Animated Chevron - Responsive sizing */}
+            <div className={`
+              p-1 sm:p-2 rounded-full bg-gradient-to-br from-white to-gray-100 ml-2 flex-shrink-0
+              shadow-sm sm:shadow-lg transform transition-all duration-300
+              ${isActive ? 'rotate-180' : ''}
+            `}>
+              {isActive ? 
+                <ChevronUp className="text-gray-600 w-4 h-4 sm:w-5 sm:h-5" /> : 
+                <ChevronDown className="text-gray-600 w-4 h-4 sm:w-5 sm:h-5" />
+              }
+            </div>
+          </button>
 
-            {/* Expanded Content - Responsive padding */}
-            {isActive && (
-              <div className="px-4 sm:px-6 pb-4 sm:pb-6 animate-fadeIn">
-                {/* Answer with bullet formatting */}
-                <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-white/60 to-white/40 backdrop-blur-sm">
+          {/* Expanded Content - Responsive padding */}
+          {isActive && (
+            <div className="px-4 sm:px-6 pb-4 sm:pb-6 animate-fadeIn">
+              {/* Answer section with potential image */}
+              <div className={`
+                ${hasImage 
+                  ? 'flex flex-col lg:flex-row gap-4 sm:gap-6' 
+                  : ''
+                }
+              `}>
+                {/* Answer content */}
+                <div className={`
+                  ${hasImage 
+                    ? 'lg:w-1/2 xl:w-2/3' 
+                    : 'w-full'
+                  }
+                  mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-white/60 to-white/40 backdrop-blur-sm
+                `}>
                   <div className="space-y-3 sm:space-y-4">
                     {parsedAnswer.map((line, index) => {
                       // Check if this is a heading line
@@ -487,51 +503,65 @@ Unencumbered Land & Building`,
                   </div>
                 </div>
                 
-                {/* Video Section */}
-                {hasVideo && (
-                  <div className="space-y-4 sm:space-y-6">
-                   
-                    
-                    {/* Video Player - Responsive aspect ratio */}
-                    <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl shadow-black/10 sm:shadow-black/20">
-                      <div className="aspect-video">
-                        <YouTubePlayer 
-                          videoId={item.videoId} 
-                          title={`Video: ${item.question}`}
-                          responsive={true}
-                        />
-                      </div>
-                    </div>
-                    
-                    {/* Action Buttons - Responsive grid */}
-                    <div className="flex">
-                      <a
-                        href={`https://www.youtube.com/watch?v=${item.videoId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-gradient-to-r from-red-600 to-red-700 p-3 sm:p-4 text-white shadow-md hover:shadow-lg hover:shadow-red-500/20 sm:hover:shadow-red-500/30 transition-all duration-300 active:scale-95 sm:hover:scale-[1.02] w-full"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="relative flex items-center justify-center gap-2 sm:gap-3">
-                          <Youtube className="w-4 h-4 sm:w-6 sm:h-6" />
-                          <span className="font-bold text-sm sm:text-base">Watch on YouTube</span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                )}
+                {/* Image section - Only show if image exists */}
+                {hasImage && (
+  <div className="lg:w-1/2 xl:w-1/3">
+    <div className="relative w-full h-48 sm:h-64 md:h-72">
+      <Image
+        src={item.image}
+        alt={`Visual for: ${item.question}`}
+        fill
+        className="object-contain"
+        priority={false}
+      />
+    </div>
+  </div>
+)}
               </div>
-            )}
-          </div>
+              
+              {/* Video Section (only if video exists) */}
+             {hasVideo && (
+  <div className="space-y-4 sm:space-y-6 mt-4 sm:mt-6">
+    {/* Video Player with responsive width */}
+    <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl shadow-black/10 sm:shadow-black/20 w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto">
+      <div className="aspect-video">
+        <YouTubePlayer 
+          videoId={item.videoId} 
+          title={`Video: ${item.question}`}
+          responsive={true}
+        />
+      </div>
+    </div>
+    
+    {/* Action Button with same width */}
+    <div className="flex w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto">
+      <a
+        href={`https://www.youtube.com/watch?v=${item.videoId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative overflow-hidden rounded-lg sm:rounded-xl bg-gradient-to-r from-red-600 to-red-700 p-3 sm:p-4 text-white shadow-md hover:shadow-lg hover:shadow-red-500/20 sm:hover:shadow-red-500/30 transition-all duration-300 active:scale-95 sm:hover:scale-[1.02] w-full"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative flex items-center justify-center gap-2 sm:gap-3">
+          <Youtube className="w-4 h-4 sm:w-6 sm:h-6" />
+          <span className="font-bold text-sm sm:text-base">Watch on YouTube</span>
+        </div>
+      </a>
+    </div>
+  </div>
+)}
+            </div>
+          )}
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
   /* ===================== RESPONSIVE UI ===================== */
 
   return (
-    <div className="min-h-screen bg-gray-50 p-2 sm:p-4 md:p-6 lg:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-50 p-2 sm:p-4 md:p-2 lg:p- relative overflow-hidden">
       {/* Animated Background Elements - Responsive positioning */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-40 h-40 sm:w-80 sm:h-80 bg-purple-500/5 rounded-full blur-xl sm:blur-3xl" />
@@ -540,14 +570,14 @@ Unencumbered Land & Building`,
       </div>
 
       {/* Main Container */}
-      <div className="relative max-w-4xl lg:max-w-6xl mx-auto">
+      <div className="relative max-w-4xl lg:max-w-full mx-auto">
         {/* Header Section - Responsive typography */}
       
 
         {/* Main Content */}
         <div className="relative">
           {/* Glass Morphism Container - Responsive border radius */}
-          <div className="backdrop-blur-lg sm:backdrop-blur-xl bg-white/80 rounded-md sm:rounded-3xl border border-gray-200 shadow-lg sm:shadow-2xl shadow-black/5 sm:shadow-black/10 overflow-hidden">
+          <div className="backdrop-blur-lg sm:backdrop-blur-xl bg-white/80 rounded-md sm:rounded-md border border-gray-200 shadow-lg sm:shadow-2xl shadow-black/5 sm:shadow-black/10 overflow-hidden">
             {/* Sticky Navigation - Responsive layout */}
             <div className="sticky top-0 z-50">
               <div className="bg-gradient-to-r from-primary to-purple-900 backdrop-blur-lg sm:backdrop-blur-xl border-b border-gray-200">
@@ -567,14 +597,14 @@ Unencumbered Land & Building`,
                     
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex gap-2 ml-4">
-                      {['about-chit-fund', 'about-Finovest', 'support'].map((section) => (
+                      {['about-chit-fund', 'about-Finovest'].map((section) => (
                         <button
                           key={section}
                           onClick={() => {
                             document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
                           }}
                           className={`
-                            px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base whitespace-nowrap
+                            px-3 w-32 py-1.5 sm:px-4 sm:py-2 rounded-md font-semibold transition-all duration-300 text-sm sm:text-base whitespace-nowrap
                             ${activeSection === section 
                               ? 'bg-white  text-primary shadow-lg' 
                               : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
@@ -600,7 +630,7 @@ Unencumbered Land & Building`,
                 {isMobileMenuOpen && (
                   <div className="md:hidden bg-white border-t border-gray-200 px-2 py-3 animate-slideDown">
                     <div className="flex flex-col gap-2">
-                      {['about-chit-fund', 'about-Finovest', 'support'].map((section) => (
+                      {['about-chit-fund', 'about-Finovest'].map((section) => (
                         <button
                           key={section}
                           onClick={() => {
@@ -615,9 +645,9 @@ Unencumbered Land & Building`,
                             }
                           `}
                         >
-                          {section === 'about-chit-fund' && '📊 Chit Funds'}
-                          {section === 'about-Finovest' && '🏆 Finovest'}
-                          {section === 'support' && '🛠️ Support'}
+                          {section === 'about-chit-fund' && 'Chit Funds'}
+                          {section === 'about-Finovest' && 'Finovest'}
+                        
                         </button>
                       ))}
                     </div>
@@ -635,14 +665,14 @@ Unencumbered Land & Building`,
                 className="mb-12 sm:mb-16 scroll-mt-20 sm:scroll-mt-24"
               >
                 <div className="relative mb-6 sm:mb-8">
-                  <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" />
-                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-50 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-blue-100">
+                  {/* <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" /> */}
+                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-purple-100 to-purple-200 backdrop-blur-sm rounded-lg  border border-blue-100">
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
+                      <div className="p-2.5 sm:p-4 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg  shadow-lg sm:shadow-xl flex-shrink-0">
                         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                       </div>
                       <div className="min-w-0">
-                        <h3 className="text-sm  md:text-md font-bold text-gray-800 truncate"> CoinPlus Chits</h3>
+                        <h3 className="text-sm  md:text-lg font-bold text-gray-800 truncate"> CoinPlus Chits</h3>
                         <p className="text-gray-600 text-xs sm:text-sm truncate">Learn everything about CoinPlus Chits</p>
                       </div>
                     </div>
@@ -658,8 +688,8 @@ Unencumbered Land & Building`,
                 className="mb-12 sm:mb-16 scroll-mt-20 sm:scroll-mt-24"
               >
                 <div className="relative mb-6 sm:mb-8">
-                  <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" />
-                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-purple-50 to-pink-50 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-purple-100">
+                  {/* <div className="absolute -inset-0.5 sm:-inset-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-xl sm:rounded-2xl blur opacity-10 sm:opacity-20" /> */}
+                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-purple-50 to-pink-50 backdrop-blur-sm rounded-lg border border-purple-100">
                     <div className="flex items-center gap-3 sm:gap-4">
                       <div className="p-2.5 sm:p-4 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl flex-shrink-0">
                         <Award className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
