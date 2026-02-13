@@ -5,37 +5,37 @@ const PrivacyPolicy = () => {
     {
       title: "Privacy & Policy",
       type: "header",
-      content: "Financial Crisis and Market Put Limited under Financial Group. Our goal is to disrupt industries in existing ways, providing innovative financial solutions and able to realise with the demands of our clients. We are committed to protect your privacy. This policy outlines how we collects, use, and safeguard your personal information about our role that provides."
+      content: "Finovest Chits and Kuries Pvt limited under Finovest Group, Our goal is to disrupt industries in exciting ways, providing innovative financial solutions and able to evolve with the demands of our clients. We are committed to protect your privacy. This policy outlines how we collect, use, and safeguard your personal information about our chit-fund services."
     },
     {
       title: "Collection of Information",
       type: "section",
       items: [
-        "Personal Information: Any information contained in identity or specific persons, such as full name, email address, mobile number, Auditor Card No. 804, more of names, IP address, URL, etc., is called personal information.",
-        "Address and IDA numbers, binomial data, bank account, debit card, and other payment details, sensitive passwords, sexual orientation, and other specified information are compiled at *personal order*. (Findable link not referenced in images and fingerprints)",
-        "Transaction Data records of you can find transactions, contributions, and withdrawals.",
-        "Communication Data Information from your interactions with us, including emails, WhatsApp and text messages."
+        "Personal Information: Any information used to identify a specific person, such as full name, email address, mobile number, Aadhar Card No, PAN, time of access, IP address, URL, etc., is called personal information.",
+        "Aadhaar and PAN numbers, biometric data, bank account, debit card, and other payment details, sensitive passwords, sexual orientation, and other sensitive information are examples of “personal data.” (Including, but not restricted to images and fingerprints)",
+        "Transaction Data: Records of your chit-fund transactions, contributions, and withdrawals.",
+        "Communication Data: Information from your interactions with us, including emails, WhatsApp and text messages."
       ]
     },
     {
       title: "How We Use Your Information",
       type: "section",
       items: [
-        "To confirm your address with BMS, CST No. Request to be full online number.",
-        "By using your information, we can recognize the your service and support requests more quickly.",
-        "To process your transaction connectivity.",
-        "To periodically give you an EME regarding the transactions you've done, as well as a reminder regarding the auditors and the DIE signals payment deadline."
+        "To confirm your address with PAN, GST No, Passport No and Aadhar number.",
+        "By using your information, we can respond to your service and support requests more quickly.",
+        "To process your transactions conveniently",
+        "To periodically give you an SMS regarding the transactions you’ve done, as well as a reminder regarding the auctions and the chit group’s payment deadline."
       ]
     },
     {
       title: "Data Protection",
       type: "section",
-      content: "No matter how or from where you share personal information with us, PROVEST OFTS AND USRES PVT UNITED is committed to protect the privacy of that information. That includes any information that may be obtained from a user's browser by one of our servers, affiliated businesses, subsidiaries, or representatives."
+      content: "No matter how or from where you share personal information with us, FINOVEST CHITS AND KURIES PVT LIMITED is committed to protect the privacy of that information. This includes any information that may be obtained from a user’s browser by one of our servers, affiliated businesses, subsidiaries, or representatives."
     },
     {
       title: "Sharing Your Information",
       type: "section",
-      content: "We do not add or rent your personal information to third parties. We may share your information with:",
+      content: "We do not sell or rent your personal information to third parties. We may share your information with:",
       items: [
         "Government Regulatory bodies as required by law.",
         "Service providers who assist us in operating our services (e.g., Payment Gateway, SMS providers etc.).",

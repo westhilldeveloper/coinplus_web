@@ -10,7 +10,7 @@ const SimpleRefundPolicy = () => {
     {
       number: "2",
       title: "Refund on Cancellation",
-      content: "We are here to assist customers who are not entirely happy with our service. Upon raising a cancellation request after joining a chit group, a refund of the paid amount can be processed if the chit is not commenced without deducting any commission. However, onboarding charge shall not be refunded. If the cancellation is submitted after commencement of Chit group, the paid amount will be refunded after deducting interest (91.2% pa for the period till the substitution has been made or within fifteen days of termination chit (Chit Fund Act 1982 Section 30)."
+      content: "We are here to assist customers who are not entirely happy with our service. Upon raising a cancellation request after joining a chit group, a refund of the paid amount can be processed if the chit is not commenced without deducting any commission. However, onboarding charge shall not be refunded. If the cancellation is submitted after commencement of Chit group, the paid amount will be refunded after deducting interest @12% pa for the period till the substitution has been made or within fifteen days of termination chit (Chit Fund Act 1982 Section 30)."
     },
     {
       number: "3",

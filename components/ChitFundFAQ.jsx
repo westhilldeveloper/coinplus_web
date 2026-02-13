@@ -200,7 +200,7 @@ Unencumbered Land & Building`,
     {
       id: 9,
       question: "Can NRIs join in chit groups?",
-      answer: `Yes, NRIs can join chit groups. NRIs need to provide a valid passport and visa, while`,
+      answer: `Yes, NRIs can join chit groups. NRIs need to provide a valid passport and visa.`,
      
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-purple-600 to-pink-500",
