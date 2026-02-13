@@ -70,6 +70,10 @@ const TermsAndConditions = () => {
     {
       number: "17",
       content: "The minimum and Maximum bid amount shall be intimated to subscriber on enrolment of Chit."
+    },
+    {
+      number: "18",
+      content: "Prized customers shall remit their instalment at least one hour before the auction begins."
     }
   ];
 
@@ -108,7 +112,7 @@ const TermsAndConditions = () => {
               
               {/* Decorative Corner */}
               <div className="absolute top-0 right-0 w-24 h-24">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-tr-2xl"></div>
+                <div className="absolute top-0 right-0 w-24 h-24  rounded-tr-2xl"></div>
               </div>
 
               {/* Content */}

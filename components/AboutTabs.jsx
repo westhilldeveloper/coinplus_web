@@ -154,7 +154,7 @@ const AboutTabs = () => {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 2:</h3>
-              <p>The customers who are the group can participate in live auction through Mob App or Website, provided he/she remitted the monthly subscription.</p>
+              <p>The customers who are in the group can participate in live auction through Mob App or Website, provided he/she remitted the monthly subscription.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 3: </h3>
@@ -162,7 +162,7 @@ const AboutTabs = () => {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 4: </h3>
-              <p>If a subscriber can’t participate in live auction due to any reason he can place a bid amount after remittance of current instalment.</p>
+              <p>If a subscriber can’t participate in live auction due to any reason he can place a bid amount after remittance of current instalment and before the auction starts.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 5: </h3>
@@ -171,6 +171,10 @@ const AboutTabs = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Step 6: </h3>
               <p>The company receives a commission of 3% to 5% and rest of the discount will be distributed equally among all the subscribers of the group irrespective of Prized or Non-Prized subscriber.</p>
+            </div>
+             <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Step 7: </h3>
+              <p>The winner of the group will recieve the amount of following day after subsequent auction if he/she has furnised security.</p>
             </div>
           </div>
         </>

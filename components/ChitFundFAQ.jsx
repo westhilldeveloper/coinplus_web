@@ -58,6 +58,7 @@ const ChitFundFAQ = () => {
     'finovest': '9nte4r_FiGQ',
     'values': 'QYUnKj8RmnU',
     'enroll': '4uT5mVZZuyo',
+    'enrollmal':'uGDr8kkzSfI',
     'security': 'zzz_HabBI3M',
     'online-auction': 'elrf36X5_m4',
     'whatis':'Cxgy0EA_3f0'
@@ -125,14 +126,15 @@ const ChitFundFAQ = () => {
    
     {
       id: 3,
-      question: "What are the modes of payment on CoinPlus?",
+      question: "What are the modes of payment in CoinPlus?",
       answer: `CoinPlus supports multiple payment modes, including:
 
 UPI: Use your preferred UPI app for seamless contributions.
 Netbanking: Transfer funds securely from your bank account.
 Cheque: Traditional payment method.
-Auto-Debit: Set up automatic recurring payments for hassle-free savings.
-Cash collection & UPI payment at doorstep: Convenient doorstep services.`,
+Nach: Auto-Debit, Set up automatic recurring payments for hassle-free savings.
+Cash collection & UPI payment at doorstep: Convenient doorstep services.
+Debit Card:  Contribute directly from your savings account with real-time transaction confirmation and no additional fees.`,
       // videoId: videoData.payment,
       icon: <DollarSign className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-purple-600 to-pink-500",
@@ -153,7 +155,8 @@ Fixed Deposits (FDs) from Nationalized and scheduled banks
 Surrender value of LIC policies
 Personal guarantee of salaried professionals
 Bank guarantee from scheduled commercial banks
-Unencumbered Land & Building`,
+Unencumbered Land & Building
+Fixed Deposite from FINOVEST GROUP`,
       icon: <FileText className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-purple-600 to-pink-500",
       glow: "shadow-indigo-500/20 sm:shadow-indigo-500/30"
@@ -191,7 +194,7 @@ Unencumbered Land & Building`,
     {
       id: 8,
       question: "What are the charges to join an SSP?",
-      answer: `The charges to join an SSP are 0.1% of the chit value, subject to a minimum of ₹200 and a maximum of ₹500. This is a one-time membership fee, and you can join as many groups as you wish.`,
+      answer: `The charges   ₹500 inclusive of GST. This is a one-time membership fee, and you can join as many groups as you wish.`,
      
       icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-purple-600 to-pink-500",
@@ -257,7 +260,7 @@ Unencumbered Land & Building`,
     },
     {
       id: 'm4',
-      question: "How to enroll?",
+      question: "How to enroll? (Malayalam)",
       answer: "Enroll via branch visit, online registration, or home assistance.",
       videoId: videoData.enroll,
       icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" />,
@@ -266,8 +269,17 @@ Unencumbered Land & Building`,
     },
     {
       id: 'm5',
+      question: "How to enroll? (English)",
+      answer: "Enroll via branch visit, online registration, or home assistance.",
+      videoId: videoData.enrollmal,
+      icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" />,
+      gradient: "from-lime-500 to-green-500",
+      glow: "shadow-lime-500/20 sm:shadow-lime-500/30"
+    },
+    {
+      id: 'm6',
       question: "How secure is my money?",
-      answer: "Registered under the Chit Funds Act with full regulatory compliance.",
+      answer: "Registered under the Chit Funds Act with full regulatory compliance. Secured by Fixed Deposit for each group with Registrar of Chits",
       // videoId: videoData.security,
       icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5" />,
       gradient: "from-amber-500 to-yellow-500",

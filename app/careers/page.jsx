@@ -195,7 +195,7 @@ export default function CareersPage() {
     {
       icon: <Shield className="text-blue-600" size={24} />,
       title: "Legacy of Trust",
-      description: "Over 60 years of trusted financial services"
+      description: "Over 10 years of trusted financial services"
     },
     {
       icon: <Users className="text-green-600" size={24} />,
