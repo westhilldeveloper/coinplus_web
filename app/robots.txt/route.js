@@ -4,17 +4,31 @@ export async function GET() {
 
   const robotsTxt = isProd
     ? `
+# Allow all bots to crawl
 User-agent: *
 Allow: /
 
+# Disallow admin and API routes
+Disallow: /admin/
 Disallow: /api/
+Disallow: /_not-found
 Disallow: /_next/
 Disallow: /dashboard/
-Disallow: /auth/
 
+# Disallow authentication pages
+Disallow: /admin/login
+
+# Disallow specific query parameters
+Disallow: /*?*
+
+# Sitemap location
 Sitemap: ${baseUrl}/sitemap.xml
+
+# Crawl delay for heavy bots (optional)
+Crawl-delay: 10
     `.trim()
     : `
+# Block all bots in development
 User-agent: *
 Disallow: /
     `.trim();
@@ -22,7 +36,7 @@ Disallow: /
   return new Response(robotsTxt, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=86400',
+      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',
     },
   });
 }

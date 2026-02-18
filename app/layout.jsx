@@ -14,46 +14,62 @@ const openSans = Poppins({
 })
 
 export const metadata = {
-   metadataBase: new URL(
+  metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || 'https://coinplus.co.in'
   ),
-  title: 'Coinplus - Online Chit Funds Platform | Secure & Transparent',
-  description: 'Join Coinplus for secure online chit funds. Get transparent chit plans, digital auctions, and financial empowerment. Start your chit fund journey today!',
-  keywords: 'coinplus, chit, chits, online chit, online chits, chit fund, chit funds, digital chit, chit scheme, money saving, savings plan, financial planning, investment, online auction, chit company, monthly savings, chit group',
+  title: {
+    default: 'Coinplus - India\'s Most Trusted Online Chit Fund Platform',
+    template: '%s | Coinplus Chit Funds'
+  },
+  description: 'Coinplus offers secure and transparent online chit funds with digital auctions, instant withdrawals, and highest returns. Join 10,000+ happy subscribers across India. Register for free!',
+  keywords: 'coinplus chit fund, online chit funds India, best chit fund company, chit fund schemes, monthly saving plans, chit fund online registration, digital chit fund platform, chit fund benefits, chit fund calculator, chit fund auction, chit fund interest, chit fund maturity, chit fund dividend, chit fund comparison, chit fund vs FD, chit fund vs RD, chit fund for women, chit fund for business, Ksfe alternative, chit fund company Kerala, chit fund company India, safe chit fund, government registered chit fund, chit fund returns, chit fund tax benefits, chit fund in Kerala, chit fund in Tamil Nadu, chit fund in Karnataka, chit fund in Bangalore, chit fund in Chennai, chit fund in Kochi',
+  
+  authors: [{ name: 'Coinplus Team' }],
+  creator: 'Coinplus',
+  publisher: 'Coinplus Financial Services',
+  
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   
   openGraph: {
-    title: 'Coinplus - Online Chit Funds Platform | Secure & Transparent',
-    description: 'Join Coinplus for secure online chit funds. Get transparent chit plans, digital auctions, and financial empowerment.',
+    title: 'Coinplus - Transform Your Savings with Digital Chit Funds',
+    description: 'Experience the future of chit funds with Coinplus. Digital auctions, transparent process, and better returns. Start your savings journey today!',
     url: 'https://coinplus.co.in',
-    siteName: 'Coinplus',
+    siteName: 'Coinplus Chit Funds',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Coinplus - Online Chit Funds Platform',
+        alt: 'Coinplus - Online Chit Fund Platform',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
     type: 'website',
   },
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Coinplus - Online Chit Funds Platform',
-    description: 'Secure and transparent online chit funds for financial empowerment',
+    title: 'Coinplus - Online Chit Funds Made Simple',
+    description: 'Join India\'s fastest growing chit fund platform. Digital, transparent, and secure.',
     images: ['/images/twitter-image.png'],
+    creator: '@coinplus',
+    site: '@coinplus',
   },
   
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      maxVideoPreview: -1,
+      maxImagePreview: 'large',
+      maxSnippet: -1,
     },
   },
 
@@ -93,7 +109,26 @@ export const metadata = {
       },
     ],
   },
-};
+  
+  manifest: '/manifest.json',
+  
+  verification: {
+    google: 'your-google-site-verification-code', // Add your actual verification code
+    // yandex: 'your-yandex-verification-code',
+    // yahoo: 'your-yahoo-verification-code',
+  },
+  
+  category: 'finance',
+  
+  alternates: {
+    canonical: 'https://coinplus.co.in',
+    // languages: {
+    //   'en-IN': 'https://coinplus.co.in',
+    //   'ml-IN': 'https://coinplus.co.in/ml',
+    //   'ta-IN': 'https://coinplus.co.in/ta',
+    // },
+  },
+}
 
 export default function RootLayout({ children }) {
   return (
